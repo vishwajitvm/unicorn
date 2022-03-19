@@ -1,0 +1,49 @@
+.bannerheadingspanyellow {
+    -webkit-animation: translateX 2s;
+    -webkit-animation-delay: 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: translateX 2s;
+    /* Firefox < 16 */
+    -ms-animation: translateX 2s;
+    /* Internet Explorer */
+    -o-animation: translateX 2s;
+    /* Opera < 12.1 */
+    animation: translateX 2s;
+    animation-delay: 1s;
+}
+
+@keyframes translateX {
+    0% {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h2 span {
+    -webkit-animation: translateX 2s;
+    -webkit-animation-delay: 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: translateX 2s;
+    /* Firefox < 16 */
+    -ms-animation: translateX 2s;
+    /* Internet Explorer */
+    -o-animation: translateX 2s;
+    /* Opera < 12.1 */
+    animation: translateX 2s;
+    animation-delay: 1s;
+}
+
+@keyframes translateX {
+    0% {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
