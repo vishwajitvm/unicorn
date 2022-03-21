@@ -34,7 +34,11 @@
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
                                     <h4>Address</h4>
-                                    <a href="# ">Delhi, India</a>
+                                    <a href="# ">WZ-131, First Floor 
+
+                                        Near Coffee House, Budela Market
+                                        
+                                        Vikas Puri, New Delhi-110018 </a>
                                 </div>
                             </div>
                             <div class="cardphone ">
@@ -48,14 +52,14 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p>Lorem ipsum dolor sit amet </p>
+                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8 ">
                         <div class="mapcontent ">
-                            <h3 class="addressheading">Vikaspuri, Delhi</h3>
+                            <h3 class="addressheading">Head Office</h3>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.356837018893!2d77.08077131500805!3d28.58906998243498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b41b7bf3f0f%3A0xaf4ab794d32d9f05!2sPalam!5e0!3m2!1sen!2sin!4v1645525396568!5m2!1sen!2sin "
                                 width="100% " height="470px" style="border:0; border-radius: 8px;" allowfullscreen=" " loading="lazy "></iframe>
                         </div>
@@ -80,7 +84,11 @@
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
                                     <h4>Address</h4>
-                                    <a href="# ">Delhi, India</a>
+                                    <a href="# ">G/F, Plot of Kh no. 556
+
+                                        MS Block , Ranaji Enclave, Near Old Age Home
+                                        
+                                        New Delhi-110043</a>
                                 </div>
                             </div>
                             <div class="cardphone ">
@@ -94,14 +102,14 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p>Lorem ipsum dolor sit amet </p>
+                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8 ">
                         <div class="mapcontent ">
-                            <h3 class="addressheading">Vikaspuri, Delhi</h3>
+                            <h3 class="addressheading">North India Assembly & Stock Point</h3>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.356837018893!2d77.08077131500805!3d28.58906998243498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b41b7bf3f0f%3A0xaf4ab794d32d9f05!2sPalam!5e0!3m2!1sen!2sin!4v1645525396568!5m2!1sen!2sin "
                                 width="100% " height="470px" style="border:0; border-radius: 8px;" allowfullscreen=" " loading="lazy "></iframe>
                         </div>
@@ -126,7 +134,9 @@
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
                                     <h4>Address</h4>
-                                    <a href="# ">Delhi, India</a>
+                                    <a href="# ">No.55, Annai Indra Nagar, Sivabootham Village
+
+                                        Vanagaram, Chennai-600095, Tamil Nadu</a>
                                 </div>
                             </div>
                             <div class="cardphone ">
@@ -140,14 +150,14 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p>Lorem ipsum dolor sit amet </p>
+                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8 ">
                         <div class="mapcontent ">
-                            <h3 class="addressheading">Vikaspuri, Delhi</h3>
+                            <h3 class="addressheading">South India Assembly & Stock Point </h3>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.356837018893!2d77.08077131500805!3d28.58906998243498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b41b7bf3f0f%3A0xaf4ab794d32d9f05!2sPalam!5e0!3m2!1sen!2sin!4v1645525396568!5m2!1sen!2sin "
                                 width="100% " height="470px" style="border:0; border-radius: 8px;" allowfullscreen=" " loading="lazy "></iframe>
                         </div>
@@ -162,6 +172,110 @@
             </div>
         </section>
         <!--contact us section end-->
+
+        <section class="contactdetails2 contactdetails">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class=" col-md-4 ">
+                        <div class="cardwrapper ">
+                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <div class="cardaddress ">
+                                <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
+                                <div class="addresscontent ">
+                                    <h4>Address</h4>
+                                    <a href="# ">Gala no. 1, Hari Hari Corporation Building No. E/16,
+
+                                        Next to Aapolo Tire Warehouse, Dapode Village,
+                                        
+                                        Near Gajanan petrol pump, Bhiwandi 421302 Maharashtra  </a>
+                                </div>
+                            </div>
+                            <div class="cardphone ">
+                                <div class="iconset "><i class="fas fa-phone-alt "></i></div>
+                                <div class="phonecontent ">
+                                    <h4>Call Us On</h4>
+                                    <a href="# ">+91 1234567890</a>
+                                </div>
+                            </div>
+                            <div class="cardemail ">
+                                <div class="iconset "><i class='fas fa-envelope'></i></div>
+                                <div class="emailcontent ">
+                                    <h4>Email Us</h4>
+                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="mapcontent ">
+                            <h3 class="addressheading">West India Assembly & Stock Point  </h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.356837018893!2d77.08077131500805!3d28.58906998243498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b41b7bf3f0f%3A0xaf4ab794d32d9f05!2sPalam!5e0!3m2!1sen!2sin!4v1645525396568!5m2!1sen!2sin "
+                                width="100% " height="470px" style="border:0; border-radius: 8px;" allowfullscreen=" " loading="lazy "></iframe>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+            </div>
+            </div>
+        </section>
+        <!--contact us section end-->
+
+
+        <section class="contactdetails2 contactdetails">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class=" col-md-4 ">
+                        <div class="cardwrapper ">
+                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <div class="cardaddress ">
+                                <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
+                                <div class="addresscontent ">
+                                    <h4>Address</h4>
+                                    <a href="# ">Nishchinda (West) PO- Ghoshpara (Bally)
+
+                                        Howrah, Kolkatta-711227, West Bengal
+                                        
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="cardphone ">
+                                <div class="iconset "><i class="fas fa-phone-alt "></i></div>
+                                <div class="phonecontent ">
+                                    <h4>Call Us On</h4>
+                                    <a href="# ">+91 1234567890</a>
+                                </div>
+                            </div>
+                            <div class="cardemail ">
+                                <div class="iconset "><i class='fas fa-envelope'></i></div>
+                                <div class="emailcontent ">
+                                    <h4>Email Us</h4>
+                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="mapcontent ">
+                            <h3 class="addressheading">East India Regional Office</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.356837018893!2d77.08077131500805!3d28.58906998243498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b41b7bf3f0f%3A0xaf4ab794d32d9f05!2sPalam!5e0!3m2!1sen!2sin!4v1645525396568!5m2!1sen!2sin "
+                                width="100% " height="470px" style="border:0; border-radius: 8px;" allowfullscreen=" " loading="lazy "></iframe>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+            </div>
+            </div>
+        </section>
+        <!--contact us section end-->
+
 
 
 
