@@ -44,7 +44,7 @@
                                 <div class="form-group">
                                     <h5>Select main Machine </h5>
                                     <div class="controls">
-                                        <select name="assign_mainmachin_name" id="assign_mainmachin_name"   class="form-control">
+                                        <select name="assign_mainmachin_name" id="product_main_machine"   class="form-control">
                                             <option value="" selected="" disabled>Select Main Name</option>
                                             @foreach ($mainmachinename as $row2)
                                             <option value=" {{$row2->machine_name}}" {{ $editData->assign_mainmachin_name == "$row2->machine_name"?"selected":"" }} > {{$row2->machine_name}} </option>
@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <h5>Select Sub Machine </h5>
                                     <div class="controls">
-                                        <select name="assign_sub_machin_name" id="assign_sub_machin_name"   class="form-control">
+                                        <select name="assign_sub_machin_name" id="product_sub_machine"   class="form-control">
                                             <option value="" selected="" disabled>Select Sub Name</option>
                                         @foreach ($subMachineData as $row2)
                                             <option  value=" {{$row2->sub_machine_name}} " {{ $editData->assign_sub_machin_name == "$row2->sub_machine_name"?"selected":"" }}  > {{$row2->sub_machine_name}} </option>
@@ -283,6 +283,22 @@
             reader.readAsDataURL(i);
         }
     }
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#product_main_machine").change(function() {
+            let productMainMachine = $(this).val() ;
+            jQuery.ajax({
+                url: '/get-sub-machine-ajax',
+                type: 'post',
+                data: 'productMainMachine='+productMainMachine+'&_token={{ csrf_token() }}',
+                success: function(result){
+                    jQuery('#product_sub_machine').html(result) ;
+                }
+            })
+        })
+    })
 </script>
 
 

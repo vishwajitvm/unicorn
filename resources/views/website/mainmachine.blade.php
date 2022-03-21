@@ -29,12 +29,12 @@
         <section class="main_machines">
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-md-3">
+                    {{-- <div class="col-md-3">
                         <div class="categoryimgbox mainmachineinner"><img class="img-thumbnail" src="{{ (!empty($item->machine_image))?url('upload/user_images/'.$item->machine_image):url('upload/no_image.jpg') }}" alt=""></div>
                         <div class="category_titleheading">
                             <h3><a href="">Walk Behind Roller</a></h3>
                         </div>
-                    </div>
+                    </div> --}}
                     
                     @foreach ($data as $item)
                     <div class="col-md-3">

@@ -144,6 +144,10 @@ Route::prefix('users')->group(function() {
 
 }) ;
 
+//AJAX REQUYEST FOR APPROVING THE USER REQUEST user-approval-request-ajex
+Route::post('/user-approval-request-ajex' , [UserController::class , 'AJAXUserRequestAPPROVAL'])->name('user-approval-request-ajex') ; 
+
+
 //
 //GROUP FOR YOUR PROFILE AND CHAANGE PASSWORD 
 //
@@ -402,7 +406,7 @@ Route::prefix('userproducts')->group( function() {
 }) ;
 
 //AJAX REQUEST FOR REQUESTING SUBMACHINE DATA ON MAIN MACHINE REQUEST
-Route::post('/get-sub-machine-ajax' , [userProductController::class , 'AJAXUserProductSubmachineDataRequest'])->name('userproducts.delete') ;
+Route::post('/get-sub-machine-ajax' , [userProductController::class , 'AJAXUserProductSubmachineDataRequest'])->name('get-sub-machine-ajax') ;
 
 
 //User invoice Routes here

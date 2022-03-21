@@ -213,13 +213,7 @@
                                 </p>
                             </div>
                             <div class="row firstcategorysection">
-                                <!--<div class="col-md-3">-->
-                                <!--    <div class="categoryimgbox"><img class="img-thumbnail" src="{{url('upload/no_image.jpg')}}" alt=""></div>-->
-                                <!--    <div class="category_titleheading">-->
-                                <!--        <h3><a href="">Walk Behind Roller</a></h3>-->
-                                <!--    </div>-->
-                                <!--</div>-->
-                                
+                                                                
                                 @foreach ($data as $item)
                                 <div class="col-md-3">
                                     <div class="categoryimgbox"><img class="img-thumbnail" src="{{ (!empty($item->machine_image))?url('upload/user_images/'.$item->machine_image):url('upload/no_image.jpg') }}" alt=""></div>

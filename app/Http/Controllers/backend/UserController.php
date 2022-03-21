@@ -99,4 +99,20 @@ class UserController extends Controller
 
     }
 
+    //AJAX REQUEST FOR APPROVING OR DENYING THE USER REQUEST
+    public function AJAXUserRequestAPPROVAL(Request $request) {
+        $userdata = $request->post('userdata') ;  //userid
+        if($userdata == null) {
+            FALSE ;
+        }
+        else{
+            if($userdata > 0) {
+                $nd = User::find($userdata) ;
+                $nd->usertype = "user" ;
+                $nd->save() ;
+            }
+        }
+
+    }
+
 }

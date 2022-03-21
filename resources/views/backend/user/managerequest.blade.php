@@ -5,22 +5,7 @@
  <div class="content-wrapper">
     <div class="container-full">
       <!-- Content Header (Page header) -->
-      <div class="content-header">
-          <div class="d-flex align-items-center">
-              <div class="mr-auto">
-                  <h3 class="page-title">Data Tables</h3>
-                  <div class="d-inline-block align-items-center">
-                      <nav>
-                          <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-                              <li class="breadcrumb-item" aria-current="page">Tables</li>
-                              <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
-                          </ol>
-                      </nav>
-                  </div>
-              </div>
-          </div>
-      </div>
+      
 
       <!-- Main content -->
       <section class="content">
@@ -32,7 +17,7 @@
 
            <div class="box">
               <div class="box-header with-border">
-                <h3 class="box-title">User List</h3>
+                <h3 class="box-title">Unapproved User List</h3>
                 <a href=" {{ route('users.add') }} " class="btn btn-rounded btn-success md-5" style="float: right"> Add User </a>
               </div>
               <!-- /.box-header -->
@@ -47,6 +32,8 @@
                               <th>Email</th>
                               <th> User Status </th>
                               <th> User Request </th>
+                              <th> Status </th>
+
                               <th width="15%">Action</th>
                           </tr>
                       </thead>
@@ -59,6 +46,14 @@
                               <td> {{$user->email}} </td>
                               <td  style="{{($user->status =='active')?'color:green':'color:red' }} ; font-size:18px"> {{$user->status}} </td>
                               <td style="{{($user->usertype ==null)?'color:white;background:red':'color:white;background:green' }} ; font-size:18px" > {{ $user->usertype== null?" Not Approved ": "Approved" }} </td>
+                              <td >
+                                <select name="select" id="userdatarequest" required class="form-control userdatarequest">
+                                  <option >Select Option For User Approval process</option>
+                                  <option value={{ $user->id }}> Approve </option>
+                                  <option value={{ null }}>Deny</option>
+                                </select>
+                              </td>
+
                               <td>
                                 <!--button here-->
                                 <a class="btn btn-info" href=" {{Route('users.edit',$user->id)}} ">Edit</a>
@@ -82,6 +77,7 @@
                       </tfoot> --}}
 
                     </table>
+                    {{-- <div id="product_sub_machine"></div> --}}
                   </div>
               </div>
               <!-- /.box-body -->
@@ -100,5 +96,25 @@
     </div>
 </div>
 <!-- /.content-wrapper -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+      $(".userdatarequest").change(function() {
+          let userdata = $(this).val() ;
+          // alert(userdata) ;
+          jQuery.ajax({
+              url: '/user-approval-request-ajex',
+              type: 'post',
+              data: 'userdata='+userdata+'&_token={{ csrf_token() }}',
+              success: function(result){
+                location.reload();
+              }
+          })
+      })
+  })
+</script>
+
 
 @endsection
