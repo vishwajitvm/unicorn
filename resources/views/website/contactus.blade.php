@@ -45,7 +45,7 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="# ">+91 1234567890</a>
+                                    <a href="tel:918048982966">+91-8048982966</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -95,7 +95,7 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="# ">+91 1234567890</a>
+                                    <a href="tel:918048982966">+91-8048982966</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -143,7 +143,7 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="# ">+91 1234567890</a>
+                                    <a href="tel:918048982966">+91-8048982966</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -194,7 +194,7 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="# ">+91 1234567890</a>
+                                    <a href="tel:918048982966">+91-8048982966</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -246,7 +246,7 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="# ">+91 1234567890</a>
+                                    <a href="tel:918048982966">+91-8048982966</a>
                                 </div>
                             </div>
                             <div class="cardemail ">

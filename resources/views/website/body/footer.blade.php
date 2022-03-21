@@ -25,11 +25,10 @@
                         Quick Links
                     </h6>
                     <p class="text-left">
-                        <a href="#!" class=" text-white">Home</a><br>
-                        <a href="#!" class=" text-white">About Us</a><br>
-                        <a href="#!" class=" text-white">Product</a><br>
-                        <a href="#!" class=" text-white">Pricinng</a><br>
-                        <a href="#!" class=" text-white">News</a>
+                        <a href="/" class=" text-white">Home</a><br>
+                        <a href="{{route('aboutus')}}" class=" text-white">About Us</a><br>
+                        <a href="#!" class=" text-white">Parts and Services</a><br>
+                        <a href="{{route('contact-us')}}" class=" text-white">Contact Us</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -55,9 +54,9 @@
                     <h6 class="fw-bold text-left mb-4">
                         Contact
                     </h6>
-                    <p class="text-white text-left"><b>Address:</b> abc def, palam 110045, india</p>
-                    <p class="text-white text-left"> <b>Phone no:</b> + 01 234 567 88</p>
-                    <p class="text-white text-left"><b>Email:</b> info@example.com</p>
+                    <p class="text-white text-left"><b>Address:</b> WZ-131, First Floor Near Coffee House, Budela Market Vikas Puri, New Delhi-110018</p>
+                    <p class="text-white text-left"> <b>Phone no:</b><a href="tel:918048982966" class="text-light">+91-8048982966</a> </p>
+                    <p class="text-white text-left"><b>Email:</b> equipmentunicorn@gmail.com</p>
 
                     <div>
                         <!-- <h6 class="fw-bold mb-4">
@@ -88,9 +87,13 @@
 
     <!-- Copyright -->
     <div class="text-center copyrightt p-4 text-white">
-        <p> © 2022 Copyright Unicorn Equipments. Developed By
+        <p> © <span id="thisyear"></span> Copyright Unicorn Equipments. Developed By
             <a class="text-reset fw-bold" href="https://blubrandzglobal.in/">BluBrandz</a></p>
     </div>
     <!-- Copyright -->
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("thisyear").innerHTML = year;    </script>
 </footer>
 <!-- Footer -->
