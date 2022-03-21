@@ -109,4 +109,14 @@ class userProductController extends Controller
         return redirect()->route('userproducts.view')->with($notification) ;
     }
 
+    public function AJAXUserProductSubmachineDataRequest(Request $request) {
+        $productMainMachine = $request->post('productMainMachine') ;  //patient name
+        $submachinenewdata = submachine::all()->where('main_machine_name' , $productMainMachine) ;
+
+        foreach ($submachinenewdata as $key=>$submachinenames) {
+            $html = '<option value="'. $submachinenames->sub_machine_name .'" > '. $submachinenames->sub_machine_name .' </option>' ;
+            echo $html;
+        }
+    }
+
 }

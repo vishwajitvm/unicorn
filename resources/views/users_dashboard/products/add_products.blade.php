@@ -48,7 +48,6 @@
                                     <div class="form-group">
                                         {{-- <h5>User Email<span class="text-danger">*</span></h5> --}}
                                         <div class="controls">
-                                            {{-- <input type="text"   name="user_phone_number" value={{ $userData->user_phone_number}} class="form-control"   aria-invalid="false"  >  --}}
                                             <input type="tel" hidden value= {{ $userData->mobile=true?$userData->mobile:"" }}   name="user_phone_number"  class="form-control"   aria-invalid="false"/>
                                         </div>
                                     </div>
@@ -58,7 +57,7 @@
                                     <div class="form-group">
                                         <h5>Select main Machine Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <select name="product_main_machine" id="sub_category_name"   class="form-control">
+                                            <select name="product_main_machine" id="product_main_machine"   class="form-control">
                                                 <option value="" selected="" disabled>Select Main Machine</option>
                                                 @foreach ($mainmachineData as $row)
                                                     <option value=" {{$row->machine_name}} "> {{$row->machine_name}} </option>
@@ -73,7 +72,7 @@
                                     <div class="form-group">
                                         <h5>Select Sub Machine Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <select name="product_sub_machine" id="sub_category"   class="form-control">
+                                            <select name="product_sub_machine" id="product_sub_machine"   class="form-control">
                                                 <option value="" selected="" disabled>Select Sub Machine</option>
                                                 @foreach ($submachineData as $row)
                                                     <option value=" {{$row->sub_machine_name}} "> {{$row->sub_machine_name}} </option>
@@ -181,43 +180,24 @@
 </script>
 
 
-
-<script type="text/javascript">
-	// $(document).ready(function(){
-	// 	$('#machine_image').change(function(e){
-	// 		var reader = new FileReader();
-	// 		reader.onload = function(e){
-	// 			$('#showImage').attr('src',e.target.result);
-	// 		}
-	// 		reader.readAsDataURL(e.target.files['0']);
-	// 	});
-	// });
-</script>
 <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
 
-{{-- <script>
-    $(document).ready(function () {
-    $('#sub_category_name').on('change', function () {
-    let id = $(this).val();
-    $('#sub_category').empty();
-    $('#sub_category').append(`<option  disabled selected>Processing...</option>`);
-    $.ajax({
-    type: 'GET',
-    url: 'GetSubCatAgainstMainCatEdit/'+id,
-    success: function (response) {
-    var response = JSON.parse(response);
-    console.log(response);   
-    $('#sub_category').empty();
-    $('#sub_category').append('<option value="0" disabled selected>Select Sub Machine</option>');
-    response.forEach(element => {
-        // $('#sub_category').append(`<option value="${element['sub_machine_name']}">${element['sub_machine_name']}</option>`);
-        // });
-        $('#sub_category').append(`<option value="${element['sub_machine_name']}">${element['sub_machine_name']}</option>`);
-        });
-    }
-});
-});
-});
-</script> --}}
+<script>
+    $(document).ready(function() {
+        $("#product_main_machine").change(function() {
+            let productMainMachine = $(this).val() ;
+            jQuery.ajax({
+                url: '/get-sub-machine-ajax',
+                type: 'post',
+                data: 'productMainMachine='+productMainMachine+'&_token={{ csrf_token() }}',
+                success: function(result){
+                    jQuery('#product_sub_machine').html(result) ;
+                }
+            })
+        })
+    })
+</script>
+
+
 
 @endsection

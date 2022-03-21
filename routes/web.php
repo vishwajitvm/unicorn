@@ -401,6 +401,10 @@ Route::prefix('userproducts')->group( function() {
 
 }) ;
 
+//AJAX REQUEST FOR REQUESTING SUBMACHINE DATA ON MAIN MACHINE REQUEST
+Route::post('/get-sub-machine-ajax' , [userProductController::class , 'AJAXUserProductSubmachineDataRequest'])->name('userproducts.delete') ;
+
+
 //User invoice Routes here
 Route::prefix('userperformainvoice')->group( function() {
     //view all invoice reciver here
