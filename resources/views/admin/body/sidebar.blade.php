@@ -29,6 +29,22 @@
 			<span>Dashboard</span>
           </a>
         </li>  
+
+        <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
+          <a href="#">
+            <i data-feather="message-circle"></i> <span>Manage Profile</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=" {{Route('profile.view')}} "><i class="ti-more"></i>Your Profile</a></li>
+            <li><a href=" {{Route('password.view')}} "><i class="ti-more"></i>Change Password</a></li>
+          </ul>
+        </li>
+
+        <li class="header nav-small-cap">MANAGE DEALERS</li>		  
+
 		
         <li class="treeview {{ ($prefix == '/users')?'active':'' }} " >
           <a href="#">
@@ -48,18 +64,7 @@
           </ul>
         </li> 
 		  
-        <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
-          <a href="#">
-            <i data-feather="message-circle"></i> <span>Manage Profile</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=" {{Route('profile.view')}} "><i class="ti-more"></i>Your Profile</a></li>
-            <li><a href=" {{Route('password.view')}} "><i class="ti-more"></i>Change Password</a></li>
-          </ul>
-        </li>
+        
 
         <li class="treeview {{ ($prefix == '/dealers')?'active':'' }}">
           <a href="#">
@@ -73,6 +78,25 @@
             <li><a href=" {{Route('password.view')}} "><i class="ti-more"></i>View Dealers</a></li>
           </ul>
         </li>
+
+        <li class="header nav-small-cap">MANAGE MACHINES</li>		  
+
+        <!--CAtaggory  work here-->
+        <li class="treeview {{ ($prefix == '/maincategory')?'active':'' }}">
+          <a href="#">
+            <i data-feather="mail"></i> <span>Manage Category </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ Route('maincategory.add') }} "><i class="ti-more"></i>Add main Category </a></li>
+            <li><a href="   "><i class="ti-more"></i>view Main Category </a></li>
+            {{-- <li><a href="#"><i class="ti-more"></i>Read</a></li> --}}
+          </ul>
+        </li>
+        <!--CATAGORY work here-->
+
 
         <!--main MAchine work here-->
         <li class="treeview {{ ($prefix == '/mainmachine')?'active':'' }}">
@@ -106,6 +130,9 @@
         </li>
         <!--sub machine work here-->
 
+        <li class="header nav-small-cap">MANAGE DEALS</li>		  
+
+
         <!--manage buyer details-->
         <li class="treeview {{ ($prefix == '/buyerdetails')?'active':'' }}  ">
           <a href="#">
@@ -125,6 +152,7 @@
           </ul>
         </li>
         <!--manage buyer details-->
+        
 
         <li class="treeview {{ ($prefix == '/assignproduct')?'active':'' }} ">
           <a href="#">
@@ -139,6 +167,9 @@
             <li><a href=" {{ route('assignproduct.view') }} "><i class="ti-more"></i>View All Assigned Products</a></li>
           </ul>
         </li>
+
+        <li class="header nav-small-cap">MANAGE WARRANTY</li>		  
+
 
         <li class="treeview {{ ($prefix == '/claimrequest')?'active':'' }}  ">
           <a href="#">

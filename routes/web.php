@@ -30,6 +30,8 @@ use App\Http\Controllers\website\websitecontroller ;
 use App\Http\Controllers\ManageDealersController ;
 use App\Models\dealer;
 use Illuminate\Support\Facades\Artisan ;
+use App\Http\Controllers\ManageMainCategoryForMachineController ;
+use App\Models\main_category ;
 
 /*
 |--------------------------------------------------------------------------
@@ -165,6 +167,27 @@ Route::prefix('profile')->group(function() {
 
     Route::post('/password/update' , [ProfileController::class , 'PasswordUpdate'])->name('password.update') ;   
 }) ;
+
+//
+//*************************************************************
+//************MANAGE MAIN CATAGORY HERE ***********************
+//*************************************************************
+//
+Route::prefix('/maincategory')->group(function() {
+    //Adding main categories
+    Route::get('/add' , [ManageMainCategoryForMachineController::class , 'AddMainCatagoryForMachine'])->name('maincategory.add') ; 
+
+    //Store the main category data here
+    Route::post('/store' , [ManageMainCategoryForMachineController::class , 'StoreMainCatagoryForMachine'])->name('maincategory.store') ; 
+
+
+}) ;
+//
+//*************************************************************
+//************MANAGE MAIN CATAGORY END ***********************
+//*************************************************************
+//
+
 
     //NOW ALL THE MACHINE FUNCTIONALITY 
 Route::prefix('/mainmachine')->group(function() {

@@ -165,7 +165,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium a veritatis aperiam ipsam sapiente consequatur dicta autem soluta rem.</p>
             
                                         <p>Officiis vitae deserunt eum ipsum nesciunt repellendus quas animi! Tempora, praesentium.</p>
-                                        <span><b>Ready to create your account?</b> <a href="#">Get Started</a></span>
+                                        <span><b>Ready to create your account?</b> <a href=" {{route('register')}} ">Get Started</a></span>
                                     </div>
             
                                 </div>
