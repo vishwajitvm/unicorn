@@ -91,7 +91,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ Route('maincategory.add') }} "><i class="ti-more"></i>Add main Category </a></li>
-            <li><a href="   "><i class="ti-more"></i>view Main Category </a></li>
+            <li><a href=" {{ Route('maincategory.view') }}  "><i class="ti-more"></i>view Main Category </a></li>
             {{-- <li><a href="#"><i class="ti-more"></i>Read</a></li> --}}
           </ul>
         </li>

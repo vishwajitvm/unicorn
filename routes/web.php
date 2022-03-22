@@ -180,6 +180,18 @@ Route::prefix('/maincategory')->group(function() {
     //Store the main category data here
     Route::post('/store' , [ManageMainCategoryForMachineController::class , 'StoreMainCatagoryForMachine'])->name('maincategory.store') ; 
 
+    //view the main categories data here
+    Route::get('/view' , [ManageMainCategoryForMachineController::class , 'ViewMainCatagoryForMachine'])->name('maincategory.view') ; 
+
+    //Edit 
+    Route::get('/edit/{id}' , [ManageMainCategoryForMachineController::class , 'EditMainCatagoryForMachine'])->name('maincategory.edit') ; 
+
+    //update 
+    Route::post('/update/{id}' , [ManageMainCategoryForMachineController::class , 'updateMainCatagoryForMachine'])->name('maincategory.update') ; 
+
+    //delete 
+    Route::get('/delete/{id}' , [ManageMainCategoryForMachineController::class , 'DeleteMainCatagoryForMachine'])->name('maincategory.delete') ; 
+
 
 }) ;
 //

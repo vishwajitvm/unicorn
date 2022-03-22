@@ -6,16 +6,19 @@ use Illuminate\Http\Request;
 use App\Models\mainmachine;
 use Illuminate\Support\Facades\Auth ;
 use Symfony\Component\Console\Input\Input;
+use App\Models\main_category ;
 
 class machineController extends Controller
 {
     //all machine controller are here
     public function mainmachineAdd() {
-        return view('backend.machine.add_mainmachine') ;
+        $data = main_category::all() ;
+        return view('backend.machine.add_mainmachine' , compact(['data'])) ;
     }
 
     public function mainmachineStore(Request $request) {
         $data = new mainmachine() ;
+        $data->main_cat_id = $request->main_cat_id ;
         $data->machine_name = $request->machine_name ;
         $data->machine_price = $request->machine_price ;
         $data->machine_description = $request->machine_description ;
@@ -40,18 +43,21 @@ class machineController extends Controller
     //View the machine
     public function mainmachineView() {
         $machineData = mainmachine::all() ;
+        $maincatdata = main_category::all() ;
         $machineData = mainmachine::latest()->get() ;
-        return view('backend.machine.view_mainmachine' , ['mainMachineData'=>$machineData]) ;
+        return view('backend.machine.view_mainmachine' , ['mainMachineData'=>$machineData] , compact(['maincatdata'])) ;
     }
 
     //Main Machine Edit Data
     public function mainmachineEdit($id) {
+        $data = main_category::all() ;
         $editData = mainmachine::find($id) ;
-        return view('backend.machine.edit_mainmachine' ,compact('editData')) ;
+        return view('backend.machine.edit_mainmachine' ,compact(['editData' , 'data'])) ;
     }
 
     public function mainmachineUpdate(Request $request, $id) {
         $editData = mainmachine::find($id) ;
+        $editData->main_cat_id = $request->main_cat_id ;
         $editData->machine_name = $request->machine_name ;
         $editData->machine_price = $request->machine_price ;
         $editData->machine_description = $request->machine_description ;

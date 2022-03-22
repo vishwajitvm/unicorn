@@ -25,6 +25,20 @@
                          <div class="row">
                            <div class="col-12">	
 
+                            <div class="col-md-12"><!--col-6 stared here-->
+                                <div class="form-group">
+                                    <h5>Select Main Category</h5>
+                                    <div class="controls">
+                                        <select name="main_cat_id" id="main_cat_id"   class="form-control">
+                                            <option value="" selected="" disabled>Select Main Categorys</option>
+                                            @foreach ($data as $item)
+                                            <option value=" {{ $item->id }} " {{ $item->id == $editData->main_cat_id?'selected':'' }}> {{ $item->category_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--col-6 Ended here-->
+
 
                             <!--row Stared here-->
                             <div class="row">

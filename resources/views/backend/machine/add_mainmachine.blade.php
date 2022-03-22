@@ -30,6 +30,21 @@
                             <div class="row">
                                 <div class="col-md-12"><!--col-6 stared here-->
                                     <div class="form-group">
+                                        <h5>Select Main Category</h5>
+                                        <div class="controls">
+                                            <select name="main_cat_id" id="main_cat_id"   class="form-control">
+                                                <option value="" selected="" disabled>Select Main Categorys</option>
+                                                @foreach ($data as $item)
+                                                <option value=" {{ $item->id }} " > {{ $item->category_name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div><!--col-6 Ended here-->
+
+
+                                <div class="col-md-12"><!--col-6 stared here-->
+                                    <div class="form-group">
                                         <h5>Machine Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <input type="text" name="machine_name"  class="form-control"  required="" aria-invalid="false"> </div>
