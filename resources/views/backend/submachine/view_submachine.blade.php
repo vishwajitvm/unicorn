@@ -42,6 +42,7 @@
                       <thead>
                           <tr>
                               <th width="5%">SL</th>
+                              <th>Main Category </th>
                               <th>Main Machine Name</th>
                               <th>Sub Machine Name</th>
                               <th>Sub Machine Price</th>
@@ -50,7 +51,6 @@
                               <th> Sub Machine Video </th>
                               <th> Sub Machine Brochure </th>
                               <th> Sub Machine Status </th>
-
                               <th width="15%">Action</th>
                           </tr>
                       </thead>
@@ -58,6 +58,13 @@
                         @foreach ($SubMachineData as $key => $submachine)
                           <tr>
                               <td> {{$key+1}} </td>
+                              <td>
+                                @php
+                                    $nd = $submachine->main_category_id ;
+                                    $main_cat_data = DB::table('main_categories')->where('id', $nd)->first() ;
+                                    echo ucfirst($main_cat_data->category_name) ;
+                                @endphp
+                              </td>
                               <td> {{$submachine->main_machine_name}} </td>
                               <td> {{$submachine->sub_machine_name}} </td>
                               <td>  {{$submachine->sub_machine_price}} </td>

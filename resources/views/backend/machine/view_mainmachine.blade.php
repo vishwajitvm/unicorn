@@ -44,7 +44,7 @@
                                 @php
                                     $nd = $mainmachine->main_cat_id ;
                                     $main_cat_data = DB::table('main_categories')->where('id', $nd)->first() ;
-                                    echo $main_cat_data->category_name ;
+                                    echo ucfirst($main_cat_data->category_name) ;
                                 @endphp
                               </td>
                               <td> {{$mainmachine->machine_name}} </td>
@@ -61,7 +61,6 @@
                                 <a class="btn btn-info" href=" {{Route('mainmachine.edit',$mainmachine->id)}} ">Edit</a>
                                 &nbsp;&nbsp;
                                 <a class="btn btn-danger" href=" {{Route('mainmachine.delete',$mainmachine->id)}}" id="delete">Delete</a>
-
                               </td>
                           </tr>
                         @endforeach

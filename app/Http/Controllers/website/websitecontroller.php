@@ -24,6 +24,12 @@ use PHPUnit\Framework\Constraint\IsTrue;
 
 class websitecontroller extends Controller
 {
+    //mainmachine selected data using main catagory data 
+    public function mainmachinelistData($id) {
+        $data = mainmachine::all()->where('main_cat_id' , $id) ;
+        return view('website.mainmachine' , compact(['data'])) ;
+    }
+
     //mainmachinelist
     public function mainmachinelist() {
         $data = mainmachine::latest()->get() ;

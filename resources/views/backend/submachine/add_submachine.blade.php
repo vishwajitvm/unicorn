@@ -28,7 +28,22 @@
                             <div class="row">
                                 <div class="col-md-12"><!--col-6 stared here-->
                                     <div class="form-group">
-                                        <h5>Select main Machine<span class="text-danger">*</span></h5>
+                                        <h5>Select Main Category <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <select name="main_category_id" id="main_category_id" required  class="form-control">
+                                                <option value="" selected="" disabled>Select Main Category</option>
+                                                @foreach ($main_cat_data as $row)
+                                                    <option value=" {{$row->id}} "> {{$row->category_name}} </option>
+                                                @endforeach
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div><!--col-6 Ended here-->
+
+                                <div class="col-md-12"><!--col-6 stared here-->
+                                    <div class="form-group">
+                                        <h5>Select main Machine <span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <select name="main_machine_name" id="main_machine_name" required  class="form-control">
                                                 <option value="" selected="" disabled>Select Main Machine</option>
@@ -46,7 +61,7 @@
                             <div class="row">
                                 <div class="col-md-12"><!--col-6 stared here-->
                                     <div class="form-group">
-                                        <h5>Sub-Machine Name<span class="text-danger">*</span></h5>
+                                        <h5>Sub-Machine Name <span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <input type="text" name="sub_machine_name"  class="form-control"  required="" aria-invalid="false"> 
                                         </div>
@@ -57,7 +72,7 @@
                                     <div class="form-group">
                                         <h5>Sub-Machine Price<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" name="sub_machine_price"  class="form-control"  required="" aria-invalid="false"> 
+                                            <input type="text" name="sub_machine_price"  class="form-control"  aria-invalid="false"> 
                                         </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
@@ -128,7 +143,7 @@
                                     <div class="form-group">
                                         <h5>Sub Machine Status <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <select name="sub_machine_status" id="sub_machine_status" required  class="form-control">
+                                            <select name="sub_machine_status" id="sub_machine_status"   class="form-control">
                                                 <option value="" selected="" disabled>Select Sub Machine Status</option>
                                                 <option value="active">Active</option>
                                                 <option value="inactive">Inactive</option>
@@ -195,16 +210,20 @@
 
 
 
-<script type="text/javascript">
-	// $(document).ready(function(){
-	// 	$('#machine_image').change(function(e){
-	// 		var reader = new FileReader();
-	// 		reader.onload = function(e){
-	// 			$('#showImage').attr('src',e.target.result);
-	// 		}
-	// 		reader.readAsDataURL(e.target.files['0']);
-	// 	});
-	// });
+<script>
+    $(document).ready(function() {
+        $("#main_category_id").change(function() {
+            let catData = $(this).val() ;
+            jQuery.ajax({
+                url: '/ajax-get-main-machine',
+                type: 'post',
+                data: 'catData='+catData+'&_token={{ csrf_token() }}',
+                success: function(result){
+                    jQuery('#main_machine_name').html(result) ;
+                }
+            })
+        })
+    })
 </script>
 
 @endsection

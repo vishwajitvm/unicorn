@@ -73,7 +73,8 @@ Route::get('redirects' , [AdminController::class , 'loginRedirects'])->middlewar
 //website first page load here
 Route::get('/', function () {
     // return view('auth.login');
-    $data = mainmachine::all()->take(8) ;
+    // $data = mainmachine::all()->take(8) ;
+    $data = main_category::all()->take(8) ;
     return view('website.index' , compact(['data'])) ;
 });
 
@@ -241,6 +242,14 @@ Route::prefix('/submachine')->group(function(){
     Route::get('/delete/{id}' , [subMachineController::class , 'submachineDelete'])->name('submachine.delete') ;  
 
 }) ;
+
+//
+//AJAX REQUESTS// ajax-get-main-machine
+//
+Route::post('/ajax-get-main-machine' , [subMachineController::class , 'AJAXGETMAINMACHINEDATA'])->name('ajax-get-main-machine') ; 
+
+//
+
 
 //manage buyer details
 Route::prefix('/buyerdetails')->group(function(){
@@ -481,6 +490,9 @@ Route::prefix('myproduct')->group( function() {
 //********************************************************* *//
 //main machine list
 Route::get('mainmachine' , [websitecontroller::class , 'mainmachinelist'])->name('mainmachine') ;
+
+Route::get('main-machine/{id}' , [websitecontroller::class , 'mainmachinelistData'])->name('main-machine') ;
+
 
 //submachine
 Route::get('submachine/{id}' , [websitecontroller::class , 'submachinelist'])->name('submachine') ;

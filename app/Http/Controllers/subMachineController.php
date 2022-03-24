@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\mainmachine;
 use App\Models\submachine ; 
+use App\Models\main_category ;
 use Symfony\Component\HttpFoundation\Session\Session ;
 
 class subMachineController extends Controller
@@ -13,12 +14,24 @@ class subMachineController extends Controller
     public function submachineAdd() {  //getting view
         $sel_maimachine = new mainmachine() ;
         $selectData = mainmachine::all() ;
-        return view('backend.submachine.add_submachine' , ['selectData'=>$selectData]) ;
+        $main_cat_data = main_category::all() ;
+        return view('backend.submachine.add_submachine' , ['selectData'=>$selectData] , compact(['main_cat_data'])) ;
+    }
+
+    //AJAX REQUEST TO GET THE MAIN MACHINE DATA
+    public function AJAXGETMAINMACHINEDATA(Request $request) {
+        $catData = $request->post('catData') ;  //patient name
+        $data = mainmachine::all()->where('main_cat_id' , $catData) ;
+        foreach ($data as $key=>$mainmachinedata) {
+            $html = '<option value="'. $mainmachinedata->machine_name .'" > '. $mainmachinedata->machine_name .' </option>' ;
+            echo $html;
+        }
     }
 
     public function submachineStore(Request $request ) { 
         // dd($request->all()) ;
         $dataDB = new submachine() ;
+        $dataDB->main_category_id = $request->main_category_id ;
         $dataDB->main_machine_name = $request->main_machine_name ;
         $dataDB->sub_machine_name = $request->sub_machine_name ;
         $dataDB->sub_machine_price = $request->sub_machine_price ;
@@ -104,6 +117,7 @@ class subMachineController extends Controller
     //update submachine data
     public function submachineUpdate(Request $request , $id) {
         $editsubmachineData = submachine::find($id) ;
+        $editsubmachineData->main_category_id = $request->main_category_id ;
         $editsubmachineData->main_machine_name = $request->main_machine_name ;
         $editsubmachineData->sub_machine_name = $request->sub_machine_name ;
         $editsubmachineData->sub_machine_price = $request->sub_machine_price ;

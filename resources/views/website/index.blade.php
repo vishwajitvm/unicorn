@@ -205,23 +205,35 @@
                         <div class="container">
                             <div class="main_title">
                                 <h2>Unicorn Equipment</h2>
-                                <h3 class="title_back_heading">Our Products</h3>
+                                <h3 class="title_back_heading">Unicorn Equipment</h3>
                                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
                                 <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
-                                <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis cupiditate fuga doloremque necessitatibus beatae <br>architecto modi velit, nisi expedita, similique molestiae perspiciatis ut dolor minima suscipit illum aut, fugiat
+                                {{-- <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis cupiditate fuga doloremque necessitatibus beatae <br>architecto modi velit, nisi expedita, similique molestiae perspiciatis ut dolor minima suscipit illum aut, fugiat
                                     exercitationem.
-                                </p>
+                                </p> --}}
                             </div>
                             <div class="row firstcategorysection">
                                                                 
                                 @foreach ($data as $item)
+                                @php
+                                    $imgData = explode('|' , $item->category_images)
+                                 @endphp
+                                <div class="col-md-3">
+                                    <div class="categoryimgbox"><img class="img-thumbnail" src=" {{ URL::to($imgData[0]) }}" alt=""></div>
+                                    <div class="category_titleheading">
+                                        <h3><a href="{{ route('main-machine',$item->id) }}"> {{ $item->category_name }} </a></h3>
+                                    </div>
+                                </div>
+                                @endforeach
+
+                                {{-- @foreach ($data as $item)
                                 <div class="col-md-3">
                                     <div class="categoryimgbox"><img class="img-thumbnail" src="{{ (!empty($item->machine_image))?url('upload/user_images/'.$item->machine_image):url('upload/no_image.jpg') }}" alt=""></div>
                                     <div class="category_titleheading">
                                         <h3><a href="{{ route('submachine',$item->id) }}"> {{ $item->machine_name }} </a></h3>
                                     </div>
                                 </div>
-                                @endforeach
+                                @endforeach --}}
 
                             </div>
             
