@@ -238,7 +238,7 @@
                             </div>
             
                             <div class="morecategory">
-                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Find More</a></button>
+                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
                             </div>
                         </div>
                     </section>
