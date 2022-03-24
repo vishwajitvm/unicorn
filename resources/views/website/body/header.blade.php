@@ -69,14 +69,14 @@
                                                         <div class="col-md-5 productslist">
                                                             <div class="productsss">
                                                                 <div class="productsdesc">
-                                                                    <img src="./images/trophy.png" alt="">
+                                                                    <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo necessitatibus quaerat facere laboriosam .</p>
                                                                 </div>
                                                             </div>
 
                                                             <div class="productsss">
                                                                 <div class="productsdescs">
-                                                                    <img src="./images/trophy.png" alt="">
+                                                                    <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo necessitatibus quaerat facere laboriosam .</p>
                                                                 </div>
                                                             </div>

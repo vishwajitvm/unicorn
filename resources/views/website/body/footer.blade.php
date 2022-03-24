@@ -10,7 +10,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <div class="footerlogo fw-bold mb-4  text-left">
-                        <img src="./images/yellow_logo.png" alt="">
+                        <img src="{{asset('frontend/images/yellow_logo.png')}}" alt="">
                     </div>
                     <p class="text-white text-left">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem in officia, iste eveniet soluta at perferendis, iusto deleniti aperiam, Molestias saepe.

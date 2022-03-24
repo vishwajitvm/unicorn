@@ -56,10 +56,10 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('users.add') }} "><i class="ti-more"></i>Add Users</a></li>
+            <li> <a href="{{ route('user.managerequest') }} "><i class="ti-more"></i> Pending Request </a> </li>
             <li><a href="{{route('user.view')}} "><i class="ti-more"></i>View All User</a></li>
             <li><a href="{{route('user.viewadmin')}} "><i class="ti-more"></i>View All Admin</a></li>
-            <li> <a href="{{ route('user.managerequest') }} "><i class="ti-more"></i> Pending Request </a> </li>
-            <li> <a href=" {{ Route('user.inactiveusers') }} "><i class="ti-more"></i> Inactive User </a> </li>
+            {{-- <li> <a href=" {{ Route('user.inactiveusers') }} "><i class="ti-more"></i> Inactive User </a> </li> --}}
 
           </ul>
         </li> 

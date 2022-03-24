@@ -288,25 +288,25 @@
                                 <div class="row wrapperssectionmargin">
                                     <div class="col-md-3 d-flex justify-content-center">
                                         <div class="imagebox">
-                                            <img src="./images/trophy.png" alt="">
+                                            <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                             <h4 class="uspheading">15<br><span>Awards</span></h4>
                                         </div>
                                     </div>
                                     <div class="col-md-3 d-flex justify-content-center">
                                         <div class="imagebox">
-                                            <img src="./images/trophy.png" alt="">
+                                            <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                             <h4 class="uspheading">1024<br><span>Happy Clients</span></h4>
                                         </div>
                                     </div>
                                     <div class="col-md-3 d-flex justify-content-center">
                                         <div class="imagebox">
-                                            <img src="./images/trophy.png" alt="">
+                                            <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                             <h4 class="uspheading">1500<br><span>Projects</span></h4>
                                         </div>
                                     </div>
                                     <div class="col-md-3 d-flex justify-content-center">
                                         <div class="imagebox">
-                                            <img src="./images/trophy.png" alt="">
+                                            <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                             <h4 class="uspheading">99<br><span>Up Time</span></h4>
                                         </div>
                                     </div>
@@ -408,7 +408,7 @@
             
                             <div class="row rowmargin">
                                 <div class="lineimage ">
-                                    <img src="./images/line.png" alt="">
+                                    <img src="{{asset('frontend/images/line.png')}}" alt="">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="imageee">
@@ -511,13 +511,13 @@
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner text-center">
                                 <div class="carousel-item active">
-                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/2UUwW5RMGZ8/AIzaSyD7Qwxbq9r2-SxNnq1VDlO_JzHF2mMlcIQ"></iframe>
                                 </div>
                                 <div class="carousel-item">
-                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/2UUwW5RMGZ8/AIzaSyD7Qwxbq9r2-SxNnq1VDlO_JzHF2mMlcIQ"></iframe>
                                 </div>
                                 <div class="carousel-item">
-                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/2UUwW5RMGZ8/AIzaSyD7Qwxbq9r2-SxNnq1VDlO_JzHF2mMlcIQ"></iframe>
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
