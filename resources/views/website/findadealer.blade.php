@@ -36,8 +36,6 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Dealer company</th>
-                                            <th scope="col">Mobile Number</th>
-                                            <th scope="col">Address</th>
                                             <th scope="col">State</th>
                                             <th scope="col">Pin Code</th>
 
@@ -46,11 +44,9 @@
                                     <tbody>
                                         
                                         @foreach ($data as $key=>$item)
-                                        <tr>
+                                        <tr style="display: none" class="tbldata">
                                             <th scope="row">{{$key+1}}</th>
                                             <td> {{ $item->dealercompany_name }} </td>
-                                            <td> {{ $item->dealermobile!=null?$item->dealermobile:"N/A" }} </td>
-                                            <td> {{ $item->dealercomapany_address }} </td>
                                             <td> {{ $item->dealerstate }} </td>
                                             <td> {{ $item->dealerpincode }} </td>
                                         </tr>
@@ -77,8 +73,17 @@
                         }).hide();
                     });
                 </script>
-        
-        
+
+
+                <script>
+                        $('#search').keyup(function()
+                    {
+                        if(!$(this).val() ) {
+                            location.reload();
+                        }
+                    });
+
+                </script>
         
 
 
