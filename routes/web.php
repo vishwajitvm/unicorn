@@ -32,6 +32,7 @@ use App\Models\dealer;
 use Illuminate\Support\Facades\Artisan ;
 use App\Http\Controllers\ManageMainCategoryForMachineController ;
 use App\Models\main_category ;
+use Illuminate\Validation\Rules\Unique;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,14 +100,17 @@ function() {
     $userlimitrdData = User::orderBy('created_at' , 'desc')->where(['usertype'=>'user'  ] )->take(4)->get() ;
     $sellingData = assignproduct::all()->sum('assign_machin_quantitys') ;
     //returning chart data here
-    // $chartData = product::all() ; 
-    $chartData = product::all()->unique('product_sub_machine')  ; 
-
-
+    $chartData = assignproduct::all()  ; 
     $data = "" ;
     foreach($chartData as $val) {
-        $data.= "[ '".$val->product_sub_machine."' , $val->product_quantity ]," ;
+        $data.= "[ '".$val->assign_sub_machin_name."' , $val->assign_machin_quantitys     ]," ;
     }
+
+
+    // $data = "" ;
+    // foreach($chartData as $val) {
+    //     $data.= "[ '".$val->product_sub_machine."' , $val->product_quantity ]," ;
+    // }
     return view('admin.index' , compact(['userData' , 'mainmachineData' , 'submachineData' , 'requestData' , 'invoiceData' , 'sellingData' , 'userlimitrdData' , 'data' ]) ) ;
 }
 )->name('dashboard')->middleware('admin') ;
@@ -313,9 +317,6 @@ Route::prefix('/buyerdetails')->group(function(){
 
     //delete the performa invoice here  deleteperformainvoice
     Route::get('/deleteperformainvoice/{id}/' , [buyerdetailsController::class , 'buyerdetailsDeletePerformaInvoice'])->name('buyerdetails.deleteperformainvoice') ; 
-
-
-
 
 }) ;
 

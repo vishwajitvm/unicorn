@@ -100,11 +100,17 @@
 		  
         <li class="header nav-small-cap">EXTRA</li>		  
 
+        <li>
+          <a href="/">
+            <i data-feather="home"></i>
+		      	<span>Visit Website</span>
+          </a>
+        </li> 
 		  
-		<li>
+	   	  <li>
           <a href="{{Route('userdashboard.logout')}}">
             <i data-feather="lock"></i>
-			<span>Log Out</span>
+			      <span>Log Out</span>
           </a>
         </li> 
         

@@ -1,5 +1,8 @@
  <!-- Footer -->
  <footer class="text-center text-lg-start footerback text-muted">
+    @php
+    $foeterbardata = DB::table('main_categories')->get()
+@endphp
 
     <!-- Section: Links  -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -40,10 +43,10 @@
                         Products
                     </h6>
                     <p class=" text-left">
-                        <a href="#!" class="text-white mb-1">Concreet Cutter</a><br>
-                        <a href="#!" class="text-white">Ride a Roller</a><br>
-                        <a href="#!" class="text-white">Rider on Trowel</a><br>
-                        <a href="#!" class="text-white">Walk behing Roller</a>
+                        {{-- <a href="#!" class="text-white mb-1">Concreet Cutter</a><br> --}}
+                        @foreach ($foeterbardata as $footerdata)
+                        <a href="{{ route('main-machine',$footerdata->id) }}" class="text-white mb-1">{{ ucfirst($footerdata->category_name) }}</a><br>
+                        @endforeach
                     </p>
                 </div>
                 <!-- Grid column -->
