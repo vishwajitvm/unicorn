@@ -379,80 +379,7 @@
                     <div class="clearfix"></div>
             
             
-                    <!-- how does it works section start here -->
-                    <section class="sections categorysection">
-                        <div class="container">
-                            <div class="main_title">
-                                <h2>How does it works</h2>
-                                <h3 class="title_back_heading">The process</h3>
-                                <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-md-6 d-flex align-items-center">
-                                    <div class="contentttbox featuresicon">
-                                        <div class="countingg"><span>1</span></div>
-                                        <div class="headingcontentt">
-                                            <h3>Search For The Equipment You Need
-                                                <hr>
-                                            </h3 style="color: #feb902; width: 50%; height: 2px;">
-                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="imageee">
-                                        <img src="{{asset('frontend/images/laptop_image.png')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="row rowmargin">
-                                <div class="lineimage ">
-                                    <img src="{{asset('frontend/images/line.png')}}" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="imageee">
-                                        <img src="{{asset('frontend/images/laptop_image.png')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 d-flex align-items-center">
-                                    <div class="contentttbox featuresicon">
-                                        <div class="countingg"><span>2</span></div>
-                                        <div class="headingcontentt">
-                                            <h3>Search For The Equipment You Need
-                                                <hr>
-                                            </h3 style="color: #feb902; width: 50%; height: 2px;">
-                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="row">
-                                <div class="lineimage ">
-                                    <img src="{{asset('frontend/images/bottom-line.png')}}" alt="">
-                                </div>
-                                <div class="col-md-6 d-flex align-items-center">
-                                    <div class="contentttbox featuresicon">
-                                        <div class="countingg"><span>3</span></div>
-                                        <div class="headingcontentt">
-                                            <h3>Search For The Equipment You Need
-                                                <hr>
-                                            </h3 style="color: #feb902; width: 50%; height: 2px;">
-                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="imageee">
-                                        <img src="{{asset('frontend/images/laptop_image.png')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </section>
-                    <!-- how does it works section end here -->
+
             
             
                     <!-- News section start here-->
@@ -531,6 +458,81 @@
                         </div>
                     </section>
                     <!-- video section end here -->
+
+                                        <!-- how does it works section start here -->
+                    <section class="sections categorysection">
+                        <div class="container">
+                            <div class="main_title">
+                                <h2>How does it works</h2>
+                                <h3 class="title_back_heading">The process</h3>
+                                <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <div class="contentttbox featuresicon">
+                                        <div class="countingg"><span>1</span></div>
+                                        <div class="headingcontentt">
+                                            <h3>Search For The Equipment You Need
+                                                <hr>
+                                            </h3 style="color: #feb902; width: 50%; height: 2px;">
+                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="imageee">
+                                        <img src="{{asset('frontend/images/laptop_image.png')}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="row rowmargin">
+                                <div class="lineimage ">
+                                    <img src="{{asset('frontend/images/line.png')}}" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="imageee">
+                                        <img src="{{asset('frontend/images/laptop_image.png')}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <div class="contentttbox featuresicon">
+                                        <div class="countingg"><span>2</span></div>
+                                        <div class="headingcontentt">
+                                            <h3>Search For The Equipment You Need
+                                                <hr>
+                                            </h3 style="color: #feb902; width: 50%; height: 2px;">
+                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="row">
+                                <div class="lineimage ">
+                                    <img src="{{asset('frontend/images/bottom-line.png')}}" alt="">
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <div class="contentttbox featuresicon">
+                                        <div class="countingg"><span>3</span></div>
+                                        <div class="headingcontentt">
+                                            <h3>Search For The Equipment You Need
+                                                <hr>
+                                            </h3 style="color: #feb902; width: 50%; height: 2px;">
+                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="imageee">
+                                        <img src="{{asset('frontend/images/laptop_image.png')}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </section>
+                    <!-- how does it works section end here -->
 </div>
 
     <script>

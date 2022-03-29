@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="{{ empty($metakeywordname)?"No Data":$metakeywordname }}" content="{{ empty($metakeywordContent)?"No Data":$metakeywordContent }}"> <!--keywords-->
-    <meta name=" {{ empty($metaDescriptionName)?"No Data":$metaDescriptionName }} " content="{{ empty($metaDescriptionContent)?"No Data":$metaDescriptionContent }} " />  <!--mets descriptions-->
+    <meta name="{{ empty($metakeywordname)?"Unicorn Equipements":$metakeywordname }}" content="{{ empty($metakeywordContent)?"Unicorn Equipements":$metakeywordContent }}"> <!--keywords-->
+    <meta name=" {{ empty($metaDescriptionName)?"Unicorn Equipements":$metaDescriptionName }} " content="{{ empty($metaDescriptionContent)?"Unicorn Equipements":$metaDescriptionContent }} " />  <!--mets descriptions-->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
