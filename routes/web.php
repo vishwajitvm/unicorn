@@ -100,6 +100,7 @@ function() {
     $userlimitrdData = User::orderBy('created_at' , 'desc')->where(['usertype'=>'user'  ] )->take(4)->get() ;
     $sellingData = assignproduct::all()->sum('assign_machin_quantitys') ;
     //returning chart data here
+    
     $chartData = assignproduct::all()  ; 
     $data = "" ;
     foreach($chartData as $val) {

@@ -34,7 +34,6 @@
                                               @foreach ($userData as $row)
                                                   <option value=" {{$row->name}} "> {{$row->name}} </option>
                                               @endforeach
-
                                           </select>
                                       </div>
                                   </div>
@@ -63,9 +62,6 @@
                                             <option value="" selected="" disabled>Select Sub Machine</option>
                                             @foreach ($subMachineData as $row2)
                                                 <option  value=" {{$row2->sub_machine_name}} "> {{$row2->sub_machine_name}} </option>
-
-                                                
-
                                             @endforeach
                                         </select>
                                     </div>
@@ -137,7 +133,7 @@
                             <div class="form-group">
                                 <h5>Tracking Number </h5>
                                 <div class="controls">
-                                    <input type="text" name="trackingnumber"  class="form-control"   aria-invalid="false"> 
+                                    <input type="text" name="trackingnumber"  class="form-control" aria-invalid="false"> 
                                 </div>
                             </div>
                         </div><!--col-6 Ended here-->
@@ -149,7 +145,6 @@
                                         <div class="col-md-12">
                                             <h5>Choose Images of Machine </h5>
                                             <div class="custom-file">
-                                                {{-- <input type="file" multiple name="machine_image"   id="machine_image"> --}}
                                                 <input type="file" name="assign_images[]" multiple accept="image/png, image/jpeg" onchange="preview()" class="form-control subMachineImage" id="file-input" >
                                                 <p id="num-of-files">No Files Chosen</p>
                                                 <!--image display here-->

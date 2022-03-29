@@ -5,29 +5,11 @@
  <div class="content-wrapper">
     <div class="container-full">
       <!-- Content Header (Page header) -->
-      <div class="content-header">
-          <div class="d-flex align-items-center">
-              <div class="mr-auto">
-                  <h3 class="page-title">View Assigned Products</h3>
-                  <div class="d-inline-block align-items-center">
-                      <nav>
-                          <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-                              <li class="breadcrumb-item" aria-current="page">Tables</li>
-                              <li class="breadcrumb-item active" aria-current="page">View All Assigned List</li>
-                          </ol>
-                      </nav>
-                  </div>
-              </div>
-          </div>
-      </div>
 
       <!-- Main content -->
       <section class="content">
         <div class="row">
             
- 
-
           <div class="col-12">
 
            <div class="box">
@@ -131,7 +113,6 @@
                                   <video width="200" height="200" controls>
                                       <source src="{{ URL::to($item) }}" type="video/mp4">
                                       <source src="{{ URL::to($item) }}" type="video/ogg">
-                                      Your browser does not support HTML video.
                                     </video>
                               @endforeach
                             </td>
@@ -150,23 +131,12 @@
 
                       </tbody>
 
-                      {{-- <tfoot>
-                          <tr>
-                              <th>SL</th>
-                              <th>Role</th>
-                              <th>Name</th>
-                              <th>Email</th>
-                              <th>Action</th>
-                          </tr>
-                      </tfoot> --}}
-
                     </table>
                   </div>
               </div>
               <!-- /.box-body -->
             </div>
             <!-- /.box -->
-
             
             <!-- /.box -->          
           </div>
@@ -178,6 +148,6 @@
     
     </div>
 </div>
-<!-- /.content-wrapper -->
+
 
 @endsection
