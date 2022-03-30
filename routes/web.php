@@ -508,6 +508,10 @@ Route::get('findealer' , [websitecontroller::class , 'findADealer'])->name('find
 //about us page here aboutus
 Route::get('aboutus' , [websitecontroller::class , 'AboutUs'])->name('aboutus') ;
 
+//Parts and services parts-&-services
+Route::get('parts-&-services' , [websitecontroller::class , 'PartAndServices'])->name('parts-&-services') ;
+
+
 //contact us page contact-us
 Route::get('contact-us' , [websitecontroller::class , 'ContactUs'])->name('contact-us') ;
 

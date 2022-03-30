@@ -33,55 +33,12 @@
                             <h4>Approx Price: <span>Rs {{ $data->sub_machine_price }}</span> / Piece</h4>
                             <a href="#" class="ml-5">Get Latest Price</a>
                         </div>
-                        {{-- <div class="tabledata mt-5">
-                            <table>
-                                <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                    <th>Country</th>
-                                </tr>
-                                <tr>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                </tr>
-                                <tr>
-                                    <td>Centro comercial Moctezuma</td>
-                                    <td>Francisco Chang</td>
-                                    <td>Mexico</td>
-                                </tr>
-                                <tr>
-                                    <td>Ernst Handel</td>
-                                    <td>Roland Mendel</td>
-                                    <td>Austria</td>
-                                </tr>
-                                <tr>
-                                    <td>Island Trading</td>
-                                    <td>Helen Bennett</td>
-                                    <td>UK</td>
-                                </tr>
-                                <tr>
-                                    <td>Laughing Bacchus Winecellars</td>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                </tr>
-                                <tr>
-                                    <td>Magazzini Alimentari Riuniti</td>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="submachinedescription  mt-5 mb-5">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat esse ut, quas ipsum quo magnam? Fugiat excepturi ut alias officia laudantium reiciendis, quisquam laborum non distinctio voluptates inventore sunt rem.
-                            </p>
 
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum labore, maiores dolor repudiandae nemo. Ipsa dolores, voluptatum impedit distinctio repudiandae, exercitationem corrupti repellendus atque sapiente
-                                expedita error dolore reprehenderit.</p>
-                        </div> --}}
 
                         {!! $data->sub_machine_description !!}
                         <a class="custombutton intrestedbtn mt-5 ml-0" href="#">Yes I am Intrested</a>
+                        <a class="custombutton intrestedbtn mt-5 ml-0" target="_blank" href="{{ URL::to($data->sub_machine_brochure) }}">Download Brocher</a>
+
                     </div>
                     <div class="col-md-5 mt-5">
                         <div id="photo-view-container">
@@ -89,22 +46,17 @@
                             <div id="commentary"></div>
                             <div id="photo-container-holder">
                                 <div id="photo-container" style="margin-left:0;">
-                                    {{-- <div class="photo-holder"><img src="./style/image/main_banner_1.jpg" onclick=viewPhoto(this) class="photo-item" alt="Lorem"></div> --}}
                                     <!--exp zone-->
                                     @php
                                         $imgData = explode('|' , $data->sub_machine_image)
                                     @endphp
                                     @foreach ($imgData as $item)
-                                        {{-- <img src="  " class="all studio isotope-item" style="width: 300px ; height: 300px ; margin:10px ; object-fit: cover; border:5px solid white ; "  alt=""> --}}
                                         <div class="photo-holder"><img src="{{ URL::to($item) }}" onclick=viewPhoto(this) class="photo-item" alt="{{$data->sub_machine_name!=null?$data->sub_machine_name:''}}" style=" object-fit:contain; border:5px solid white ; "></div>
 
                                     @endforeach
                                     <!--exp zone end-->
-                                    <!-- <div class="photo-holder"><img src="https://webdesign-assistant.com/images/dummy/photo3.jpg" onclick=viewPhoto(this) class="photo-item" alt="Lorem"></div> -->
                                 </div>
                             </div>
-                            <!-- <img id="left" src="https://webdesign-assistant.com/images/dummy/left.png" onclick=leftRight(this) alt="">
-                            <img id="right" src="https://webdesign-assistant.com/images/dummy/right.png" onclick=leftRight(this) alt=""> -->
                         </div>
                     </div>
                 </div>

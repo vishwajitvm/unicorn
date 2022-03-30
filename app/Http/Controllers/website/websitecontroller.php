@@ -87,4 +87,10 @@ class websitecontroller extends Controller
         }
     }
 
+    //Part and services
+    public function PartAndServices() {
+        return view('website.part_and_services' ) ;
+
+    }
+
 }

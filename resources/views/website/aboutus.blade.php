@@ -49,7 +49,7 @@
                 <h2 class="text-center mb-5">Our Founders</h2>
                 <div class="col-md-3">
                     <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/avatar-1.png')}}" alt="">
+                        <img src="{{asset('frontend/images/te1.jpg')}}" alt="">
                         <h3 class="mb-2 mt-3">Vishwa</h3>
                         <div class="mb-2 mt-1">Developer</div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/avatar-3.png')}}" alt="">
+                        <img src="{{asset('frontend/images/te2.jpg')}}" alt="">
                         <h3 class="mb-2 mt-3">Sonali</h3>
                         <div class="mb-2 mt-1">Developer</div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/avatar-4.png')}}" alt="">
+                        <img src="{{asset('frontend/images/te1.jpg')}}" alt="">
                         <h3 class="mb-2 mt-3">Vishwa</h3>
                         <div class="mb-2 mt-1">Developer</div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/avatar-5.png')}}" alt="">
+                        <img src="{{asset('frontend/images/te2.jpg')}}" alt="">
                         <h3 class="mb-2 mt-3">Sonali</h3>
                         <div class="mb-2 mt-1">Developer</div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>

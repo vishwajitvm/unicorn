@@ -16,9 +16,7 @@
 <div class="containtdata">
                     <!--banner section start-->
                     <section class="main_banner">
-
                         <div id="wrap" class="container-fluid">
-
                             <!-- Carousel -->
                             <div id="carousel" class="carousel slide gallery" data-ride="carousel">
                                 <div class="carousel-inner">
@@ -38,7 +36,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" data-slide-number="1" data-toggle="lightbox" data-gallery="gallery" data-remote="frontend/style/image/main_banner_2.jpg">
+                                    <div class="carousel-item" data-slide-number="1" data-toggle="lightbox" data-gallery="gallery" data-remote="../style/image/main_banner_2.jpg">
                                         <div class="slideimage2">
                                             <div class="container">
                                                 <div class="row d-flex justify-content-center">
@@ -162,9 +160,14 @@
                                 <div class="col-md-6 borderright">
                                     <div class="headingcontent">
                                         <h2 class="headinggcontent">Log In</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium a veritatis aperiam ipsam sapiente consequatur dicta autem soluta rem.</p>
+                                        <p>
+                                            <ol type="a">
+                                                <li>Create an Account at Unicorn Equipment</li>
+                                                <li> Sign in to explore the Unicorn Equipments </li>
+                                                <li> Request the Unicorn Equipement Uisng your pannel </li>
+                                            </ol>
+                                        </p>
             
-                                        <p>Officiis vitae deserunt eum ipsum nesciunt repellendus quas animi! Tempora, praesentium.</p>
                                         <span><b>Ready to create your account?</b> <a href=" {{route('register')}} ">Get Started</a></span>
                                     </div>
             
@@ -206,7 +209,7 @@
                             <div class="main_title">
                                 <h2>Unicorn Equipment</h2>
                                 <h3 class="title_back_heading">Unicorn Equipment</h3>
-                                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <h4>Build Your Way Better</h4>
                                 <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
                                 {{-- <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis cupiditate fuga doloremque necessitatibus beatae <br>architecto modi velit, nisi expedita, similique molestiae perspiciatis ut dolor minima suscipit illum aut, fugiat
                                     exercitationem.
@@ -214,7 +217,7 @@
                             </div>
                             <div class="row firstcategorysection">
                                                                 
-                                @foreach ($data as $item)
+                                {{-- @foreach ($data as $item)
                                 @php
                                     $imgData = explode('|' , $item->category_images)
                                  @endphp
@@ -224,17 +227,36 @@
                                         <h3><a href="{{ route('main-machine',$item->id) }}"> {{ $item->category_name }} </a></h3>
                                     </div>
                                 </div>
-                                @endforeach
-
-                                {{-- @foreach ($data as $item)
-                                <div class="col-md-3">
-                                    <div class="categoryimgbox"><img class="img-thumbnail" src="{{ (!empty($item->machine_image))?url('upload/user_images/'.$item->machine_image):url('upload/no_image.jpg') }}" alt=""></div>
-                                    <div class="category_titleheading">
-                                        <h3><a href="{{ route('submachine',$item->id) }}"> {{ $item->machine_name }} </a></h3>
-                                    </div>
-                                </div>
                                 @endforeach --}}
 
+                                @foreach ($data as $key=>$item)
+                                @php
+                                    $imgData = explode('|' , $item->category_images)
+                                 @endphp
+                                    <div class="col-md-3">
+                                        <div class="categoryimgbox">
+                                            <!-- <img class="img-thumbnail" src="./images/walk-behind-roller.png" alt=""> -->
+                                            <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src=" {{ URL::to($imgData[0]) }}" class="d-block w-100" alt="">                                                   
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img src=" {{ URL::to($imgData[1]) }}" class="d-block w-100" alt="">                                                   
+                                                    </div>
+                                                    <div class="carousel-item ">
+                                                        <img src=" {{ URL::to($imgData[2]) }}" class="d-block w-100" alt="">                                                   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="category_titleheading">
+                                            <h3><a href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a></h3>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                
                             </div>
             
                             <div class="morecategory">
@@ -546,3 +568,4 @@
         }
         </script>
 @endsection
+
