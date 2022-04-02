@@ -1,7 +1,7 @@
  <!-- Footer -->
  <footer class="text-center text-lg-start footerback text-muted">
     @php
-    $foeterbardata = DB::table('main_categories')->get()
+    $foeterbardata = DB::table('main_categories')->take(5)->get()
 @endphp
 
     <!-- Section: Links  -->
@@ -16,7 +16,7 @@
                         <img src="{{asset('frontend/images/yellow_logo.png')}}" alt="">
                     </div>
                     <p class="text-white text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem in officia, iste eveniet soluta at perferendis, iusto deleniti aperiam, Molestias saepe.
+                        Unicorn Equipment is brand of well reputed vendor of Indian Forces since 1986. Unicorn Equipment is a fully Indian company with long experience of machine assembling point in India. Product development and assembly takes place at our facility in Delhi. 
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -30,7 +30,7 @@
                     <p class="text-left">
                         <a href="/" class=" text-white">Home</a><br>
                         <a href="{{route('aboutus')}}" class=" text-white">About Us</a><br>
-                        <a href="#!" class=" text-white">Parts and Services</a><br>
+                        <a href="{{route('services')}}" class=" text-white"> Services</a><br>
                         <a href="{{route('contact-us')}}" class=" text-white">Contact Us</a>
                     </p>
                 </div>

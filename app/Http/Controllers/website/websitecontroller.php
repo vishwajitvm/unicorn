@@ -21,6 +21,7 @@ use Illuminate\Auth\Events\Failed;
 use phpDocumentor\Reflection\Types\Null_;
 use PHPUnit\Framework\Constraint\IsTrue;
 use App\Models\service_request ;
+use Illuminate\Support\Facades\Mail ;
 
 class websitecontroller extends Controller
 {
@@ -150,6 +151,15 @@ class websitecontroller extends Controller
         }//multi Invoices upload end here
         $data->service_checkbox_policy	= $request->service_checkbox_policy	;
         $data->save() ;
+        //mail start
+        $datamail = ['data'=>"You have recived a new request For Service" , 'name'=> $request->service_username , 'phonenumber'=>$request->service_phonenumber , 'Address'=>$request->service_address ] ;
+        $user['to']='memebazzzar@gmail.com' ;
+
+        Mail::send('mails.NewServiceRequestMail', $datamail, function ($messages) use ($user) {
+            $messages->to($user['to']) ;
+            $messages->subject("UNICORN EQUIPMENT SERVICE REQUEST") ;
+        });
+        //mail end
         $notification = array(
             'message' => 'Your Request For Services is Send Successfully',
             'alert-type' => 'success',

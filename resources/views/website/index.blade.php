@@ -241,12 +241,11 @@
                                                     <div class="carousel-item active">
                                                         <img src=" {{ URL::to($imgData[0]) }}" class="d-block w-100" alt="">                                                   
                                                     </div>
+                                                    @for ($i = 1; $i < count($imgData); $i++)
                                                     <div class="carousel-item ">
-                                                        <img src=" {{ URL::to($imgData[1]) }}" class="d-block w-100" alt="">                                                   
+                                                        <img src=" {{ URL::to($imgData[$i]) }}" class="d-block w-100" alt="">                                                   
                                                     </div>
-                                                    <div class="carousel-item ">
-                                                        <img src=" {{ URL::to($imgData[2]) }}" class="d-block w-100" alt="">                                                   
-                                                    </div>
+                                                    @endfor
                                                 </div>
                                             </div>
                                         </div>
