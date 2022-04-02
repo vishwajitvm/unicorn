@@ -42,14 +42,24 @@
                               <td>  {{$row->service_phonenumber}} </td>
                               <td> {{ $row->service_address }} </td>
                               
-                              <td>  <!--mutli imag starded here-->
+                              <td class="imageclick">  <!--mutli imag starded here-->
                                   @php
                                       $imgData = explode('|' , $row->service_photos)
                                   @endphp
                                   @foreach ($imgData as $item)
-                                      <img src=" {{ URL::to($item) }}" style="width: 80px ; height:80px ; margin:2px" class="imageclick"  alt="">
+                                      <img src=" {{ URL::to($item) }}" style="width: 200px ; height:200px ; margin:2px"   alt="">
                                   @endforeach
                               </td>  
+
+                              {{-- <style>
+                                .imageclick img:hover {
+                                  /* resize: both !important;
+                                  overflow: auto !important; */
+                                  width: 400px !important ;
+                                  height: 400px !important ;
+                                  object-fit: cover !important ;
+                                }
+                              </style> --}}
                               <!--multiple image end here-->
 
                               <td> <!--video started here-->

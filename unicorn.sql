@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Mar 19, 2022 at 05:49 AM
--- Server version: 10.5.12-MariaDB-cll-lve
--- PHP Version: 7.2.34
+-- Host: 127.0.0.1
+-- Generation Time: Apr 02, 2022 at 09:58 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u305645215_unicornequip`
+-- Database: `unicorn`
 --
 
 -- --------------------------------------------------------
@@ -39,9 +39,22 @@ CREATE TABLE `assignproducts` (
   `logisticpartner` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `logisticpartner_link` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `trackingnumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assign_images` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assign_videos` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `assignproducts`
+--
+
+INSERT INTO `assignproducts` (`id`, `username`, `assign_mainmachin_name`, `assign_sub_machin_name`, `assign_machin_quantitys`, `serial_number`, `warranty_from`, `warranty_to`, `logisticpartner`, `logisticpartner_link`, `trackingnumber`, `assign_images`, `assign_videos`, `created_at`, `updated_at`) VALUES
+(2, 'rohit', 'bar bending machine', 'Mild Steel Bar Bending Machine', '1', 'rtyhethethrj', '2022-03-24', '2023-04-24', 'fuf6w565w6h56y35', NULL, '56y365y56', 'upload/assign_product/cb57cdb7cc459dc6fbbc33f91485b5e2.jpg|upload/assign_product/d5a28f81834b6df2b6db6d3e5e2635c7.jpg|upload/assign_product/cd19a3a0867f69f400961b5dd502fbc6.jpg', 'upload/assign_product/2281f5c898351dbc6dace2ba201e7948.mp4', '2022-03-24 06:15:06', '2022-03-24 06:15:06'),
+(3, 'rohit', 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '1', 'rtyhetheth', '2022-03-24', '2022-03-30', 'fuf6w565w6h56y35dfbdbdf', NULL, 'dbdbdbdbb4d5fb54d5f4b', 'upload/assign_product/676b58765ad419a5b7af6a959d4de341.jpg|upload/assign_product/ab1a4d0dd4d48a2ba1077c4494791306.jpg', 'upload/assign_product/7a1d9028a78f418cb8f01909a348d9b2.mp4', '2022-03-24 06:17:31', '2022-03-24 06:17:31'),
+(4, 'test12', 'Stirrup Bending Machine', 'Digital Stirrup Bending Machine', '1', 'rtyhethethrj', '2022-03-24', '2022-04-05', 'fgbfgbfgbfg4b4fgb54f45b4f54b5gf4', 'fg5bf5g4b54gf54b', 'gfb5gfb5f45gb', 'upload/assign_product/75da5036f659fe64b53f3d9b39412967.jpg|upload/assign_product/24f2f931f12a4d9149876a5bef93e96a.jpg', 'upload/assign_product/291d43c696d8c3704cdbe0a72ade5f6c.mp4', '2022-03-24 06:20:11', '2022-03-24 06:20:11'),
+(5, 'yash', 'Stirrup Bending Machine', 'Digital Stirrup Bending Machine', '1', 'v5fd1v5fd1vfd1v1fdv1f1vfvfdf2v', '2022-03-24', '2022-07-29', 'gtrgtrgtrgtrgtrgtgg', 'gtrgtrgtr', 'gtrgtrgtrgtgtg5t5g5tgtr', 'upload/assign_product/3f24bb08a5741e4197af64e1f93a5029.jpg|upload/assign_product/2172fde49301047270b2897085e4319d.jpg', 'upload/assign_product/c255c05246a081654a0267cbb725f5a7.mp4', '2022-03-24 07:18:09', '2022-03-24 07:18:09'),
+(6, 'rohit', 'bar bending machine', 'Mild Steel Bar Bending Machine', '1', 'rtyhetheth', '2022-03-25', '2022-04-02', 'fuf6w565w6h56y35', 'fg5bf5g4b54gf54b', 'ythythulluil', 'upload/assign_product/27934a1f19d678a1377c257b9a780e80.jpg|upload/assign_product/12fb63ba1566cb03484e1e5e290a73f4.jpg', NULL, '2022-03-25 00:06:58', '2022-03-25 00:06:58');
 
 -- --------------------------------------------------------
 
@@ -144,6 +157,7 @@ CREATE TABLE `invoices` (
 
 CREATE TABLE `mainmachines` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `main_cat_id` int(255) DEFAULT NULL,
   `machine_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `machine_price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `machine_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -157,8 +171,35 @@ CREATE TABLE `mainmachines` (
 -- Dumping data for table `mainmachines`
 --
 
-INSERT INTO `mainmachines` (`id`, `machine_name`, `machine_price`, `machine_description`, `machine_image`, `machine_status`, `created_at`, `updated_at`) VALUES
-(1, 'Concrete Cutter Machine', '40000', 'Prominent & Leading Manufacturer from Delhi, we offer rcc concrete cutter machine, unicorn gasoline concrete cutter, concrete road cutting machine, 10 hp concrete cutter, groove cutting machine and road cutting machine.', '202202281144rcc-cutter-machine-500x500 (2).jpeg', 'active', '2022-02-28 11:44:23', '2022-02-28 11:44:23');
+INSERT INTO `mainmachines` (`id`, `main_cat_id`, `machine_name`, `machine_price`, `machine_description`, `machine_image`, `machine_status`, `created_at`, `updated_at`) VALUES
+(3, 5, 'bar bending machine', '10000', 'How does a bar bending machine work?\r\nBar bending machine is consist of electric motor, coupling, circular plate, worm gear drive, extended shaft. Electric motor transmits power to gear box where speed is decreased and torque is increased. Which is used to bend bar with the help of circular plate. Bend at any required angle for bar having dia.', '202203221151IMG-20200101-WA0053.jpg', 'active', '2022-03-22 06:21:46', '2022-03-22 06:21:46'),
+(4, 5, 'Stirrup Bending Machine', '54542121', 'Computerized control automatic stirrup bending machine comes with high intelligent integration control and feeding. It is used to scale, straightening, bending, forming, cutting various process single one live, to direct production of various size specifications of the stirrup. High power feeding motor ensures bending bar accuracy hence it meets the required accuracy of stirrups. Automatic double wire intake system increases productivity efficiency 2 times.', '202203221209IMG-20191014-WA0093.jpg', 'active', '2022-03-22 06:39:44', '2022-03-22 06:39:44'),
+(5, 6, 'Mild Steel Power Floater Machine', '54542121', 'Providing you the best range of concrete power trowel machine, power trowel and 5hp power trowel with effective & timely delivery', '202203221213IMG-20200102-WA0000.jpg', 'active', '2022-03-22 06:43:55', '2022-03-22 06:49:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `main_categories`
+--
+
+CREATE TABLE `main_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `category_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category_images` varchar(4000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category_status` enum('active','inactive') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category_empty` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `main_categories`
+--
+
+INSERT INTO `main_categories` (`id`, `category_name`, `category_description`, `category_images`, `category_status`, `category_empty`, `created_at`, `updated_at`) VALUES
+(5, 'Rebar Processing', 'Rebaring is the method of insertion of the Steel bars when,\r\nthere is change in design or there is some extension of the present structure.\r\nWhen Steel rod as per drawing has not been installed.\r\n\r\nRebaring technique is reinforced concrete construction is a method for proper fabrication and placement of reinforcement bar as per the design and drawing of RCC work.', 'upload/categories_data/e2c4c0b38669387a2a842e1fe391d233.jpg|upload/categories_data/d47619b92cebc6ebfa07969ab5370ae6.jpg|upload/categories_data/adf854f418fc96fb01ad92a2ed2fc35c.jpg|upload/categories_data/dcacff2565700c8f88f59cf4a16f9dfc.jpg|upload/categories_data/e55bc0255c752d1cb05da10c0f1f5026.jpg|upload/categories_data/a51fb975227d6640e4fe47854476d133.jpg|upload/categories_data/1fa6269f58898f0e809575c9a48747ef.jpg|upload/categories_data/46fc943ecd56441056a560ba37d0b9e8.jpg|upload/categories_data/022400dffec5b4477f760ca0e7449d73.jpg|upload/categories_data/300bedd5a8a0b2f1c4bf26d3cd69cc9b.jpg|upload/categories_data/110eec23201d80e40d0c4a48954e2ff5.jpg', 'active', NULL, '2022-03-22 05:44:22', '2022-03-22 05:44:22'),
+(6, 'flooring Equipment', 'Floor covering is a term to generically describe any finish material applied over a floor structure to provide a walking surface. Both terms are used interchangeably but floor covering refers more to loose-laid materials. Materials almost always classified as flooring include carpet, laminate, tile, and vinyl.\r\nhe floor under the flooring is called the subfloor, which provides the support for the flooring. Special purpose subfloors like floating floors, raised floors or sprung floors may be laid upon another underlying subfloor which provides the structural strength. Subfloors that are below grade (underground) or ground level floors in buildings without basements typically have a concrete subfloor. Subfloors above grade (above ground) typically have a plywood subfloor.', 'upload/categories_data/09779bb7930c8a0a44360e12b538ae3c.jpg|upload/categories_data/f0eaf559f89ca17022783964ebe9cdfd.jpg|upload/categories_data/0e1ebad68af7f0ae4830b7ac92bc3c6f.jpg|upload/categories_data/f93486bfff38ca69d76d85c089569a09.jpg|upload/categories_data/749b3dec12dee44c9594af615a9de86b.jpg|upload/categories_data/5c7a3b81a677c639c76989610183c0e0.jpg|upload/categories_data/044a23cadb567653eb51d4eb40acaa88.jpg|upload/categories_data/286674e3082feb7e5afb92777e48821f.jpg|upload/categories_data/473803f0f2ebd77d83ee60daaa61f381.jpg|upload/categories_data/5ffaa9f5182c2a36843f438bb1fdbdea.jpg|upload/categories_data/dce8af15f064d1accb98887a21029b08.jpg', 'active', NULL, '2022-03-22 05:45:41', '2022-03-22 06:00:35');
 
 -- --------------------------------------------------------
 
@@ -188,7 +229,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (18, '2021_10_27_065014_create_products_table', 6),
 (19, '2021_10_22_073718_create_invoices_table', 7),
 (20, '2021_10_30_073004_create_assignproducts_table', 8),
-(22, '2021_11_02_112033_create_insuranceclaims_table', 9);
+(22, '2021_11_02_112033_create_insuranceclaims_table', 9),
+(23, '2021_11_17_102844_create_proformas_table', 10),
+(24, '2022_03_22_095708_create_main_categories_table', 11),
+(25, '2022_04_01_072551_create_service_requests_table', 12);
 
 -- --------------------------------------------------------
 
@@ -253,8 +297,55 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `Product_username`, `product_email`, `user_phone_number`, `product_main_machine`, `product_sub_machine`, `product_quantity`, `phone_number`, `product_message`, `request_status`, `created_at`, `updated_at`) VALUES
-(1, 'rohit', 'rohit@gmail.com', 1234567890, 'Concrete Cutter Machine', 'RCC Concrete Cutter Machine', 4, NULL, NULL, NULL, '2022-03-16 05:43:19', '2022-03-16 05:43:19'),
-(2, 'rohit', 'rohit@gmail.com', 1234567890, 'Concrete Cutter Machine', 'RCC Concrete Cutter Machine', 4, 8787854454, NULL, NULL, '2022-03-16 05:43:53', '2022-03-16 05:43:53');
+(1, 'rohit', 'rohit@gmail.com', 1234567890, 'bar bending machine', 'Mild Steel Bar Bending Machine', 10, NULL, 'gnfgnfgn', NULL, '2022-03-24 06:35:08', '2022-03-24 06:35:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `proformas`
+--
+
+CREATE TABLE `proformas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `main_machine_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_machine_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `total_price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `upload_invoice` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `invoice_status` enum('approve','deny') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_requests`
+--
+
+CREATE TABLE `service_requests` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service_username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_useremail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_phonenumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_photos` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_videos` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_invoice` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_checkbox_policy` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `empty1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Status` tinyint(4) DEFAULT NULL COMMENT '0=not done, 1 = done',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `service_requests`
+--
+
+INSERT INTO `service_requests` (`id`, `service_username`, `service_useremail`, `service_phonenumber`, `service_address`, `service_photos`, `service_videos`, `service_invoice`, `service_checkbox_policy`, `empty1`, `Status`, `created_at`, `updated_at`) VALUES
+(6, 'testuseremail', 'testuseremail@gmail.com', '+912626622622', 'gfbfgbfgkb gb klgf kgf gf', 'upload/website_services/3dde11a7673e90ad96fafd0b3b27a477.jpg|upload/website_services/63bfd6e8f26d1d3537f4c5038264ef36.jpg|upload/website_services/e6385d39ec9394f2f3a354d9d2b88eec.jpg', 'upload/website_services/9332c513ef44b682e9347822c2e457ac.mp4|upload/website_services/6f8caa0e6413027cb7a12f945151cb8d.mp4', 'upload/website_services/b9b72b29352f3764ea4dec130772bd9d.pdf', 'on', NULL, NULL, '2022-04-01 04:08:03', '2022-04-01 04:08:03'),
+(7, 'test 2', 'test2@gmail.com', '+91123456859', 'fhfg fg hfg hfg h fgh fg', 'upload/website_services/654ad60ebd1ae29cedc37da04b6b0672.jpg|upload/website_services/d80126524c1e9641333502c664fc6ca1.jpg', 'upload/website_services/ad47a008a2f806aa6eb1b53852cd8b37.mp4', 'upload/website_services/2812e5cf6d8f21d69c91dddeefb792a7.pdf', 'on', NULL, NULL, '2022-04-01 05:00:06', '2022-04-01 05:00:06');
 
 -- --------------------------------------------------------
 
@@ -276,24 +367,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('0hcvGOTPKOOWZkMpZd6XXFavIY2CA94caJPVI58s', 3, '2405:204:92aa:ca3d:2948:60ae:bff5:91d3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoienoxcWRqZVowRTFXWHdPVUtSMXhxN3BtV0N2d2hCT2h6U0ZTUTVzQiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NjY6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tL3Byb2ZpbGUvcGFzc3dvcmQvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR4eklBbVcvL01MTG1aT3RhWnNMaE5lSUpUYU1xREw5WlFZMVBMamV6RHc4V0hVY3B2OEczNiI7fQ==', 1647429618),
-('4KVuwZT8EMqb1cx18HvEKquqVfedqyPgduRUZ2F6', NULL, '2401:4900:415d:4d23:18bc:8904:d7ae:cf99', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidWdkMDNrVkJObHJUbXRjYWJJUVpJZnU5b0R0ckR0aWlyZXFpdng5byI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647429341),
-('7PeGWAEBxu4lbZ4Qw6ZsuWerrfpfAvM3g2qHhWov', NULL, '2401:4900:415d:4d23:18bc:8904:d7ae:cf99', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicWxZSDBERDhpMjJVVGVZSUhJRXhUR3g0eFVHSGpPdnpWR1V2TVZPTyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647429412),
-('bLekGRgH5wy4yCKFbgve3wwH7JNLvvOxavhPvB9S', NULL, '2405:204:92aa:ca3d:18ce:d9ad:dd80:572c', 'WhatsApp/2.22.4.75 i', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZENRbFRqZVNLYXNBd0VXT290bEVtR3FNbE5GTmFiZ3VjbmxDNHVLNCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647429321),
-('CJNi7aVlJPYI9wx5DK1BgBf8VvOmz08zRR9wtHFB', NULL, '223.233.79.160', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQ0tzcWpEa3Z1ZDE0cHNLZVEyVUl5cnNXeVRqUmJteklFNzZEZzJOUiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647431234),
-('CXRfYbaZovokwOFhViPee88nW7f3k5smYRFHt1SU', NULL, '35.246.65.127', 'Go-http-client/1.1', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiS2JJaG9ydko0M1VmaVFra2JMSHdGd0FEemhqZ29tNm55YTh3RDBZRCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647543807),
-('iaGcoaPrzUU64ZU25ESwdguEJW3KTtEnXhyrQRjo', NULL, '45.248.93.165', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieFFBN1RtMzdWR3A2U05GWDI1NXdYZHFRcENvakdCanVGR3FpdERiTiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NjY6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tL3Byb2ZpbGUvcGFzc3dvcmQvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1647610022),
-('JVDWgGc3INMwIMI92MTogKIk2Qfsr3Mryv89HcTR', NULL, '150.242.174.173', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMzh4UlV2VVExZmJ6RXBNc0lqRGpsUW84NHZucUFLWlNUUGVnV1p0QyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647665564),
-('KRT8HcKq3y6G66HwQVnQFQ75dJBht3MO5H6HPbsp', NULL, '35.246.65.127', 'Go-http-client/1.1', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiVGZ1a1FYdjlkWHc4b3FnSlkyTXBoV083QUs1cDFUbG03aFRtTm9RcSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647457400),
-('KY7w4QgxEcoM7lu002VF80hisR7N6gKygkqZmQB6', NULL, '35.246.65.127', 'Go-http-client/1.1', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiSGgzd3QyNnFmVE9xNFVka3Vhczc0SGFrQnVYWXR4R2hSYm43YmxabiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647371007),
-('PnCXVCDcqnCKzkHVazTkiF5coTGlPRMLswY50Qv8', 3, '2409:4050:2e0e:da99:149b:5e23:926d:4d97', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36', 'YTo1OntzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHh6SUFtVy8vTUxMbVpPdGFac0xoTmVJSlRhTXFETDlaUVkxUExqZXpEdzhXSFVjcHY4RzM2IjtzOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czo2MzoiaHR0cDovL3VuaWNvcm5lZXF1aXBtZW50LmJsdWJyYW5kemdsb2JhbC5jb20vc3VibWFjaGluZWRldGFpbC8xIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo2OiJfdG9rZW4iO3M6NDA6IjFYVnU1WnphWW96VG0xTDVXZmRLd2ZuaGd0bWphM0RRcVhBc1hiU20iO3M6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7fQ==', 1647409303),
-('SN7pTCDs4hfb6NPAGDjDpgmo0x5RNh9ywqtcN0yE', NULL, '35.246.65.127', 'Go-http-client/1.1', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoid3JoZTA5QXNieG1zckZnY2JQWTJXNE1Ya0pWUXJ3eWlhZnlScWpZNSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647630205),
-('TFMH5oIZNDTrMzMDyrBJ6lDe8zzi2VbPh3igNpqX', 2, '2409:4050:2e0e:da99:149b:5e23:926d:4d97', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36', 'YTo2OntzOjM6InVybCI7YTowOnt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Njg6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tL3VzZXJwcm9kdWN0cy9hZGRyZXF1ZXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo2OiJfdG9rZW4iO3M6NDA6IlRWSzJwbjlOb1JwS2pMd0lHUXdDSTM3MWVqUXBROHlIMFlLZGNBM1UiO3M6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCREeUozQUVXZklpLnJvQmNsb050NFVPdEdBejE0UEpCY0g4NEU5V25qVFRTV04uTzFDZlBxQyI7fQ==', 1647409459),
-('tZK0VwN7ak5Mll6bD4U8tbJBopDBzwTwyc4LsqjL', NULL, '223.233.78.111', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQzMwY0tMVjg0T2MzRng4bDY0MkRJVG15alM2ZHpWQUl0NDJYN3VCNCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647437110),
-('vK0ROAWFMFTQc5PJPKx9zBEuCuVgy1tVSJl7C48O', 3, '2409:4050:2e0e:da99:149b:5e23:926d:4d97', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOXZGSnNDb3VxS3hrWkZsTWJ0a1gwV2pEcVh0bUZ1QnpuWG1OVmpZRyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tL2Rhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR4eklBbVcvL01MTG1aT3RhWnNMaE5lSUpUYU1xREw5WlFZMVBMamV6RHc4V0hVY3B2OEczNiI7fQ==', 1647409124),
-('WyPrTEO5EIKnjajCgOoZ15vkSdwaTVFQGnMm7ke3', NULL, '185.192.71.27', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRjdiZjRwcklIamVYWnRuWmdDNThkMFBScDVPOFFnM1pQMGNvOG0yeSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647455557),
-('xUfKubyvOQEhbjRFqSycZ7rvzSecoR91FlOiAYZF', 3, '49.206.123.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicmR5YXdYTHNNbE4zM2NsdEIzZFE1TGl6NVE0WHU4eklJYXUxc3NGdCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTU6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tL3VzZXJzL3ZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTozO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkeHpJQW1XLy9NTExtWk90YVpzTGhOZUlKVGFNcURMOVpRWTFQTGplekR3OFdIVWNwdjhHMzYiO30=', 1647497600),
-('YGMESpr5eUkJiSRBsxQxhpGPemtcK860o6CDboqv', NULL, '103.90.201.66', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieEg5ZkVpVHV2V1pKU1NzY09aaUxKM2NLdHhTTUVKdUZoYXRqcnhvZCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly91bmljb3JuZWVxdWlwbWVudC5ibHVicmFuZHpnbG9iYWwuY29tIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1647437072);
+('Q5kCd3rL45cVPp6BttaFJmWB8qdCmjIvOItMKbGr', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYVJNUGlMampzVWdPa2ZVNmY2VDdZMmdaSWY1NHEwdGhTS3lsM2pqSSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hYm91dHVzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MztzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHh6SUFtVy8vTUxMbVpPdGFac0xoTmVJSlRhTXFETDlaUVkxUExqZXpEdzhXSFVjcHY4RzM2Ijt9', 1648886285);
 
 -- --------------------------------------------------------
 
@@ -303,9 +377,10 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 
 CREATE TABLE `submachines` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `main_category_id` int(11) DEFAULT NULL,
   `main_machine_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sub_machine_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sub_machine_price` int(255) NOT NULL,
+  `sub_machine_price` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `sub_machine_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sub_machine_image` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sub_machine_video` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -319,8 +394,10 @@ CREATE TABLE `submachines` (
 -- Dumping data for table `submachines`
 --
 
-INSERT INTO `submachines` (`id`, `main_machine_name`, `sub_machine_name`, `sub_machine_price`, `sub_machine_description`, `sub_machine_image`, `sub_machine_video`, `sub_machine_brochure`, `sub_machine_status`, `created_at`, `updated_at`) VALUES
-(1, 'Concrete Cutter Machine', 'RCC Concrete Cutter Machine', 85000, '<p><strong>Product Details:</strong></p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>Usage/Application</td>\r\n			<td>RCC Concrete Cutting</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Drive Mechanism</td>\r\n			<td>Belt</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Engine Type</td>\r\n			<td>Petrol Engine</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Brand/Make</td>\r\n			<td>Unicorn</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Water Tank Capacity</td>\r\n			<td>35 L</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Max Speed</td>\r\n			<td>3600 RPM</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Max Cutting Depth</td>\r\n			<td>500 mm</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Fuel Tank</td>\r\n			<td>7 L</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\n<strong>RCC Concrete Cutter Machine</strong>&nbsp;is mainly used for road maintenance work, slitting and cutting concrete and asphalt road. It&#39;s widely used for cutting concrete, masonry, brick, asphalt, tile, and other solid materials. Our concrete cutter could be easily operated on cutting concrete and asphalt floor of road, bridge, parking lot, square, factories house floors and so on.<br />\r\n<br />\r\nUnicorn walk behind concrete and asphalt road cutter uses first-class brand engine, honda gasoline engine which is reliable and durable. And you can also choose diesel engine. Unique designed steel water tank provides adequate water supply and perfect waling effect and has less problems. We use laser welded diamond saw blade, the blade size is optional, you can choose 350mm, 400mm, 500mm blades, the cutting depth is adjustable, the maximum cutting depth is 180mm.<br />\r\n<br />\r\n<strong>Special Features:</strong></p>\r\n\r\n<ul>\r\n	<li>Gasoline engine and Diesel engine are available.</li>\r\n	<li>Small volume, light weight, and portable.</li>\r\n	<li>Simple clamping and convenient operation.</li>\r\n	<li>400mm, 500mm blades are optional.</li>\r\n	<li>Large matching power and quick cutting speed.</li>\r\n	<li>High precision of positioning, good quality of cutting section.</li>\r\n</ul>\r\n\r\n<p><br />\r\n<strong>Other details:</strong></p>\r\n\r\n<ul>\r\n	<li><strong>Engine</strong>: 5.5hp Honda gasoline GX160 engine is durable and easy to start. Honda brand engine is reliable and insure the machine less problem and better performance.</li>\r\n	<li><strong>Blade</strong>: High quality Laser welded diamond saw blade for longer life, Max cutting depth is 180mm, Optional blade size: 350mm, 400mm, 500mm</li>\r\n	<li><strong>Blade Cover</strong>: Special designed blade cover is fixed on the frame by screw bolts. It makes the assembling and disassembling more easily.</li>\r\n</ul>', 'upload/sub_machine_img/426f990b332ef8193a61cc90516c1245.jpeg|upload/sub_machine_img/bb7946e7d85c81a9e69fee1cea4a087c.jpeg|upload/sub_machine_img/ed57844fa5e051809ead5aa7e3e1d555.jpeg', NULL, 'upload/sub_machine_brochure/d339a8932df05de23ae3d9e29df4b25f.pdf', 'active', '2022-02-28 11:46:06', '2022-03-16 05:41:36');
+INSERT INTO `submachines` (`id`, `main_category_id`, `main_machine_name`, `sub_machine_name`, `sub_machine_price`, `sub_machine_description`, `sub_machine_image`, `sub_machine_video`, `sub_machine_brochure`, `sub_machine_status`, `created_at`, `updated_at`) VALUES
+(4, 5, 'bar bending machine', 'Mild Steel Bar Bending Machine', '91000', '<p><strong>Product Details:</strong></p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>Model Name/Number</td>\r\n			<td>UNI 40B</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Brand</td>\r\n			<td>Unicorn</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Weight</td>\r\n			<td>440 Kg</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Operation</td>\r\n			<td>Automatic</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Bar Bending Diameter</td>\r\n			<td>32mm TMT rebar and 35 mm plain bar</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Type Of Motor</td>\r\n			<td>Copper Winding (Brake Motor)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Motor Power</td>\r\n			<td>4 kW / 5 HP</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Rotation Speed Of Motor</td>\r\n			<td>1440 R/min</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Speed Of Working Disc</td>\r\n			<td>8-11 R/min</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Noise Value</td>\r\n			<td>Less than or equal to 80 dBA (1 m away)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Dimension</td>\r\n			<td>850 x 800 x 880 mm</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Production Capacity</td>\r\n			<td>2 Ton/Ph</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Automatic bar bending machines (UNI 40B &amp; UNI 50B) offered by us are designed to bend the bar upto 6 mm to 42 mm. These bar bending machine (UNI 40B &amp; UNI 50B) are served in the capacity of 4.5 kW/6HP Power. These machines are high on demand for Construction Job Site applications. The range of bar bending machines we offer renders smooth functioning for longer time period. In addition, the high performance of our reinforced bar bending machine with working rotation speed. UNI 42B &amp; UNI 50B is powered by 100% copper winding 4.5 kW/6HP TEFC Induction electric motor running on 4P, 415V. Our fully automatic Bar Bending Machine is operated through manual button as well as automatic button and delivers stable performance with optimum safety.<br />\r\n<br />\r\n<strong>Advantages:</strong></p>\r\n\r\n<ul>\r\n	<li>The latest heavy duty gear box assembly, spindle is a maintenance free.&nbsp;</li>\r\n	<li>Column and spool adopt high quality alloy steel, high temperature quenching treatment, higher hardness, more wear-resisting</li>\r\n	<li>Increase heavy of disc and square steel, never deformation, bend bar more accurately.&nbsp;</li>\r\n	<li>Enclosed electric cabinet, moisture proof, prevent dust, prevent leakage.</li>\r\n	<li>Thickening the dashboard, increase the integrity of the machine and longer service life</li>\r\n	<li>Rotary oil-way of work station makes add oil more conveniently.</li>\r\n	<li>Advanced electrical control panel with brake motor increases performance and durability.</li>\r\n	<li>Different bending bushes designed for various bending radius.</li>\r\n	<li>Ensures high durability at its user ends, effectively increases the production capacity.</li>\r\n	<li>Various sizes of bushes for bending diameter of bars.</li>\r\n	<li>Cost effective bending machines, used for bending reinforcement bars and different kind of round bars.</li>\r\n</ul>', 'upload/sub_machine_img/84f74ce4511e0c9531af1182fb636f0f.jpg|upload/sub_machine_img/a4ee59dd868ba016ed2de90d330acb6a.jpg|upload/sub_machine_img/a50abba8132a77191791390c3eb19fe7.jpg|upload/sub_machine_img/3cc697419ea18cc98d525999665cb94a.jpg|upload/sub_machine_img/ff096d0e005a8c794b6c1da7c0fd662e.jpg', NULL, 'upload/sub_machine_brochure/c5d215777c229704a7862de577d40a73.pdf', 'active', '2022-03-24 00:35:50', '2022-03-24 00:35:50'),
+(5, 6, 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '38500', '<p><strong>Product Details:</strong></p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>Brand</td>\r\n			<td>Unicorn</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Power</td>\r\n			<td>7 kW / 9 HP</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Weight</td>\r\n			<td>120 Kg</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Fuel Tank Capacity</td>\r\n			<td>6.1 L</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Engine Type</td>\r\n			<td>Air-cooled, 4-cycle, Gasoline</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Working Diameter</td>\r\n			<td>1170 mm</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Dimension</td>\r\n			<td>2080 x 1250 x 1020 mm</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Speed</td>\r\n			<td>Max 3600 RPM</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Type</td>\r\n			<td>Honda GX270</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\nUnicorn concrete finishing&nbsp;power trowel machine&nbsp;is widely used for concrete surface finishing and smoothing work of high-standard workshop, warehouse, parking lot, square, airport, concrete road and frame style building. The working efficiency of the float machine is much higher than the formal manual trowel. Unicorn walk behind concrete power float trowel machines are durable and high efficiency. They are powered by Honda GX270 gasoline engine. The 24inch trowel blades are made of 2.0mm thickness spring steel. The float trowel pan is made of 3.0mm thickness manganese steel and it help the machine have years of high performance. And, our high strength steel handle provides maximum comfort and control.<br />\r\n<br />\r\n<strong>Features:</strong></p>\r\n\r\n<ul>\r\n	<li>Independent rotating flywheel, allowing operation in tight corners and in confined spaces.</li>\r\n	<li>Over-built gearbox assures long service life.</li>\r\n	<li>Height adjustable handle, assures operator comfort &amp; easy control.</li>\r\n	<li>Screw control ensures precise blade adjustment</li>\r\n	<li>Heavy type clutch make &quot;leave&quot; and &quot;close&quot; closely</li>\r\n	<li>Aluminum reducer case is not only light, but also has best heat radiating function</li>\r\n</ul>\r\n\r\n<p><br />\r\n<strong>Special Features:</strong></p>\r\n\r\n<ul>\r\n	<li><strong>Trowel Pan:</strong>&nbsp;Unicorn concrete power trowel pan is made of 3mm thickness manganese steel. It protects the trowel blades and make the machine more durable, working life time is over 5000m.</li>\r\n	<li><strong>Gear:</strong>&nbsp;Gear is made of pure copper. The worm gear and endless screw design make them.</li>\r\n	<li><strong>Reducer:</strong>&nbsp;The reducer of our concrete towel is Aluminum body reducer. It is nto only light, but also has best heat radiating funtion.</li>\r\n	<li><strong>Clutch:</strong>&nbsp;Heavy type Clutch make &quot;leave&quot; and &quot;close&quot; completely.</li>\r\n</ul>', 'upload/sub_machine_img/0ce98f53e3aa229aa2f31b16e5dcbb4b.jpg|upload/sub_machine_img/97416ac0f58056947e2eb5d5d253d4f2.jpg|upload/sub_machine_img/5ad2c993fa4f162c255867250267de48.jpg|upload/sub_machine_img/f12ee9734e1edf70ed02d9829018b3d9.jpg|upload/sub_machine_img/d8330f857a17c53d217014ee776bfd50.jpg|upload/sub_machine_img/c3e4035af2a1cde9f21e1ae1951ac80b.jpg', 'upload/sub_machine_videos/015e31933548461020e2ba448e85995e.mp4|upload/sub_machine_videos/602d1305678a8d5fdb372271e980da6a.mp4|upload/sub_machine_videos/29530de21430b7540ec3f65135f7323c.mp4', 'upload/sub_machine_brochure/94130ea17023c4837f0dcdda95034b65.pdf', 'active', '2022-03-24 00:42:26', '2022-03-24 00:42:26'),
+(6, 5, 'Stirrup Bending Machine', 'Digital Stirrup Bending Machine', '70,000', '<p><strong>Product Details:</strong></p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td>Brand</td>\r\n			<td>Unicorn</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Model Name/Number</td>\r\n			<td>GW 42</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Max Bending Angle</td>\r\n			<td>360 Degree</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Machine Weight</td>\r\n			<td>300 Kg</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Voltage</td>\r\n			<td>415V</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Motor Power</td>\r\n			<td>3 HP</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Motor Type</td>\r\n			<td>100% Copper Winding</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><br />\r\nSttirup Bar Bending Machine&nbsp;offered by us are designed to bend the bar up-to 6mm to 32 mm. These bar bending machines are served in the capacity of 3HP Power. These machines are high on demand for Construction Job Site applications. The range of bar bending machines we offer renders smooth functioning for longer time period. In addition, the high performance of our reinforced bar bending machine with working rotation speed GW 42 is powered by 100% copper winding 3HP TEFC Induction electric motor running on 4P, 415 V. Our fully automatic bar bending machine is operated through manual button as well as automatic button and delivers stable performance with optimum safety.</p>', 'upload/sub_machine_img/970627414218ccff3497cb7a784288f5.jpg|upload/sub_machine_img/28b9f8aa9f07db88404721af4a5b6c11.jpg|upload/sub_machine_img/8fe6833df81e224e08ce9be4abfa89a0.jpg|upload/sub_machine_img/7296d81c3d5e425bc1785994bea8a0d2.jpg|upload/sub_machine_img/db182d2552835bec774847e06406bfa2.jpg|upload/sub_machine_img/825f9cd5f0390bc77c1fed3c94885c87.jpg|upload/sub_machine_img/a0046ad4c1bafc4ef04e41e755f28368.jpg|upload/sub_machine_img/54c3d58c5efcf59ddeb7486b7061ea5a.jpg|upload/sub_machine_img/3ce6d3c8830d27ec2e6a1936ecbaa514.jpg|upload/sub_machine_img/9399e0b02c73fcc14cd11d9b4e685f2e.jpg|upload/sub_machine_img/9e6adb1432c4a75a33d48693328e4159.jpg|upload/sub_machine_img/3eb65004054f5d21fca4087f5658c727.jpg', 'upload/sub_machine_videos/add5efc3f8de35d6208dc6fc154b59d3.mp4|upload/sub_machine_videos/31f81674a348511b990af268ca3a8391.mp4|upload/sub_machine_videos/84f2798f05d595273de40e3046329309.mp4', 'upload/sub_machine_brochure/ad9d4d2bc5365e856dcb6d78fb0c7cb5.pdf', 'active', '2022-03-24 00:53:27', '2022-03-24 00:53:27');
 
 -- --------------------------------------------------------
 
@@ -365,10 +442,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `usertype`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `mobile`, `address`, `gender`, `company_name`, `image`, `fname`, `mname`, `religion`, `id_no`, `dob`, `code`, `role`, `join_date`, `designation_id`, `salary`, `status`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(2, 'user', 'rohit', 'rohit@gmail.com', NULL, '$2y$10$DyJ3AEWfIi.roBcloNt4UOtGAz14PJBcH84E9WnjTTSWN.O1CfPqC', NULL, NULL, '1234567890', 'Delhi', 'Male', NULL, '202202241023avatar-4.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'inactive', NULL, NULL, NULL, '2021-10-07 07:10:08', '2022-02-24 04:53:15'),
+(2, 'user', 'rohit', 'rohit@gmail.com', NULL, '$2y$10$DyJ3AEWfIi.roBcloNt4UOtGAz14PJBcH84E9WnjTTSWN.O1CfPqC', NULL, NULL, '1234567890', 'Delhi', 'Male', NULL, '202203241026Stan1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'inactive', NULL, NULL, NULL, '2021-10-07 07:10:08', '2022-03-24 04:56:18'),
 (3, 'admin', 'vishwa', 'vishwa@gmail.com', NULL, '$2y$10$xzIAmW//MLLmZOtaZsLhNeIJTaMqDL9ZQY1PLjezDw8WHUcpv8G36', NULL, NULL, '8920352115', 'Delhi', 'Male', NULL, '202202281131202202241023avatar-4.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-10-09 03:07:54', '2022-02-28 11:31:37'),
-(10, 'user', 'test', 'test@gmail.com', NULL, '$2y$10$4Vxwu/D3I/0K1ob73RzKp.2GSOhzAs3Lr00omQTQNoHOXKG3fzouy', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 00:59:36', '2021-11-12 00:59:36'),
-(11, 'user', 'yash', 'yash@gmail.com', NULL, '$2y$10$URXM0DpezsO724fDVtfZKOTaWTFfambl7TEEHYK2B0LKHkSbA1djK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 01:01:24', '2021-11-12 01:01:24');
+(10, 'user', 'test', 'test@gmail.com', NULL, '$2y$10$4Vxwu/D3I/0K1ob73RzKp.2GSOhzAs3Lr00omQTQNoHOXKG3fzouy', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 00:59:36', '2022-03-21 05:10:30'),
+(11, 'user', 'yash', 'yash@gmail.com', NULL, '$2y$10$URXM0DpezsO724fDVtfZKOTaWTFfambl7TEEHYK2B0LKHkSbA1djK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 01:01:24', '2022-03-21 01:43:30'),
+(14, 'user', 'test12', 'test12@gmail.com', NULL, '$2y$10$86FZikqHRfjic39KizuTCeGWThnjO5mCBMtrcSU/hsKrDGZIEgyei', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2022-03-21 00:33:57', '2022-03-21 01:37:04');
 
 --
 -- Indexes for dumped tables
@@ -412,6 +490,12 @@ ALTER TABLE `mainmachines`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `main_categories`
+--
+ALTER TABLE `main_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -435,6 +519,18 @@ ALTER TABLE `personal_access_tokens`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `proformas`
+--
+ALTER TABLE `proformas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `service_requests`
+--
+ALTER TABLE `service_requests`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -465,7 +561,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `assignproducts`
 --
 ALTER TABLE `assignproducts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `dealers`
@@ -495,13 +591,19 @@ ALTER TABLE `invoices`
 -- AUTO_INCREMENT for table `mainmachines`
 --
 ALTER TABLE `mainmachines`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `main_categories`
+--
+ALTER TABLE `main_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -513,19 +615,31 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `proformas`
+--
+ALTER TABLE `proformas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `service_requests`
+--
+ALTER TABLE `service_requests`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `submachines`
 --
 ALTER TABLE `submachines`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
