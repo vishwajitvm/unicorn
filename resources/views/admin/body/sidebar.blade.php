@@ -79,6 +79,21 @@
           </ul>
         </li>
 
+        <li class="header nav-small-cap">MANAGE SERVICES</li>		  
+          <!--CAtaggory  work here-->
+        <li class="treeview {{ ($prefix == '/service-request')?'active':'' }}">
+          <a href="#">
+            <i data-feather="mail"></i> <span>Manage Services </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=" {{ Route('service-request.view') }}  "><i class="ti-more"></i>view Service Request </a></li>
+          </ul>
+        </li>
+        <!--CATAGORY work here-->
+
         <li class="header nav-small-cap">MANAGE MACHINES</li>		  
 
         <!--CAtaggory  work here-->

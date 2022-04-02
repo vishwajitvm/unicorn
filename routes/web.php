@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\Artisan ;
 use App\Http\Controllers\ManageMainCategoryForMachineController ;
 use App\Models\main_category ;
 use Illuminate\Validation\Rules\Unique;
+use App\Http\Controllers\AdminWebsiteSERVICESController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -387,6 +388,16 @@ Route::prefix('dealers')->group( function() {
     
 });
 
+//
+//MANAGES SERVICES REQUEST AT ADMIN PANNEL
+//
+Route::prefix('service-request')->group( function() {
+    //view all the services
+    Route::get('/view' , [AdminWebsiteSERVICESController::class , 'ViewAllServicesRequest'])->name('service-request.view') ; 
+
+});
+
+
 
 //************************************************************ *//
 ////////////////USERS DASHBOARD ROUTING//////////////////////////
@@ -509,7 +520,7 @@ Route::get('findealer' , [websitecontroller::class , 'findADealer'])->name('find
 Route::get('aboutus' , [websitecontroller::class , 'AboutUs'])->name('aboutus') ;
 
 //Parts and services parts-&-services
-Route::get('parts-&-services' , [websitecontroller::class , 'PartAndServices'])->name('parts-&-services') ;
+Route::get('services' , [websitecontroller::class , 'PartAndServices'])->name('services') ;
 
 
 //contact us page contact-us
@@ -518,7 +529,13 @@ Route::get('contact-us' , [websitecontroller::class , 'ContactUs'])->name('conta
 //Check if user is loged in or not loginpage
 Route::get('loginpage' , [websitecontroller::class , 'checkAuthentication'])->name('loginpage') ;
 
+//Services Request 
+Route::post('services-requests' , [websitecontroller::class , 'PostServicesRequest'])->name('services-requests') ;
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
 //post project setup
 Route::get('/cache' , function() {
     Artisan::Call('cache:clear') ;

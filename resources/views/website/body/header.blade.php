@@ -90,7 +90,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="{{ route('parts-&-services') }}">Part & Services</a>
+                                            <a class="nav-link active" aria-current="page" href="{{ route('services') }}"> Services</a>
                                         </li>
 
                                         
