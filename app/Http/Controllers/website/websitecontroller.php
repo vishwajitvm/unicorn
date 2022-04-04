@@ -22,6 +22,7 @@ use phpDocumentor\Reflection\Types\Null_;
 use PHPUnit\Framework\Constraint\IsTrue;
 use App\Models\service_request ;
 use Illuminate\Support\Facades\Mail ;
+use App\Models\request_machine ;
 
 class websitecontroller extends Controller
 {
@@ -47,7 +48,7 @@ class websitecontroller extends Controller
     //submachinedetails submachinedetails
     public function submachinedetails($id) {
         $data = submachine::find($id) ;
-        return view('website.submachinedetails' , compact(['data' ])) ;
+        return view('website.submachinedetails' , compact(['data'])) ;
     }
 
     //find a dealer 
@@ -165,8 +166,21 @@ class websitecontroller extends Controller
             'alert-type' => 'success',
         ) ;
         return redirect()->route('services')->with($notification) ;
+    }
 
-
+    //POPUP REQUEST Store
+    public function POPUPRequestStore (Request $request) {
+        $data = new request_machine() ;
+        $data->request_username = $request->request_username ;
+        $data->request_useremail = $request->request_useremail ;
+        $data->request_userphone_number = $request->request_userphone_number ;
+        $data->request_machine = $request->request_machine ;
+        $data->request_submachine = $request->request_submachine ;
+        $data->request_quantity = $request->request_quantity ;
+        $data->request_message = $request->request_message ;
+        $data->request_submachine_id = $request->request_submachine_id ;
+        $data->save() ;
+        return redirect()->back() ;
     }
 
 }

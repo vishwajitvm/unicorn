@@ -532,6 +532,10 @@ Route::get('loginpage' , [websitecontroller::class , 'checkAuthentication'])->na
 //Services Request 
 Route::post('services-requests' , [websitecontroller::class , 'PostServicesRequest'])->name('services-requests') ;
 
+//POPUP REQUEST STORE
+Route::post('popup-request-store' , [websitecontroller::class , 'POPUPRequestStore'])->name('popup-request-store') ;
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////

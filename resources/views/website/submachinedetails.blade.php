@@ -31,17 +31,95 @@
                     <div class="col-md-7 mt-5">
                         <div class="submachineprice">
                             <h4>Approx Price: <span>Rs {{ $data->sub_machine_price }}</span> / Piece</h4>
-                            <a href="#" class="ml-5">Get Latest Price</a>
+                            {{-- <a href="#" class="ml-5">Get Latest Price</a> --}}
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                Get Latest Price
+                              </a>
+
+                            <!--model start here-->
+                            <!--model start here-->                            
+                            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog bg-warning rounded border border-dark" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Send Your Request</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body px-4">
+                                      <form action="{{ route('popup-request-store') }}" method="POST">
+                                          @csrf
+                                        <div class="form-group">
+                                          <label for="recipient-name" class="col-form-label"> <span class="text-danger">*</span>Your Name:</label>
+                                          <input type="text" class="form-control" name="request_username"  id="recipient-name" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Your Email:</label>
+                                            <input type="text" class="form-control" name="request_useremail" id="recipient-name">
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label"><span class="text-danger">*</span>Your Phone Number:</label>
+                                            <input type="text" class="form-control" name="request_userphone_number" id="recipient-name" required>
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Machine Name:</label>
+                                            <input type="text" class="form-control" name="request_machine" value="{{ $data->main_machine_name }}" id="recipient-name" readonly>
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Sub Machine Name:</label>
+                                            <input type="text" class="form-control" name="request_submachine" value="{{ $data->sub_machine_name }}" id="recipient-name" readonly>
+                                          </div>
+
+                                          <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Quantity</label>
+                                            <input type="text" class="form-control" name="request_quantity" id="recipient-name">
+                                          </div>
+
+                                        <div class="form-group">
+                                          <label for="message-text" class="col-form-label">Message:</label>
+                                          <textarea class="form-control" name="request_message" id="message-text"></textarea>
+                                        </div> <br>
+
+                                        <input type="number" class="form-control" name="request_submachine_id" value="{{$data->id}}" style="display: none">
+
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Send message</button>
+                                          </div>
+                                      </form>
+                                    </div>
+                                    {{-- <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Send message</button>
+                                    </div> --}}
+                                  </div>
+                                </div>
+                              </div>
+                            <!--model end here-->
+                            <!--model end here-->
+                            
+
                         </div>
 
 
                         {!! $data->sub_machine_description !!}
-                        <a class="custombutton intrestedbtn mt-5 ml-0" href="#">Yes I am Intrested</a>
-                        <a class="custombutton intrestedbtn mt-5 ml-0" target="_blank" href="{{ URL::to($data->sub_machine_brochure) }}">Download Brocher</a>
+                        {{-- <a class="custombutton intrestedbtn mt-5 ml-0" href="#">Yes I am Intrested</a> --}}
+                        <a type="button" class="custombutton intrestedbtn mt-5 mx-2" data-toggle="modal" data-target="#exampleModalCenter">
+                            Yes I am Intrested
+                          </a>
+
+                        <a type="button" class="custombutton intrestedbtn mt-5 ml-0" target="_blank" href="{{ URL::to($data->sub_machine_brochure) }}">Download Brocher</a>
 
                     </div>
                     <div class="col-md-5 mt-5">
-                        <div id="photo-view-container">
+                        <div class="photo-view-container">
+                            <h3> {{$data->sub_machine_name  }} Images</h3>
                             <div id="photo-display"></div>
                             <div id="commentary"></div>
                             <div id="photo-container-holder">
@@ -51,13 +129,63 @@
                                         $imgData = explode('|' , $data->sub_machine_image)
                                     @endphp
                                     @foreach ($imgData as $item)
-                                        <div class="photo-holder"><img src="{{ URL::to($item) }}" onclick=viewPhoto(this) class="photo-item" alt="{{$data->sub_machine_name!=null?$data->sub_machine_name:''}}" style=" object-fit:contain; border:5px solid white ; "></div>
+                                        <div class="photo-holder"><img src="{{ URL::to($item) }}"  onclick=viewPhoto(this) class="photo-item" alt="{{$data->sub_machine_name!=null?$data->sub_machine_name:''}}" style=" object-fit:contain; border:5px solid white ; "></div>
 
                                     @endforeach
                                     <!--exp zone end-->
                                 </div>
                             </div>
                         </div>
+
+                        <!--videos-->
+                        <div class="photo-view-container mt-5"  style="margin-top: 100px !important;">
+                            <h3> {{ $data->sub_machine_name }} Videos</h3>
+                            <div id="carousel-example" class="carousel slide">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                                </ol>
+                                    @php
+                                        $videodata = explode('|' , $data->sub_machine_image)
+                                    @endphp
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <video width="100%" controls autoplay muted>
+                                                <source src="/images/movie.mp4" type="video/mp4">
+                                              </video>
+                                            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0" allowfullscreen></iframe> -->
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <video width="100%" controls autoplay muted>
+                                                <source src="/images/movie.mp4" type="video/mp4">
+                                              </video>
+                                            <!-- <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84910153?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" allowfullscreen></iframe> -->
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <video width="100%" controls autoplay muted>
+                                                <source src="/images/movie.mp4" type="video/mp4">
+                                              </video>
+                                            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oiKj0Z_Xnjc" allowfullscreen></iframe> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--video end-->
                     </div>
                 </div>
             </div>
