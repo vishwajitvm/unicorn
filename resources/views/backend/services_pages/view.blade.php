@@ -30,7 +30,7 @@
                               <th> Photos </th>
                               <th> Videos </th>
                               <th> Invoice </th>
-                              <th width="15%">Action</th>
+                              {{-- <th width="15%">Action</th> --}}
                           </tr>
                       </thead>
                       <tbody>
@@ -96,13 +96,13 @@
                             @endforeach
                               </td> 
                               <!--document end here-->
-                              <td>
+                              {{-- <td>
                                 <!--button here-->
                                 <a class="btn btn-info" href=" {{Route('submachine.edit',$row->id)}} ">Edit</a> 
                                 &nbsp;&nbsp;
                                 <a class="btn btn-danger" href=" {{Route('submachine.delete',$row->id)}}" id="delete">Delete</a>
 
-                              </td>
+                              </td> --}}
                           </tr>
                         @endforeach
 

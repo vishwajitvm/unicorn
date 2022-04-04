@@ -34,6 +34,7 @@ use App\Http\Controllers\ManageMainCategoryForMachineController ;
 use App\Models\main_category ;
 use Illuminate\Validation\Rules\Unique;
 use App\Http\Controllers\AdminWebsiteSERVICESController ;
+use App\Http\Controllers\ManageAdminWebsiteMachineRequestsController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -396,6 +397,16 @@ Route::prefix('service-request')->group( function() {
     Route::get('/view' , [AdminWebsiteSERVICESController::class , 'ViewAllServicesRequest'])->name('service-request.view') ; 
 
 });
+
+//
+//MANAGE WEBSITE MACHINE REQUEST
+//
+Route::prefix('website-machine-request')->group( function() {
+    //view all requests
+    Route::get('/view' , [ManageAdminWebsiteMachineRequestsController::class , 'ViewAllWEbsiteMachineRequests'])->name('website-machine-request.view') ; 
+
+}) ;
+
 
 
 

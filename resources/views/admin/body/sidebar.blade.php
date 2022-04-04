@@ -83,7 +83,7 @@
           <!--CAtaggory  work here-->
         <li class="treeview {{ ($prefix == '/service-request')?'active':'' }}">
           <a href="#">
-            <i data-feather="mail"></i> <span>Manage Services </span>
+            <i data-feather="globe"></i> <span>Manage Services </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -93,6 +93,23 @@
           </ul>
         </li>
         <!--CATAGORY work here-->
+
+        <li class="header nav-small-cap">MANAGE WEBSITE MACHINE REQUEST</li>
+        
+        <!--CAtaggory  work here-->
+        <li class="treeview {{ ($prefix == '/website-machine-request')?'active':'' }}">
+          <a href="#">
+            <i data-feather="globe"></i> <span>Website Request </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=" {{ Route('website-machine-request.view') }}  "><i class="ti-more"></i>view Machine Request </a></li>
+          </ul>
+        </li>
+        <!--CATAGORY work here-->
+
 
         <li class="header nav-small-cap">MANAGE MACHINES</li>		  
 
@@ -157,8 +174,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=" {{ route('buyerdetails.viewEquipmentRequestUser') }} "><i class="ti-more"></i> Users Equipment Requests  </a></li>
             <li><a href=" {{ route('buyerdetails.viewEquipmentRequest') }} "><i class="ti-more"></i>View All Requests  </a></li>
+            <li><a href=" {{ route('buyerdetails.viewEquipmentRequestUser') }} "><i class="ti-more"></i> Users Equipment Requests  </a></li>
             <li><a href=" {{ route('buyerdetails.proforma') }} "><i class="ti-more"></i>  Add Proforma Invoice </a></li>
             <li><a href=" {{ route('buyerdetails.viewproforma') }} "><i class="ti-more"></i> View Proforma Invoice </a></li>
 
