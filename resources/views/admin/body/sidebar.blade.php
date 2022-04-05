@@ -79,7 +79,7 @@
           </ul>
         </li>
 
-        <li class="header nav-small-cap">MANAGE SERVICES</li>		  
+        <li class="header nav-small-cap">MANAGE PARTS & SERVICES</li>		  
           <!--CAtaggory  work here-->
         <li class="treeview {{ ($prefix == '/service-request')?'active':'' }}">
           <a href="#">
@@ -93,6 +93,19 @@
           </ul>
         </li>
         <!--CATAGORY work here-->
+
+        <li class="treeview {{ ($prefix == '/manage-parts')?'active':'' }}">
+          <a href="#">
+            <i data-feather="server"></i><span>Manage Parts</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ Route('manage-parts.add') }}"><i class="ti-more"></i>Add Parts</a></li>
+            <li><a href="tables_data.html"><i class="ti-more"></i>View Parts</a></li>
+          </ul>
+        </li>
 
         <li class="header nav-small-cap">MANAGE WEBSITE MACHINE REQUEST</li>
         

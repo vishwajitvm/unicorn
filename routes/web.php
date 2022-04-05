@@ -35,6 +35,7 @@ use App\Models\main_category ;
 use Illuminate\Validation\Rules\Unique;
 use App\Http\Controllers\AdminWebsiteSERVICESController ;
 use App\Http\Controllers\ManageAdminWebsiteMachineRequestsController ;
+use App\Http\Controllers\AdminManagePartsCOntroller ;
 
 /*
 |--------------------------------------------------------------------------
@@ -404,6 +405,15 @@ Route::prefix('service-request')->group( function() {
 Route::prefix('website-machine-request')->group( function() {
     //view all requests
     Route::get('/view' , [ManageAdminWebsiteMachineRequestsController::class , 'ViewAllWEbsiteMachineRequests'])->name('website-machine-request.view') ; 
+
+}) ;
+
+//
+//MANAGE PARTS 
+//
+Route::prefix('manage-parts')->group( function() {
+    //add
+    Route::get('/add' , [AdminManagePartsCOntroller::class , 'AddParts'])->name('manage-parts.add') ; 
 
 }) ;
 

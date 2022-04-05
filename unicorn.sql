@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2022 at 09:58 AM
+-- Generation Time: Apr 04, 2022 at 01:14 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -152,6 +152,27 @@ CREATE TABLE `invoices` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `machine_parts`
+--
+
+CREATE TABLE `machine_parts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `parts_mainmachine` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_submachine` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_images` varchar(3000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_videos` varchar(3000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_status` enum('active','inactive') COLLATE utf8mb4_unicode_ci DEFAULT 'active',
+  `parts_empty1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parts_empty2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mainmachines`
 --
 
@@ -232,7 +253,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (22, '2021_11_02_112033_create_insuranceclaims_table', 9),
 (23, '2021_11_17_102844_create_proformas_table', 10),
 (24, '2022_03_22_095708_create_main_categories_table', 11),
-(25, '2022_04_01_072551_create_service_requests_table', 12);
+(25, '2022_04_01_072551_create_service_requests_table', 12),
+(26, '2022_04_04_062127_create_request_machines_table', 13),
+(27, '2022_04_04_103919_create_machine_parts_table', 14);
 
 -- --------------------------------------------------------
 
@@ -320,6 +343,35 @@ CREATE TABLE `proformas` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `request_machines`
+--
+
+CREATE TABLE `request_machines` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `request_username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_useremail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_userphone_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_machine` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_submachine` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_quantity` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_submachine_id` varchar(2555) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `request_machines`
+--
+
+INSERT INTO `request_machines` (`id`, `request_username`, `request_useremail`, `request_userphone_number`, `request_machine`, `request_submachine`, `request_quantity`, `request_message`, `request_submachine_id`, `created_at`, `updated_at`) VALUES
+(1, 'adil', 'adil@gmail.com', '7894561230', 'bar bending machine', 'Mild Steel Bar Bending Machine', '10', 'hell,message', '0', '2022-04-04 01:13:42', '2022-04-04 01:13:42'),
+(2, 'vishwa', 'vishwa@gmail.com', '4567891230', 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '13', 'hello, test message', NULL, '2022-04-04 01:42:39', '2022-04-04 01:42:39'),
+(9, 'rohit', 'rohit@gmail.com', '7894561230', 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '14', 'hthtrhtrh', '5', '2022-04-04 02:03:12', '2022-04-04 02:03:12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `service_requests`
 --
 
@@ -345,7 +397,9 @@ CREATE TABLE `service_requests` (
 
 INSERT INTO `service_requests` (`id`, `service_username`, `service_useremail`, `service_phonenumber`, `service_address`, `service_photos`, `service_videos`, `service_invoice`, `service_checkbox_policy`, `empty1`, `Status`, `created_at`, `updated_at`) VALUES
 (6, 'testuseremail', 'testuseremail@gmail.com', '+912626622622', 'gfbfgbfgkb gb klgf kgf gf', 'upload/website_services/3dde11a7673e90ad96fafd0b3b27a477.jpg|upload/website_services/63bfd6e8f26d1d3537f4c5038264ef36.jpg|upload/website_services/e6385d39ec9394f2f3a354d9d2b88eec.jpg', 'upload/website_services/9332c513ef44b682e9347822c2e457ac.mp4|upload/website_services/6f8caa0e6413027cb7a12f945151cb8d.mp4', 'upload/website_services/b9b72b29352f3764ea4dec130772bd9d.pdf', 'on', NULL, NULL, '2022-04-01 04:08:03', '2022-04-01 04:08:03'),
-(7, 'test 2', 'test2@gmail.com', '+91123456859', 'fhfg fg hfg hfg h fgh fg', 'upload/website_services/654ad60ebd1ae29cedc37da04b6b0672.jpg|upload/website_services/d80126524c1e9641333502c664fc6ca1.jpg', 'upload/website_services/ad47a008a2f806aa6eb1b53852cd8b37.mp4', 'upload/website_services/2812e5cf6d8f21d69c91dddeefb792a7.pdf', 'on', NULL, NULL, '2022-04-01 05:00:06', '2022-04-01 05:00:06');
+(7, 'test 2', 'test2@gmail.com', '+91123456859', 'fhfg fg hfg hfg h fgh fg', 'upload/website_services/654ad60ebd1ae29cedc37da04b6b0672.jpg|upload/website_services/d80126524c1e9641333502c664fc6ca1.jpg', 'upload/website_services/ad47a008a2f806aa6eb1b53852cd8b37.mp4', 'upload/website_services/2812e5cf6d8f21d69c91dddeefb792a7.pdf', 'on', NULL, NULL, '2022-04-01 05:00:06', '2022-04-01 05:00:06'),
+(8, 'Vineet', 'vineet@gmail.com', '+912626622622', 'RZ : 12058/08 xyz nagar new delhi , 110045', 'upload/website_services/1354b84eca447ab194edadb895706bb0.jpg|upload/website_services/6c351da15b5e8a743a21ee96a86e25df.jpg', 'upload/website_services/8685549650016d9e1d14bf972262450b.mp4', 'upload/website_services/40cb228987243c91b2dd0b7c9c4a0856.pdf', 'on', NULL, NULL, '2022-04-02 04:32:02', '2022-04-02 04:32:02'),
+(9, 'Vineet', 'vineet@gmail.com', '+912626622622', 'RZ : 12058/08 xyz nagar new delhi , 110045', 'upload/website_services/24146db4eb48c718b84cae0a0799dcfc.jpg|upload/website_services/df438e5206f31600e6ae4af72f2725f1.jpg', 'upload/website_services/4747f5ca63b8e8bd670b26e4b1573961.mp4', 'upload/website_services/cdbc9bca0a9fd93852571cced0089c4d.pdf', 'on', NULL, NULL, '2022-04-02 04:43:11', '2022-04-02 04:43:11');
 
 -- --------------------------------------------------------
 
@@ -367,7 +421,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('Q5kCd3rL45cVPp6BttaFJmWB8qdCmjIvOItMKbGr', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYVJNUGlMampzVWdPa2ZVNmY2VDdZMmdaSWY1NHEwdGhTS3lsM2pqSSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hYm91dHVzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MztzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHh6SUFtVy8vTUxMbVpPdGFac0xoTmVJSlRhTXFETDlaUVkxUExqZXpEdzhXSFVjcHY4RzM2Ijt9', 1648886285);
+('HzWPq3D4qjF50Ho3KKI9Pq8fDyv5jKWokX7NrYZJ', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibTBqMGp2VldVWWxjSUt3TVZDMWgxMjdFQmJLN2pWWkJJbGZjWVg2ZSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9tYW5hZ2UtcGFydHMvYWRkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MztzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHh6SUFtVy8vTUxMbVpPdGFac0xoTmVJSlRhTXFETDlaUVkxUExqZXpEdzhXSFVjcHY4RzM2Ijt9', 1649070834);
 
 -- --------------------------------------------------------
 
@@ -445,8 +499,7 @@ INSERT INTO `users` (`id`, `usertype`, `name`, `email`, `email_verified_at`, `pa
 (2, 'user', 'rohit', 'rohit@gmail.com', NULL, '$2y$10$DyJ3AEWfIi.roBcloNt4UOtGAz14PJBcH84E9WnjTTSWN.O1CfPqC', NULL, NULL, '1234567890', 'Delhi', 'Male', NULL, '202203241026Stan1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'inactive', NULL, NULL, NULL, '2021-10-07 07:10:08', '2022-03-24 04:56:18'),
 (3, 'admin', 'vishwa', 'vishwa@gmail.com', NULL, '$2y$10$xzIAmW//MLLmZOtaZsLhNeIJTaMqDL9ZQY1PLjezDw8WHUcpv8G36', NULL, NULL, '8920352115', 'Delhi', 'Male', NULL, '202202281131202202241023avatar-4.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-10-09 03:07:54', '2022-02-28 11:31:37'),
 (10, 'user', 'test', 'test@gmail.com', NULL, '$2y$10$4Vxwu/D3I/0K1ob73RzKp.2GSOhzAs3Lr00omQTQNoHOXKG3fzouy', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 00:59:36', '2022-03-21 05:10:30'),
-(11, 'user', 'yash', 'yash@gmail.com', NULL, '$2y$10$URXM0DpezsO724fDVtfZKOTaWTFfambl7TEEHYK2B0LKHkSbA1djK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 01:01:24', '2022-03-21 01:43:30'),
-(14, 'user', 'test12', 'test12@gmail.com', NULL, '$2y$10$86FZikqHRfjic39KizuTCeGWThnjO5mCBMtrcSU/hsKrDGZIEgyei', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2022-03-21 00:33:57', '2022-03-21 01:37:04');
+(11, 'user', 'yash', 'yash@gmail.com', NULL, '$2y$10$URXM0DpezsO724fDVtfZKOTaWTFfambl7TEEHYK2B0LKHkSbA1djK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'active', NULL, NULL, NULL, '2021-11-12 01:01:24', '2022-03-21 01:43:30');
 
 --
 -- Indexes for dumped tables
@@ -481,6 +534,12 @@ ALTER TABLE `insuranceclaims`
 -- Indexes for table `invoices`
 --
 ALTER TABLE `invoices`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `machine_parts`
+--
+ALTER TABLE `machine_parts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -525,6 +584,12 @@ ALTER TABLE `products`
 -- Indexes for table `proformas`
 --
 ALTER TABLE `proformas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `request_machines`
+--
+ALTER TABLE `request_machines`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -588,6 +653,12 @@ ALTER TABLE `invoices`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `machine_parts`
+--
+ALTER TABLE `machine_parts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `mainmachines`
 --
 ALTER TABLE `mainmachines`
@@ -603,7 +674,7 @@ ALTER TABLE `main_categories`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -624,10 +695,16 @@ ALTER TABLE `proformas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `request_machines`
+--
+ALTER TABLE `request_machines`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `service_requests`
 --
 ALTER TABLE `service_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `submachines`

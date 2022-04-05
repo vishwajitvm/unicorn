@@ -5,13 +5,11 @@
  <div class="content-wrapper">
     <div class="container-full">
       <!-- Content Header (Page header) -->
-
-
+      
       <!-- Main content -->
       <section class="content">
         <div class="row">
           <div class="col-12">
-
            <div class="box">
               <div class="box-header with-border">
                 <h3 class="box-title">View All Machine Request From Website </h3>
@@ -46,11 +44,7 @@
                               <td> {{$row->request_message}} </td>                             
                           </tr>
                         @endforeach
-
                       </tbody>
-
-                      
-
                     </table>
                   </div>
               </div>
