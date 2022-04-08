@@ -19,7 +19,7 @@
                <div class="box-body">
                  <div class="row">
                    <div class="col">
-                       <form novalidate method="POST" action=" {{Route('maincategory.store') }} " enctype="multipart/form-data" > <!--form-->
+                       <form novalidate method="POST" action=" {{Route('manage-parts.store') }} " enctype="multipart/form-data" > <!--form-->
                         @csrf  
                          <div class="row">
                            <div class="col-12">	
@@ -32,9 +32,10 @@
                                         <h5>Parts Main Machine <span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <select name="parts_mainmachine" id="parts_mainmachine" required  class="form-control">
-                                                <option value="" selected="" disabled>Select Category Status</option>
-                                                <option value="active">Active</option>
-                                                <option value="inactive">Inactive</option>
+                                                <option value="" selected="" disabled>Select Main Machine</option>
+                                               @foreach ($mainmachinedata as $item1)
+                                                    <option value="{{ $item1->machine_name }}"> {{$item1->machine_name  }} </option>
+                                               @endforeach
 
                                             </select>
                                         </div>
@@ -47,9 +48,9 @@
                                         <div class="controls">
                                             <select name="parts_submachine" id="parts_submachine" required  class="form-control">
                                                 <option value="" selected="" disabled>Select Category Status</option>
-                                                <option value="active">Active</option>
-                                                <option value="inactive">Inactive</option>
-
+                                                @foreach ($submachinedata as $item2)
+                                                    <option value="{{ $item2->sub_machine_name }}"> {{$item2->sub_machine_name  }} </option>
+                                               @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -179,6 +180,23 @@
         }
     }
 </script>
+
+<script>
+    $(document).ready(function() {
+        $("#parts_mainmachine").change(function() {
+            let productMainMachine = $(this).val() ;
+            jQuery.ajax({
+                url: '/get-sub-machine-ajax',
+                type: 'post',
+                data: 'productMainMachine='+productMainMachine+'&_token={{ csrf_token() }}',
+                success: function(result){
+                    jQuery('#parts_submachine').html(result) ;
+                }
+            })
+        })
+    })
+</script>
+
 
 
 @endsection

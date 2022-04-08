@@ -103,7 +103,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ Route('manage-parts.add') }}"><i class="ti-more"></i>Add Parts</a></li>
-            <li><a href="tables_data.html"><i class="ti-more"></i>View Parts</a></li>
+            <li><a href="{{ Route('manage-parts.view') }}"><i class="ti-more"></i>View Parts</a></li>
           </ul>
         </li>
 

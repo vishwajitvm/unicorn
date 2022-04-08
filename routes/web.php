@@ -415,6 +415,13 @@ Route::prefix('manage-parts')->group( function() {
     //add
     Route::get('/add' , [AdminManagePartsCOntroller::class , 'AddParts'])->name('manage-parts.add') ; 
 
+    //store Parts
+    Route::post('/store' , [AdminManagePartsCOntroller::class , 'StorePartsDB'])->name('manage-parts.store') ; 
+
+    //view machine parts
+    Route::get('/view' , [AdminManagePartsCOntroller::class , 'ViewParts'])->name('manage-parts.view') ; 
+
+
 }) ;
 
 
