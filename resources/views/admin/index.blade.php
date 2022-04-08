@@ -93,7 +93,7 @@
 
            
             <!--chart started here-->
-            <div class="col-6">
+            {{-- <div class="col-6">
                 <div class="box">
                     <div class="box-header">
                         <h4 class="box-title align-items-start flex-column">
@@ -128,13 +128,13 @@
                         
                         </div>
                     </div>
-            </div>  
+            </div>   --}}
             
 
             <!--chart end here-->
 
 
-              <div class="col-6">
+              <div class="col-12">
                   <div class="box">
                       <div class="box-header">
                           <h4 class="box-title align-items-start flex-column">

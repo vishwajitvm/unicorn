@@ -13,7 +13,7 @@
             <!-- Basic Forms -->
              <div class="box">
                <div class="box-header with-border">
-                 <h4 class="box-title">Add Parts[UNDER DEVELOPMENT*]</h4>
+                 <h4 class="box-title">Add Parts</h4>
                </div>
                <!-- /.box-header -->
                <div class="box-body">
@@ -31,7 +31,7 @@
                                     <div class="form-group">
                                         <h5>Parts Main Machine <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <select name="category_status" id="category_status" required  class="form-control">
+                                            <select name="parts_mainmachine" id="parts_mainmachine" required  class="form-control">
                                                 <option value="" selected="" disabled>Select Category Status</option>
                                                 <option value="active">Active</option>
                                                 <option value="inactive">Inactive</option>
@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <h5>Parts Sub Machine <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <select name="category_status" id="category_status" required  class="form-control">
+                                            <select name="parts_submachine" id="parts_submachine" required  class="form-control">
                                                 <option value="" selected="" disabled>Select Category Status</option>
                                                 <option value="active">Active</option>
                                                 <option value="inactive">Inactive</option>
@@ -59,7 +59,7 @@
                                     <div class="form-group">
                                         <h5>Parts Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" name="category_name"  class="form-control"  required="" aria-invalid="false"> </div>
+                                            <input type="text" name="parts_name"  class="form-control"  required="" aria-invalid="false"> </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
 
@@ -67,7 +67,7 @@
                                     <div class="form-group">
                                         <h5>Parts Description<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <textarea rows="5" name="category_description" class="form-control" placeholder="Machine Description" aria-invalid="false"></textarea>
+                                            <textarea rows="5" name="parts_description" class="form-control" placeholder="Describe Machine Parts" aria-invalid="false"></textarea>
                                         </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
@@ -88,7 +88,7 @@
                                             <h5>Parts Images </h5>
                                             <div class="custom-file">
                                                 {{-- <input type="file" multiple name="machine_image"   id="machine_image"> --}}
-                                                <input type="file" name="category_images[]" multiple accept="image/png, image/jpeg" onchange="preview()" class="form-control category_images" id="file-input" >
+                                                <input type="file" name="parts_images[]" multiple accept="image/png, image/jpeg" onchange="preview()" class="form-control category_images" id="file-input" >
                                                 <p id="num-of-files">No Files Chosen</p>
                                                 <!--image display here-->
                                                 <div id="images" style="width: 140px; ">
@@ -105,7 +105,7 @@
                                         <div class="col-md-12">
                                             <h5>Choose Parts Video </h5>
                                             <div class="custom-file">
-                                                <input type="file" accept="video/*" name="sub_machine_video[]" multiple class="form-control">
+                                                <input type="file" accept="video/*" name="parts_videos[]" multiple class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@
                                     <div class="form-group">
                                         <h5>Parts Status <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <select name="category_status" id="category_status" required  class="form-control">
+                                            <select name="parts_status" id="parts_status" required  class="form-control">
                                                 <option value="" selected="" disabled>Select Category Status</option>
                                                 <option value="active">Active</option>
                                                 <option value="inactive">Inactive</option>
@@ -151,9 +151,6 @@
     </div>
 </div>
 <!-- /.content-wrapper -->
-
-
-
 
 <script>
         let fileInput = document.getElementById("file-input");
