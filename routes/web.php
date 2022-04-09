@@ -435,6 +435,15 @@ Route::prefix('gallery')->group( function() {
     //add gallaery images here
     Route::get('/add' , [GalleryManagementAdminController::class , 'AddGallery'])->name('gallery.add') ; 
 
+    //store 
+    Route::post('/store' , [GalleryManagementAdminController::class , 'StoreGallery'])->name('gallery.store') ; 
+
+    //view
+    Route::get('/view' , [GalleryManagementAdminController::class , 'viewGallery'])->name('gallery.view') ; 
+
+    //delete
+    Route::get('/delete/{id}' , [GalleryManagementAdminController::class , 'DeleteGallery'])->name('gallery.delete') ; 
+
 }) ;
 
 

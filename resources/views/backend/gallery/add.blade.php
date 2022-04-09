@@ -20,7 +20,7 @@
                <div class="box-body">
                  <div class="row">
                    <div class="col">
-                       <form novalidate method="POST" action=" {{Route('mainmachine.store') }} " enctype="multipart/form-data" > <!--form-->
+                       <form novalidate method="POST" action=" {{Route('gallery.store') }} " enctype="multipart/form-data" > <!--form-->
                         @csrf  
                          <div class="row">
                            <div class="col-12">	
@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <h5>Image Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" name="machine_name"  class="form-control"  required="" aria-invalid="false"> </div>
+                                            <input type="text" name="gallery_img_name"  class="form-control"   aria-invalid="false"> </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
 
@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <h5>State Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" name="machine_price"  class="form-control"  required="" aria-invalid="false"> </div>
+                                            <input type="text" name="gallery_state_name"  class="form-control"   aria-invalid="false"> </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
                             </div>
@@ -59,7 +59,7 @@
                                         <div class="col-md-12">
                                             <h5>Choose Machine Image </h5>
                                             <div class="custom-file">
-                                                <input type="file" accept="image/png, image/gif, image/jpeg" name="machine_image"  class="custom-file-input" id="machine_image">
+                                                <input type="file" accept="image/png, image/gif, image/jpeg" name="gallery_image"  class="custom-file-input" id="machine_image" required>
                                                 <label class="custom-file-label text-light font-weight-bolder" for="customFile"   >Choose Machine Image</label>
                                             </div>
                                         </div>
@@ -74,22 +74,7 @@
                                 
                                     <!--image display ended here-->
 
-                                </div><!--col-6 Ended here-->
-
-                                {{-- <div class="col-md-12"><!--col-6 stared here-->
-                                    <div class="form-group">
-                                        <h5>Machine Status <span class="text-danger">*</span></h5>
-                                        <div class="controls">
-                                            <select name="machine_status" id="machine_status" required  class="form-control">
-                                                <option value="" selected="" disabled>Select Machine Status</option>
-                                                <option value="active">Active</option>
-                                                <option value="inactive">Inactive</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div><!--col-6 Ended here--> --}}
-                                
+                                </div><!--col-6 Ended here-->                                
                             </div>
                             <!--row Ended here-->
                            

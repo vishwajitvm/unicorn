@@ -245,7 +245,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('gallery.add') }}"><i class="ti-more"></i>Add Gallery</a></li>
-            <li><a href="tables_data.html"><i class="ti-more"></i>View Gallery</a></li>
+            <li><a href=" {{route('gallery.view')  }} "><i class="ti-more"></i>View Gallery</a></li>
           </ul>
         </li>
 
