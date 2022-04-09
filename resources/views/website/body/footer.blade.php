@@ -58,7 +58,9 @@
                         Contact
                     </h6>
                     <p class="text-white text-left"><b>Address:</b> WZ-131, First Floor Near Coffee House, Budela Market Vikas Puri, New Delhi-110018</p>
-                    <p class="text-white text-left"> <b>Phone no:</b><a href="tel:918048982966" class="text-light">+91-8048982966</a> </p>
+                    <p class="text-white text-left"> <b>Phone no:</b><a href="tel:919811111632" class="text-light">+91-9811111632</a> </p>
+                    <p class="text-white text-left"> <b>Phone no:</b><a href="tel:919811777774" class="text-light">+91-9811777774</a> </p>
+
                     <p class="text-white text-left"><b>Email:</b> equipmentunicorn@gmail.com</p>
 
                     <div>
@@ -67,13 +69,13 @@
                         </h6> -->
                         <div class="socialsicons text-left">
                             <div class="socialiconalign">
-                                <i class="fab fa-facebook-square"></i>
+                                <a href="https://www.facebook.com/unicornequipment/" target="_blank"><i class="fab fa-facebook-square"></i></a>
                             </div>
                             <div class="socialiconalign">
-                                <i class="fab fa-instagram-square"></i>
+                                <a href="https://www.instagram.com/equipmentunicorn/" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
                             <div class="socialiconalign">
-                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/company/unicorn-equipment/about/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             </div>
                             <div class="socialiconalign">
                                 <i class="fab fa-twitter-square"></i>

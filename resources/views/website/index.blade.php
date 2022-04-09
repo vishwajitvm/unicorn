@@ -316,7 +316,7 @@
                                     <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
-                                            <h4 class="uspheading">{{ $dealdone }}<br><span>Happy Clients</span></h4>
+                                            <h4 class="uspheading">{{ $dealdone }}<br><span>Order Complete</span></h4>
                                         </div>
                                     </div>
                                     <div class="col-md-4 d-flex justify-content-center">
