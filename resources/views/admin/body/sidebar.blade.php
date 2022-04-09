@@ -112,7 +112,7 @@
         <!--CAtaggory  work here-->
         <li class="treeview {{ ($prefix == '/website-machine-request')?'active':'' }}">
           <a href="#">
-            <i data-feather="globe"></i> <span>Website Request </span>
+            <i data-feather="globe"></i> <span>Machine Request </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -232,6 +232,39 @@
 
           </ul>
         </li>
+
+        <li class="header nav-small-cap">MANAGE GALLARY & VIDEOS</li>	
+        
+        <li class="treeview {{ ($prefix == '/gallery')?'active':'' }}">
+          <a href="#">
+            <i data-feather="server"></i>
+          <span>Manage Gallary</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('gallery.add') }}"><i class="ti-more"></i>Add Gallery</a></li>
+            <li><a href="tables_data.html"><i class="ti-more"></i>View Gallery</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="server"></i>
+            <span>Manage Videos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="tables_simple.html"><i class="ti-more"></i>Add Videos</a></li>
+            <li><a href="tables_data.html"><i class="ti-more"></i>View Videos</a></li>
+          </ul>
+        </li>
+
+
+
 		
 		  
 		<li class="header nav-small-cap">EXTRA</li>		  

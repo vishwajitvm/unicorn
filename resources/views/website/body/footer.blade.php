@@ -13,11 +13,11 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <div class="footerlogo fw-bold mb-4  text-left">
-                        <img src="{{asset('frontend/images/yellow_logo.png')}}" alt="">
+                        <img src="{{asset('frontend/images/yellow_logo.png')}}" style="width: 70%" alt="">
                     </div>
-                    <p class="text-white text-left">
+                    {{-- <p class="text-white text-left">
                         Unicorn Equipment is brand of well reputed vendor of Indian Forces since 1986. Unicorn Equipment is a fully Indian company with long experience of machine assembling point in India. Product development and assembly takes place at our facility in Delhi. 
-                    </p>
+                    </p> --}}
                 </div>
                 <!-- Grid column -->
 

@@ -36,6 +36,9 @@ use Illuminate\Validation\Rules\Unique;
 use App\Http\Controllers\AdminWebsiteSERVICESController ;
 use App\Http\Controllers\ManageAdminWebsiteMachineRequestsController ;
 use App\Http\Controllers\AdminManagePartsCOntroller ;
+use App\Http\Controllers\GalleryManagementAdminController ;
+use App\Models\request_machine;
+use App\Models\service_request ;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,7 +82,10 @@ Route::get('/', function () {
     // return view('auth.login');
     // $data = mainmachine::all()->take(8) ;
     $data = main_category::all()->take(8) ;
-    return view('website.index' , compact(['data'])) ;
+    $dealdone = assignproduct::all()->count() ;
+    $requestmachine = request_machine::all()->count() ;
+    $servicedone = service_request::all()->count() ;
+    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone'])) ;
 });
 
 
@@ -420,9 +426,17 @@ Route::prefix('manage-parts')->group( function() {
 
     //view machine parts
     Route::get('/view' , [AdminManagePartsCOntroller::class , 'ViewParts'])->name('manage-parts.view') ; 
+}) ;
 
+//
+//MANAGES GALLERY 
+//
+Route::prefix('gallery')->group( function() {
+    //add gallaery images here
+    Route::get('/add' , [GalleryManagementAdminController::class , 'AddGallery'])->name('gallery.add') ; 
 
 }) ;
+
 
 
 

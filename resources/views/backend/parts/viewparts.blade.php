@@ -17,7 +17,7 @@
                 <h3 class="box-title">Machine Parts</h3>
                 <a href=" {{ route('manage-parts.add') }} " class="btn btn-rounded btn-success md-5" style="float: right"> Add New Machine Parts </a>
               </div>
-              <!-- /.box-header -->
+
               <div class="box-body">
                   <div class="table-responsive">
                     <table id="example1" class="table table-bordered table-striped">
@@ -43,7 +43,6 @@
                               <td>  {{$itemdata->parts_name}} </td>
                               <td>  {{$itemdata->parts_description}} </td>
 
-                              
                               <td>  <!--mutli imag starded here-->
                                   @php
                                       $imgData = explode('|' , $itemdata->parts_images)
@@ -84,21 +83,14 @@
                     </table>
                   </div>
               </div>
-              <!-- /.box-body -->
             </div>
-            <!-- /.box -->
 
             
-            <!-- /.box -->          
           </div>
-          <!-- /.col -->
         </div>
-        <!-- /.row -->
       </section>
-      <!-- /.content -->
     
     </div>
 </div>
-<!-- /.content-wrapper -->
 
 @endsection

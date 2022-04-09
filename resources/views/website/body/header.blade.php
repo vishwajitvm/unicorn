@@ -13,7 +13,7 @@
                             <div class="main_logo">
                                 <div>
                                     <a class="navbar-brand" href="/">
-                                        <img src="{{asset('frontend/images/white_logo.png')}}" alt="Unicorn Logo">
+                                        <img src="{{asset('frontend/images/logo.png')}}" alt="Unicorn Logo">
                                     </a>
                                 </div>
                                 <!-- <div class="contact-details">

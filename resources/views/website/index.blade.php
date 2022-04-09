@@ -162,9 +162,9 @@
                                         <h2 class="headinggcontent">Log In</h2>
                                         <p>
                                             <ol type="a">
-                                                <li>Create an Account at Unicorn Equipment</li>
-                                                <li> Sign in to explore the Unicorn Equipments </li>
-                                                <li> Request the Unicorn Equipement Uisng your pannel </li>
+                                                <li>Create an Account at Unicorn Equipment.</li>
+                                                <li> Sign in to explore the Unicorn Equipment in Inventory. </li>
+                                                <li> Place your order using Unicorn Equipment Pannel </li>
                                             </ol>
                                         </p>
             
@@ -307,28 +307,28 @@
                         <div class="uspsection">
                             <div class="container">
                                 <div class="row wrapperssectionmargin">
-                                    <div class="col-md-3 d-flex justify-content-center">
+                                    {{-- <div class="col-md-3 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
                                             <h4 class="uspheading">15<br><span>Awards</span></h4>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 d-flex justify-content-center">
+                                    </div> --}}
+                                    <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
-                                            <h4 class="uspheading">1024<br><span>Happy Clients</span></h4>
+                                            <h4 class="uspheading">{{ $dealdone }}<br><span>Happy Clients</span></h4>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 d-flex justify-content-center">
+                                    <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
-                                            <h4 class="uspheading">1500<br><span>Projects</span></h4>
+                                            <h4 class="uspheading">{{ $requestmachine }}<br><span>Processing Orders</span></h4>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 d-flex justify-content-center">
+                                    <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
-                                            <h4 class="uspheading">99<br><span>Up Time</span></h4>
+                                            <h4 class="uspheading">{{ $servicedone }}<br><span>Service Completed</span></h4>
                                         </div>
                                     </div>
                                 </div>
