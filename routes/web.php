@@ -39,6 +39,7 @@ use App\Http\Controllers\AdminManagePartsCOntroller ;
 use App\Http\Controllers\GalleryManagementAdminController ;
 use App\Models\request_machine;
 use App\Models\service_request ;
+use App\Http\Controllers\ManageVideosAdminController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -445,6 +446,26 @@ Route::prefix('gallery')->group( function() {
     Route::get('/delete/{id}' , [GalleryManagementAdminController::class , 'DeleteGallery'])->name('gallery.delete') ; 
 
 }) ;
+
+//
+//MANAGE WEBSITE FRONT END VIDEOS
+//
+Route::prefix('managevideos')->group( function() {
+        //add gallaery images here
+    Route::get('/add' , [ManageVideosAdminController::class , 'addVideos'])->name('managevideos.add') ; 
+
+    //store
+    Route::post('/store' , [ManageVideosAdminController::class , 'StoreVideos'])->name('managevideos.store') ;
+    
+    //view
+    Route::get('/view' , [ManageVideosAdminController::class , 'ViewVideos'])->name('managevideos.view') ;
+
+    //delete
+    Route::get('/delete/{id}' , [ManageVideosAdminController::class , 'DeleteVideos'])->name('managevideos.delete') ;
+
+
+}) ;
+
 
 
 

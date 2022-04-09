@@ -249,7 +249,7 @@
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class="treeview {{ ($prefix == '/managevideos')?'active':'' }}">
           <a href="#">
             <i data-feather="server"></i>
             <span>Manage Videos</span>
@@ -258,8 +258,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="tables_simple.html"><i class="ti-more"></i>Add Videos</a></li>
-            <li><a href="tables_data.html"><i class="ti-more"></i>View Videos</a></li>
+            <li><a href="{{ route('managevideos.add') }}"><i class="ti-more"></i>Add Videos</a></li>
+            <li><a href="{{ route('managevideos.view') }}"><i class="ti-more"></i>View Videos</a></li>
           </ul>
         </li>
 

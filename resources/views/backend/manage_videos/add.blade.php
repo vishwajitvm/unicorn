@@ -13,14 +13,14 @@
             <!-- Basic Forms -->
              <div class="box">
                <div class="box-header with-border">
-                 <h4 class="box-title">Add Gallary Images</h4>
-                 <a href=" {{ route('gallery.view') }} " class="btn btn-rounded btn-success md-5" style="float: right"> View Gallery Image </a>
+                 <h4 class="box-title">Add Gallary Videos</h4>
+                 <a href=" {{ route('managevideos.view') }} " class="btn btn-rounded btn-success md-5" style="float: right"> View Gallery Videos </a>
                </div>
                <!-- /.box-header -->
                <div class="box-body">
                  <div class="row">
                    <div class="col">
-                       <form novalidate method="POST" action=" {{Route('gallery.store') }} " enctype="multipart/form-data" > <!--form-->
+                       <form novalidate method="POST" action=" {{Route('managevideos.store') }} " enctype="multipart/form-data" > <!--form-->
                         @csrf  
                          <div class="row">
                            <div class="col-12">	
@@ -30,17 +30,9 @@
                             <div class="row">
                                 <div class="col-md-12"><!--col-6 stared here-->
                                     <div class="form-group">
-                                        <h5>Image Name<span class="text-danger">*</span></h5>
+                                        <h5>Video Name </h5>
                                         <div class="controls">
-                                            <input type="text" name="gallery_img_name"  class="form-control"   aria-invalid="false"> </div>
-                                    </div>
-                                </div><!--col-6 Ended here-->
-
-                                <div class="col-md-12"><!--col-6 stared here-->
-                                    <div class="form-group">
-                                        <h5>State Name<span class="text-danger">*</span></h5>
-                                        <div class="controls">
-                                            <input type="text" name="gallery_state_name"  class="form-control"   aria-invalid="false"> </div>
+                                            <input type="text" name="video_name"  class="form-control"   aria-invalid="false"> </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
                             </div>
@@ -57,20 +49,13 @@
                                     <div class="form-group row">
                                         {{-- <label class="col-form-label col-lg-2">Custom BS file input</label> --}}
                                         <div class="col-md-12">
-                                            <h5>Choose Machine Image </h5>
+                                            <h5>Choose Video </h5>
                                             <div class="custom-file">
-                                                <input type="file" accept="image/png, image/gif, image/jpeg" name="gallery_image"  class="custom-file-input" id="machine_image" required>
-                                                <label class="custom-file-label text-light font-weight-bolder" for="customFile"   >Choose Machine Image</label>
+                                                <input type="file" accept="video/*" name="gallery_video"  class="form-control">
                                             </div>
                                         </div>
                                     </div>
-                                     <!--image display after selecting UISNG AJEX-->
-                                    <div class="form-group">
-                                        <div class="controls">
-                                            <img id="showImage" accept="image/PNG, image/gif, image/JPEG"  src="{{ (!empty($editData->image))?url('upload/user_images/'.$editData->image):url('upload/no_image.jpg') }}" alt="" style="width: 200px;height:100px;border:2px solid black">
-                                            <img src="" alt="" >
-                                        </div>
-                                    </div>
+                                    
                                 
                                     <!--image display ended here-->
 
@@ -101,19 +86,5 @@
     </div>
 </div>
 <!-- /.content-wrapper -->
-
-
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#machine_image').change(function(e){
-			var reader = new FileReader();
-			reader.onload = function(e){
-				$('#showImage').attr('src',e.target.result);
-			}
-			reader.readAsDataURL(e.target.files['0']);
-		});
-	});
-</script>
 
 @endsection

@@ -34,7 +34,7 @@ class GalleryManagementAdminController extends Controller
             'message' => 'Gallery Image Upload Successfully',
             'alert-type' => 'success'
         ) ;
-        return redirect()->route('gallery.add')->with($notification) ;
+        return redirect()->route('gallery.view')->with($notification) ;
     }
 
     //view
