@@ -28,9 +28,10 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2 class="text-uppercase">Company Performance</h2>
-                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
-                                                                error blanditiis quae quasi aperiam!</p>
+                                                            <h2 class="text-uppercase"> Ride On Roller </h2>
+                                                            <p>Amidst our wide range of products, we are also engaged in offering a wide range of Ride on roller or Ride on vibratory roller. These Hi-tech Rollers credited for their better smooth performance and longer durability, are widely used for construction and repairing of roads and also to maintain edges of highways. They are also credited for their sturdiness and easy handling.</p>
+                                                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
+
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5"></div>
@@ -44,9 +45,10 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2 class="text-uppercase">Company Performance</h2>
-                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
-                                                                error blanditiis quae quasi aperiam!</p>
+                                                            <h2 class="text-uppercase"> Walk Behind Roller </h2>
+                                                            <p>Walk Behind rollers can be double drum model, both types are self-propelled and can work in reverse travel direction. these roller controlled by cable or road linkages. They are used for soil, granular and asphalt compaction and for small area repair and pothole work.</p>
+                                                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
+
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5"></div>
@@ -60,9 +62,10 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2 class="text-uppercase">Company Performance</h2>
-                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
-                                                                error blanditiis quae quasi aperiam!</p>
+                                                            <h2 class="text-uppercase">Bar cutting Machine </h2>
+                                                            <p>Unicorn Equipment a unit of M/S global links is a unique name. which is engaged in presenting a wide range of bar cutting machine. This brings duty bar cutting machine with strong construction and high quality components. Rebar Cutting Machine Mainly used for construction site for flawless smooth functionality and easy operations.</p>
+                                                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
+
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5"></div>
@@ -76,9 +79,10 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2 class="text-uppercase">Company Performance</h2>
-                                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
-                                                                error blanditiis quae quasi aperiam!</p>
+                                                            <h2 class="text-uppercase">  bar bending machine </h2>
+                                                            <p> Automatic Bar Bending Machine offered by us are designed to bend the bar upto 42mm to 45 mm.Thease bar bending machine (UNI 50B) are served in the capacity of 4kw/6HP Power.</p>
+                                                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
+
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5"></div>

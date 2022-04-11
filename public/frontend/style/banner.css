@@ -96,6 +96,8 @@
     color: #FFFFFF;
     font-family: Montserrat;
     font-weight: 400;
+    font-size: 22px;
+    padding-bottom: 20px ;
 }
 
 #carousel-thumbs img:hover {
