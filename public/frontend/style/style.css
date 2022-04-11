@@ -49,8 +49,6 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(26, 26, 26, 0.73) !important;
-            position: relative;
-
         }
         
         .main_logo {
@@ -70,7 +68,7 @@
             font-size: 16px;
             font-weight: 500;
             color: #fff;
-            font-family: roboto;
+            font-family: Open Sans;
         }
         
         .contact-details h3 span {
@@ -78,7 +76,7 @@
             font-weight: 600;
             color: #feca0a;
             padding-top: 2px;
-            font-family: roboto;
+            font-family: Open Sans;
         }
         
         .navbar-brand img {
@@ -90,7 +88,7 @@
             font-size: 16px;
             color: #fff;
             font-weight: 500;
-            font-family: roboto;
+            font-family: Open Sans;
             padding-left: 1rem;
             padding-right: 1rem;
         }
@@ -124,7 +122,7 @@
             color: #000;
             font-size: 16px;
             font-weight: 600;
-            font-family: roboto;
+            font-family: Open Sans;
             text-transform: uppercase;
             text-decoration: none;
             background-color: #feca0a;
@@ -218,6 +216,7 @@
             margin-top: 180px;
             padding: 0px 70px;
             box-shadow: 0px 2px 15px 0px #a0a0a05d;
+            flex-wrap: wrap;
         }
         
         .headinggcontent {
@@ -321,10 +320,10 @@
         }
         
         .categoryimgbox img {
-            width: 280px !important;
+            width: 315px !important;
             max-width: 100%;
-            height: 230px;
-            max-height: 230px;
+            height: 316px;
+            max-height: 316px ;
             object-fit: cover !important;
             padding: 10px;
             border: none;
@@ -350,7 +349,7 @@
         a.custombutton {
             color: #000;
             font-size: 18px;
-            font-family: Roboto;
+            font-family: Open Sans;
             font-weight: 500;
             text-decoration: none;
             background-color: #feca0a;
@@ -657,7 +656,7 @@
             margin-top: -100px;
             background-image: url(./image/header_background.png);
             z-index: -1;
-            /* position: relative; */
+            position: relative;
         }
         
         .mainheadertitle h1 {
@@ -706,7 +705,7 @@
         .custom-buttonnn a {
             color: #000;
             font-size: 18px;
-            font-family: Roboto;
+            font-family: Open Sans;
             font-weight: 500;
             text-decoration: none;
             background-color: #feca0a;
@@ -1249,7 +1248,7 @@
         .queryformparts .form-label {
             font-size: 18px;
             font-weight: 400;
-            font-family: roboto;
+            font-family: Open Sans;
         }
         
         .queryformparts form input[type=text],
@@ -1267,4 +1266,68 @@
         .queryformparts .form-select:focus {
             box-shadow: none !important;
             border: 2px solid #0000003d;
+        }
+        
+        .image {
+            position: relative;
+            width: 400px;
+            max-width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        .image__img {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px
+        }
+        
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        
+        .image__overlay--blur {
+            backdrop-filter: blur(5px);
+        }
+        
+        .image__overlay--primary {
+            background: #00000052;
+            border-radius: 10px;
+        }
+        
+        .image__overlay>* {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+        
+        .image__overlay:hover {
+            opacity: 1;
+        }
+        
+        .image__overlay:hover>* {
+            transform: translateY(0);
+        }
+        
+        .image__title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .image__description {
+            font-size: 1.25em;
+            margin-top: 0.25em;
         }

@@ -16,7 +16,9 @@
 <div class="containtdata">
                     <!--banner section start-->
                     <section class="main_banner">
+
                         <div id="wrap" class="container-fluid">
+
                             <!-- Carousel -->
                             <div id="carousel" class="carousel slide gallery" data-ride="carousel">
                                 <div class="carousel-inner">
@@ -109,16 +111,16 @@
                                     <div class="carousel-item active" data-slide-number="0">
                                         <div class="row mx-0 justify-content-center">
                                             <div id="carousel-selector-0" class="thumb col-3 px-1 py-2 selected" data-target="#carousel" data-slide-to="0">
-                                                <img src="{{asset('frontend/style/image/main_banner_1.jpg')}}" class="img-fluid" alt="...">
+                                                <img src="{{asset('frontend/style/image/home_banner_1.jpg')}}" class="img-fluid" alt="...">
                                             </div>
                                             <div id="carousel-selector-1" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="1">
-                                                <img src="{{asset('frontend/style/image/main_banner_2.jpg')}}" class="img-fluid" alt="...">
+                                                <img src="{{asset('frontend/style/image/home_banner_2.jpg')}}" class="img-fluid" alt="...">
                                             </div>
                                             <div id="carousel-selector-2" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="2">
-                                                <img src="{{asset('frontend/style/image/main_banner_3.jpg')}}" class="img-fluid" alt="...">
+                                                <img src="{{asset('frontend/style/image/home_banner_3.jpg')}}" class="img-fluid" alt="...">
                                             </div>
                                             <div id="carousel-selector-3" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="3">
-                                                <img src="{{asset('frontend/style/image/main_banner_4.jpg')}}" class="img-fluid" alt="...">
+                                                <img src="{{asset('frontend/style/image/home_banner_4.jpg')}}" class="img-fluid" alt="...">
                                             </div>
                                         </div>
                                     </div>
