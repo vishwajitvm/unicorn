@@ -229,7 +229,7 @@
                                             </div>
                                         </div>
                                         <div class="category_titleheading">
-                                            <h3><a href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a></h3>
+                                            <h3 class="text-capitalize"><a href="{{ route('main-machine',$item->id) }}"><b>{{ $item->category_name }}</b></a></h3>
                                         </div>
                                     </div>
                                 @endforeach
@@ -422,7 +422,7 @@
                                 
                                 @foreach ($videodata as $key=>$item)                            
                                     <div class="carousel-item">
-                                        <video width="60%" height="500px" controls>
+                                        <video width="60%" height="500px" class="bg-dark" controls>
                                             <source src="{{ URL('upload/manages_website_videos',$item->gallery_video) }}" type="video/mp4">
                                           Your browser does not support the video tag.
                                           </video>

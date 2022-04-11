@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 01:14 PM
+-- Generation Time: Apr 11, 2022 at 11:32 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -107,6 +107,31 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `gallery_img_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_state_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_image` varchar(2500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_empty` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `gallery_img_name`, `gallery_state_name`, `gallery_image`, `gallery_empty`, `created_at`, `updated_at`) VALUES
+(2, 'sec image hfuhfddhvd', 'new delhi', '202204091147IMG-20191225-WA0028.jpg', NULL, '2022-04-09 06:17:05', '2022-04-09 06:17:05'),
+(3, 'third image', 'up', '202204091153IMG-20200211-WA0008.jpg', NULL, '2022-04-09 06:23:58', '2022-04-09 06:23:58'),
+(4, 'new image', 'jharkhand', '202204110600IMG-20191014-WA0087.jpg', NULL, '2022-04-11 00:30:39', '2022-04-11 00:30:39');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `insuranceclaims`
 --
 
@@ -170,6 +195,13 @@ CREATE TABLE `machine_parts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `machine_parts`
+--
+
+INSERT INTO `machine_parts` (`id`, `parts_mainmachine`, `parts_submachine`, `parts_name`, `parts_description`, `parts_images`, `parts_videos`, `parts_status`, `parts_empty1`, `parts_empty2`, `created_at`, `updated_at`) VALUES
+(1, 'bar bending machine', 'Mild Steel Bar Bending Machine', 'first parts', 'this is basic description of machine part one', 'upload/machine_parts/fa28c6cdf8dd6f41a657c3d7caa5c709.jpg|upload/machine_parts/1ae6464c6b5d51b363d7d96f97132c75.jpg|upload/machine_parts/6194a1ee187acd6606989f03769e8f7f.jpg', 'upload/machine_parts/8be6adae5ae0e157014d7d250870f212.mp4', 'active', NULL, NULL, '2022-04-08 02:27:13', '2022-04-08 02:27:13');
+
 -- --------------------------------------------------------
 
 --
@@ -225,6 +257,29 @@ INSERT INTO `main_categories` (`id`, `category_name`, `category_description`, `c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `manage_videos`
+--
+
+CREATE TABLE `manage_videos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `video_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_video` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `empty1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `manage_videos`
+--
+
+INSERT INTO `manage_videos` (`id`, `video_name`, `gallery_video`, `empty1`, `created_at`, `updated_at`) VALUES
+(2, 'first video', '202204110655VID-20200505-WA0008.mp4', NULL, '2022-04-11 01:25:47', '2022-04-11 01:25:47'),
+(3, 'second video', '202204110703loader4.mp4', NULL, '2022-04-11 01:33:52', '2022-04-11 01:33:52');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -255,7 +310,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (24, '2022_03_22_095708_create_main_categories_table', 11),
 (25, '2022_04_01_072551_create_service_requests_table', 12),
 (26, '2022_04_04_062127_create_request_machines_table', 13),
-(27, '2022_04_04_103919_create_machine_parts_table', 14);
+(27, '2022_04_04_103919_create_machine_parts_table', 14),
+(28, '2022_04_09_111754_create_galleries_table', 15),
+(29, '2022_04_09_124138_create_manage_videos_table', 16);
 
 -- --------------------------------------------------------
 
@@ -367,7 +424,8 @@ CREATE TABLE `request_machines` (
 INSERT INTO `request_machines` (`id`, `request_username`, `request_useremail`, `request_userphone_number`, `request_machine`, `request_submachine`, `request_quantity`, `request_message`, `request_submachine_id`, `created_at`, `updated_at`) VALUES
 (1, 'adil', 'adil@gmail.com', '7894561230', 'bar bending machine', 'Mild Steel Bar Bending Machine', '10', 'hell,message', '0', '2022-04-04 01:13:42', '2022-04-04 01:13:42'),
 (2, 'vishwa', 'vishwa@gmail.com', '4567891230', 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '13', 'hello, test message', NULL, '2022-04-04 01:42:39', '2022-04-04 01:42:39'),
-(9, 'rohit', 'rohit@gmail.com', '7894561230', 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '14', 'hthtrhtrh', '5', '2022-04-04 02:03:12', '2022-04-04 02:03:12');
+(9, 'rohit', 'rohit@gmail.com', '7894561230', 'Mild Steel Power Floater Machine', 'Concrete Power Trowel Cum Floater', '14', 'hthtrhtrh', '5', '2022-04-04 02:03:12', '2022-04-04 02:03:12'),
+(10, 'vishwa', 'vishwa@gmail.com', '7894561230', 'bar bending machine', 'Mild Steel Bar Bending Machine', '14', 'htyhtyhythty', '4', '2022-04-08 05:29:30', '2022-04-08 05:29:30');
 
 -- --------------------------------------------------------
 
@@ -399,7 +457,8 @@ INSERT INTO `service_requests` (`id`, `service_username`, `service_useremail`, `
 (6, 'testuseremail', 'testuseremail@gmail.com', '+912626622622', 'gfbfgbfgkb gb klgf kgf gf', 'upload/website_services/3dde11a7673e90ad96fafd0b3b27a477.jpg|upload/website_services/63bfd6e8f26d1d3537f4c5038264ef36.jpg|upload/website_services/e6385d39ec9394f2f3a354d9d2b88eec.jpg', 'upload/website_services/9332c513ef44b682e9347822c2e457ac.mp4|upload/website_services/6f8caa0e6413027cb7a12f945151cb8d.mp4', 'upload/website_services/b9b72b29352f3764ea4dec130772bd9d.pdf', 'on', NULL, NULL, '2022-04-01 04:08:03', '2022-04-01 04:08:03'),
 (7, 'test 2', 'test2@gmail.com', '+91123456859', 'fhfg fg hfg hfg h fgh fg', 'upload/website_services/654ad60ebd1ae29cedc37da04b6b0672.jpg|upload/website_services/d80126524c1e9641333502c664fc6ca1.jpg', 'upload/website_services/ad47a008a2f806aa6eb1b53852cd8b37.mp4', 'upload/website_services/2812e5cf6d8f21d69c91dddeefb792a7.pdf', 'on', NULL, NULL, '2022-04-01 05:00:06', '2022-04-01 05:00:06'),
 (8, 'Vineet', 'vineet@gmail.com', '+912626622622', 'RZ : 12058/08 xyz nagar new delhi , 110045', 'upload/website_services/1354b84eca447ab194edadb895706bb0.jpg|upload/website_services/6c351da15b5e8a743a21ee96a86e25df.jpg', 'upload/website_services/8685549650016d9e1d14bf972262450b.mp4', 'upload/website_services/40cb228987243c91b2dd0b7c9c4a0856.pdf', 'on', NULL, NULL, '2022-04-02 04:32:02', '2022-04-02 04:32:02'),
-(9, 'Vineet', 'vineet@gmail.com', '+912626622622', 'RZ : 12058/08 xyz nagar new delhi , 110045', 'upload/website_services/24146db4eb48c718b84cae0a0799dcfc.jpg|upload/website_services/df438e5206f31600e6ae4af72f2725f1.jpg', 'upload/website_services/4747f5ca63b8e8bd670b26e4b1573961.mp4', 'upload/website_services/cdbc9bca0a9fd93852571cced0089c4d.pdf', 'on', NULL, NULL, '2022-04-02 04:43:11', '2022-04-02 04:43:11');
+(9, 'Vineet', 'vineet@gmail.com', '+912626622622', 'RZ : 12058/08 xyz nagar new delhi , 110045', 'upload/website_services/24146db4eb48c718b84cae0a0799dcfc.jpg|upload/website_services/df438e5206f31600e6ae4af72f2725f1.jpg', 'upload/website_services/4747f5ca63b8e8bd670b26e4b1573961.mp4', 'upload/website_services/cdbc9bca0a9fd93852571cced0089c4d.pdf', 'on', NULL, NULL, '2022-04-02 04:43:11', '2022-04-02 04:43:11'),
+(10, 'dvdv', 'test2@gmail.com', '+91123456859', 'fgbgfbfgb', 'upload/website_services/7a7c6a5b2f18e21e23049634cec06c68.jpg|upload/website_services/d062f3e278a1fbba2303ff5a22e8c75e.jpg', 'upload/website_services/dffac38df13c3a801f1b8994f9303bcc.mp4', 'upload/website_services/570320a43e5d968459b6342c01498b81.pdf', 'on', NULL, NULL, '2022-04-09 03:33:21', '2022-04-09 03:33:21');
 
 -- --------------------------------------------------------
 
@@ -421,7 +480,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('HzWPq3D4qjF50Ho3KKI9Pq8fDyv5jKWokX7NrYZJ', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibTBqMGp2VldVWWxjSUt3TVZDMWgxMjdFQmJLN2pWWkJJbGZjWVg2ZSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9tYW5hZ2UtcGFydHMvYWRkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MztzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHh6SUFtVy8vTUxMbVpPdGFac0xoTmVJSlRhTXFETDlaUVkxUExqZXpEdzhXSFVjcHY4RzM2Ijt9', 1649070834);
+('pBZ6U6Yhv3uB7bsTgkOw9cbdgYa4YaH5Qfrt8zUf', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZ2VuSXZqOGVpS2FZNXdnbG1CeUpFSlJkNElSZmtOaHlBdmpCZWhxMyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR4eklBbVcvL01MTG1aT3RhWnNMaE5lSUpUYU1xREw5WlFZMVBMamV6RHc4V0hVY3B2OEczNiI7fQ==', 1649667251);
 
 -- --------------------------------------------------------
 
@@ -525,6 +584,12 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `insuranceclaims`
 --
 ALTER TABLE `insuranceclaims`
@@ -552,6 +617,12 @@ ALTER TABLE `mainmachines`
 -- Indexes for table `main_categories`
 --
 ALTER TABLE `main_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `manage_videos`
+--
+ALTER TABLE `manage_videos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -641,6 +712,12 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `insuranceclaims`
 --
 ALTER TABLE `insuranceclaims`
@@ -656,7 +733,7 @@ ALTER TABLE `invoices`
 -- AUTO_INCREMENT for table `machine_parts`
 --
 ALTER TABLE `machine_parts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mainmachines`
@@ -671,10 +748,16 @@ ALTER TABLE `main_categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `manage_videos`
+--
+ALTER TABLE `manage_videos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -698,13 +781,13 @@ ALTER TABLE `proformas`
 -- AUTO_INCREMENT for table `request_machines`
 --
 ALTER TABLE `request_machines`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `service_requests`
 --
 ALTER TABLE `service_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `submachines`

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
         * {
             box-sizing: border-box;
         }
@@ -8,7 +9,7 @@
         }
         
         p {
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-size: 16px;
         }
         
@@ -28,12 +29,12 @@
         
         h1 {
             line-height: 1.38;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
         }
         
         h2 {
             line-height: 1.38;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .sections {
@@ -50,6 +51,10 @@
             justify-content: center;
             background-color: rgba(26, 26, 26, 0.73) !important;
             position: relative;
+        }
+
+        .navbar-expand-lg .navbar-nav .nav-link {
+            font-family: 'Montserrat', sans-serif !important;
         }
         
         .main_logo {
@@ -123,7 +128,7 @@
             color: #000;
             font-size: 16px;
             font-weight: 600;
-            font-family: Open Sans;
+            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             text-decoration: none;
             background-color: #feca0a;
@@ -171,7 +176,7 @@
         
         .bannerheadingspan {
             font-size: 32px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             background-color: #fff;
             padding: 8px;
@@ -179,7 +184,7 @@
         
         .bannerheadingspanyellow {
             font-size: 36px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: bold;
             background-color: #feca0a;
             padding: 8px;
@@ -286,7 +291,7 @@
         
         .categorysection h2 {
             font-size: 62px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             text-transform: uppercase;
         }
@@ -337,7 +342,7 @@
         
         .category_titleheading h3 {
             font-size: 20px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             border: 0 !important;
         }
@@ -350,7 +355,7 @@
         a.custombutton {
             color: #000;
             font-size: 18px;
-            font-family: Open Sans;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             text-decoration: none;
             background-color: #feca0a;
@@ -365,7 +370,7 @@
         
         .aboutussection h2 {
             font-size: 40px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             text-transform: uppercase;
         }
@@ -395,7 +400,7 @@
         
         .wrappersection p {
             font-size: 18px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             line-height: 1.5;
             margin-top: 20px;
@@ -488,7 +493,7 @@
         .uspheading span {
             font-size: 24px;
             color: #fff;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 200;
         }
         /* features section start here */
@@ -522,7 +527,7 @@
         
         .contentt h3 {
             font-size: 24px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
         }
         
@@ -535,7 +540,7 @@
         
         .countingg span {
             font-size: 64px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             border: 0px;
         }
@@ -550,7 +555,7 @@
         
         .contentttbox h3 {
             font-size: 24px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
         }
         
@@ -605,7 +610,7 @@
         
         footer h6 {
             font-size: 18px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             color: #feca0a;
         }
@@ -616,13 +621,13 @@
         
         footer p {
             font-size: 16px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
         }
         
         footer p b {
             font-size: 18px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
         }
         
@@ -664,7 +669,7 @@
             color: #fff;
             font-size: 54px;
             font-weight: 700;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             margin: 130px 0px 0px 0px;
         }
         
@@ -859,7 +864,7 @@
         
         .submachineheading h3 {
             font-size: 24px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             line-height: 2;
         }
@@ -871,7 +876,7 @@
         
         .submachineprice h4 {
             font-size: 18px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             line-height: 1;
         }
@@ -896,7 +901,7 @@
         
         .submachineprice h4 span {
             font-size: 18px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-style: italic;
             font-weight: 700;
         }
@@ -1027,7 +1032,7 @@
         a.intrestedbtn {
             border-radius: 8px;
             font-size: 16px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             color: #000;
         }
@@ -1039,7 +1044,7 @@
         a.intrestedbtn:hover {
             border-radius: 8px;
             font-size: 16px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             color: #fff;
         }
@@ -1159,7 +1164,7 @@
         
         .contactdetails h3 {
             font-size: 24px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             line-height: 1;
             margin-bottom: 20px;
@@ -1167,7 +1172,7 @@
         
         .contactdetails h4 {
             font-size: 18px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             line-height: 1;
             margin-bottom: 10px;
@@ -1206,7 +1211,7 @@
         
         .teamsectionn h2 {
             font-size: 52px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             text-transform: uppercase;
         }
@@ -1220,13 +1225,13 @@
         
         .cardwrapperr h3 {
             font-size: 22px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
         }
         
         .cardwrapperr div {
             font-size: 16px;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             color: #aab0bc;
             text-transform: uppercase;
