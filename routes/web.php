@@ -40,6 +40,9 @@ use App\Http\Controllers\GalleryManagementAdminController ;
 use App\Models\request_machine;
 use App\Models\service_request ;
 use App\Http\Controllers\ManageVideosAdminController ;
+//model
+use App\Models\gallery ;
+use App\Models\manage_video ;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,7 +89,8 @@ Route::get('/', function () {
     $dealdone = assignproduct::all()->count() ;
     $requestmachine = request_machine::all()->count() ;
     $servicedone = service_request::all()->count() ;
-    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone'])) ;
+    $galleryimages = gallery::latest()->get() ;
+    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone' , 'galleryimages'])) ;
 });
 
 

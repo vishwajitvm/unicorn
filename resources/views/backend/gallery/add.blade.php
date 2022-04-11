@@ -32,7 +32,8 @@
                                     <div class="form-group">
                                         <h5>Image Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" name="gallery_img_name"  class="form-control"   aria-invalid="false"> </div>
+                                            <input type="text" name="gallery_img_name"  class="form-control"   aria-invalid="false" maxlength="25">
+                                         </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
 
@@ -40,7 +41,7 @@
                                     <div class="form-group">
                                         <h5>State Name<span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" name="gallery_state_name"  class="form-control"   aria-invalid="false"> </div>
+                                            <input type="text" name="gallery_state_name"  class="form-control"   aria-invalid="false" maxlength="25"> </div>
                                     </div>
                                 </div><!--col-6 Ended here-->
                             </div>

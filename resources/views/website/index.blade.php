@@ -28,7 +28,7 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2>Company Performance</h2>
+                                                            <h2 class="text-uppercase">Company Performance</h2>
                                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
                                                                 error blanditiis quae quasi aperiam!</p>
                                                         </div>
@@ -44,7 +44,7 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2>Company Performance</h2>
+                                                            <h2 class="text-uppercase">Company Performance</h2>
                                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
                                                                 error blanditiis quae quasi aperiam!</p>
                                                         </div>
@@ -60,7 +60,7 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2>Company Performance</h2>
+                                                            <h2 class="text-uppercase">Company Performance</h2>
                                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
                                                                 error blanditiis quae quasi aperiam!</p>
                                                         </div>
@@ -76,7 +76,7 @@
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
-                                                            <h2>Company Performance</h2>
+                                                            <h2 class="text-uppercase">Company Performance</h2>
                                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel est voluptates dolorem, mollitia eligendi aut autem porro asperiores. Eaque, voluptates ducimus? Perferendis voluptas alias exercitationem
                                                                 error blanditiis quae quasi aperiam!</p>
                                                         </div>
@@ -409,51 +409,30 @@
                     <section class="blogsection categorysection">
                         <div class="container">
                             <div class="main_title">
-                                <h2>News</h2>
-                                <h3 class="title_back_heading">Our Blogs</h3>
+                                <h2>Gallery</h2>
+                                <h3 class="title_back_heading">Gallery</h3>
                                 <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
                             </div>
-                            <div class="row firstcategorysection">
-                                <div class="col-md-4">
-                                    <div class="blogimgbox">
-                                        <img class="img-thumbnail" src="{{asset('frontend/images/CM20220203-c5714-40e22.jpg')}}" alt="">
-                                        <div class="category_titleheading">
-                                            <h3><a href="">Walk Behind Roller</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem incidunt explicabo est quis expedita soluta.</p>
-                                            <div class="morecategory mt-5 mb-3">
-                                                <button type="button"><a class="custombutton" href="#">Read More</a></button>
-                                            </div>
+
+                            <div class="row">
+                                
+                                @foreach ($galleryimages as $items)
+                                <div class="col-md-3">
+                                    <div class="image">
+                                        <img class="image__img" src="{{ (!empty($items->gallery_image))?url('upload/gallery_images/'.$items->gallery_image):url('upload/no_image.jpg') }}" alt="Bricks">
+                                        <div class="image__overlay image__overlay--primary">
+                                            <div class="image__title text-uppercase">  {{ $items->gallery_img_name  }} </div>
+                                            <p class="image__description text-capitalize">
+                                                {{ $items->gallery_state_name }}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="blogimgbox">
-                                        <img class="img-thumbnail" src="{{asset('frontend/images/CM20220203-c5714-40e22.jpg')}}" alt="">
-                                        <div class="category_titleheading">
-                                            <h3><a href="">Walk Behind Roller</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem incidunt explicabo est quis expedita soluta.</p>
-                                            <div class="morecategory mt-5 mb-3">
-                                                <button type="button"><a class="custombutton" href="#">Read More</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="blogimgbox">
-                                        <img class="img-thumbnail" src="{{asset('frontend/images/CM20220203-c5714-40e22.jpg')}}" alt="">
-                                        <div class="category_titleheading">
-                                            <h3><a href="">Walk Behind Roller</a></h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem incidunt explicabo est quis expedita soluta.</p>
-                                            <div class="morecategory mt-5 mb-3">
-                                                <button type="button"><a class="custombutton" href="#">Read More</a></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </section>
-                    <!-- News section end here -->
+                                <!-- News section end here -->
             
             
                     <!-- video section Start Here -->
