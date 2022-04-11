@@ -113,7 +113,7 @@
                             <div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active" data-slide-number="0">
-                                        <div class="row mx-0 justify-content-center">
+                                        {{-- <div class="row mx-0 justify-content-center">
                                             <div id="carousel-selector-0" class="thumb col-3 px-1 py-2 selected" data-target="#carousel" data-slide-to="0">
                                                 <img src="{{asset('frontend/style/image/home_banner_1.jpg')}}" class="img-fluid" alt="...">
                                             </div>
@@ -126,7 +126,7 @@
                                             <div id="carousel-selector-3" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="3">
                                                 <img src="{{asset('frontend/style/image/home_banner_4.jpg')}}" class="img-fluid" alt="...">
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@
                                             </div>
                                         </div>
                                         <div class="category_titleheading">
-                                            <h3 class="text-capitalize"><a href="{{ route('main-machine',$item->id) }}"><b>{{ $item->category_name }}</b></a></h3>
+                                            <h3 class="text-uppercase"><a href="{{ route('main-machine',$item->id) }}"><b>{{ $item->category_name }}</b></a></h3>
                                         </div>
                                     </div>
                                 @endforeach
@@ -295,15 +295,16 @@
                                     <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
-                                            <h4 class="uspheading">{{ $dealdone }}<br><span>Order Complete</span></h4>
+                                            <h4 class="uspheading">{{ $requestmachine }}<br><span>Processing Orders</span></h4>
                                         </div>
                                     </div>
                                     <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">
-                                            <h4 class="uspheading">{{ $requestmachine }}<br><span>Processing Orders</span></h4>
+                                            <h4 class="uspheading">{{ $dealdone }}<br><span>Order Complete</span></h4>
                                         </div>
                                     </div>
+
                                     <div class="col-md-4 d-flex justify-content-center">
                                         <div class="imagebox">
                                             <img src="{{asset('frontend/images/trophy.png')}}" alt="">

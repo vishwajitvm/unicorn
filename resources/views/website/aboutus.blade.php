@@ -63,7 +63,7 @@
                     <button type="button"><a class="custombutton aboutssbtn" href="#">Contact Now</a></button>
                 </div>
                 <div class="col-md-6">
-                    <img src="{{asset('frontend/images/about_us_map.png')}}" class="aboutusimg" alt="">
+                    <img src="{{asset('frontend/images/founder.jpg')}}" class="aboutusimg" alt="">
                 </div>
 
             </div>

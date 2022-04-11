@@ -54,7 +54,7 @@
                                                                 <div class="col-md-12 d-grid">
                                                                     @foreach ($navbardata as $navdata)
                                                                     {{-- <a href="{{ route('submachine',$navdata->id) }}"> {{ $navdata->machine_name}} </a>   --}}
-                                                                    <a href="{{ route('main-machine',$navdata->id) }}"> {{ $navdata->category_name}} </a>  
+                                                                    <a href="{{ route('main-machine',$navdata->id) }}" class="text-uppercase"> <b>{{ $navdata->category_name}}</b> </a>  
                                                                     @endforeach
                                                                 </div>
                                                                 

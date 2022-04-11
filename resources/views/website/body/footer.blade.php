@@ -57,11 +57,14 @@
                     <h6 class="fw-bold text-left mb-4">
                         Contact
                     </h6>
-                    <p class="text-white text-left"><b>Address:</b> WZ-131, First Floor Near Coffee House, Budela Market Vikas Puri, New Delhi-110018</p>
-                    <p class="text-white text-left"> <b>Phone no:</b><a href="tel:919811111632" class="text-light">+91-9811111632</a> </p>
-                    <p class="text-white text-left"> <b>Phone no:</b><a href="tel:919811777774" class="text-light">+91-9811777774</a> </p>
+                    <p class="text-white text-left"><b><i class="fas fa-home text-warning"></i>&nbsp;&nbsp;</b> WZ-131, First Floor Near Coffee House, Budela Market Vikas Puri, New Delhi-110018</p>
+                    <p class="text-white text-left"> <b><i class="fas fa-phone-alt text-warning"></i></b>&nbsp;&nbsp;<a href="tel:919811111632" class="text-light">+91-9811111632</a> </p>
+                    <p class="text-white text-left"> <b><i class="fas fa-phone-alt text-warning"></i></b> &nbsp;&nbsp;<a href="tel:919811777774" class="text-light">+91-9811777774</a> </p>
 
-                    <p class="text-white text-left"><b>Email:</b> equipmentunicorn@gmail.com</p>
+                    <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b>&nbsp;&nbsp; equipmentunicorn@gmail.com</p>
+                    {{-- <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b> Info.equipmentunicorn@gmail.com</p>
+                    <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b> Salesunicornequipment@gmail.com </p> --}}
+
 
                     <div>
                         <!-- <h6 class="fw-bold mb-4">

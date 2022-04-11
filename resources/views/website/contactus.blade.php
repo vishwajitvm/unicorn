@@ -29,7 +29,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -53,7 +53,11 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
+                                    <p>
+                                        <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> <br>
+                                        <a href="mailto:Salesunicornequipment@gmail.com">Salesunicornequipment@gmail.com</a> <br>
+                                        <a href="mailto:Info.equipmentunicorn@gmail.com">Info.equipmentunicorn@gmail.com</a> 
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +84,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -104,8 +108,12 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
-                                </div>
+                                    <p>
+                                        <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> <br>
+                                        <a href="mailto:Salesunicornequipment@gmail.com">Salesunicornequipment@gmail.com</a> <br>
+                                        <a href="mailto:Info.equipmentunicorn@gmail.com">Info.equipmentunicorn@gmail.com</a> 
+                                    </p>
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -131,7 +139,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -153,8 +161,12 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
-                                </div>
+                                    <p>
+                                        <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> <br>
+                                        <a href="mailto:Salesunicornequipment@gmail.com">Salesunicornequipment@gmail.com</a> <br>
+                                        <a href="mailto:Info.equipmentunicorn@gmail.com">Info.equipmentunicorn@gmail.com</a> 
+                                    </p>
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -181,7 +193,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -205,7 +217,12 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
+                                    <p>
+                                         <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> <br>
+                                         <a href="mailto:Salesunicornequipment@gmail.com">Salesunicornequipment@gmail.com</a> <br>
+                                         <a href="mailto:Info.equipmentunicorn@gmail.com">Info.equipmentunicorn@gmail.com</a> 
+                                     </p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -235,7 +252,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/style/image/main_banner_1.jpg ')}}" alt=" ">
+                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -258,7 +275,11 @@
                                 <div class="iconset "><i class='fas fa-envelope'></i></div>
                                 <div class="emailcontent ">
                                     <h4>Email Us</h4>
-                                    <p> <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> </p>
+                                    <p>
+                                        <a href="mailto:equipmentunicorn@gmail.com">equipmentunicorn@gmail.com</a> <br>
+                                        <a href="mailto:Salesunicornequipment@gmail.com">Salesunicornequipment@gmail.com</a> <br>
+                                        <a href="mailto:Info.equipmentunicorn@gmail.com">Info.equipmentunicorn@gmail.com</a> 
+                                    </p>
                                 </div>
                             </div>
                         </div>
