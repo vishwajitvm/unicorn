@@ -128,31 +128,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="carousel-item " data-slide-number="1">
-                                        <div class="row mx-0">
-                                            <div id="carousel-selector-4" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="4">
-                                                <img src="https://source.unsplash.com/kmRZFcZEMY8/1600x900.jpg" class="img-fluid" alt="...">
-                                            </div>
-                                            <div id="carousel-selector-5" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="5">
-                                                <img src="https://source.unsplash.com/HJDdrWtlkIY/1600x900.jpg" class="img-fluid" alt="...">
-                                            </div>
-                                            <div id="carousel-selector-6" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="6">
-                                                <img src="https://source.unsplash.com/VfuJpt81JZo/1600x900.jpg" class="img-fluid" alt="...">
-                                            </div>
-                                            <div id="carousel-selector-7" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="7">
-                                                <img src="https://source.unsplash.com/NLkXZQ7kHzI/1600x900.jpg" class="img-fluid" alt="...">
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
-                                <!-- <a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel-thumbs" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a> -->
                             </div>
                         </div>
 
@@ -217,9 +193,6 @@
                                 <h3 class="title_back_heading">Unicorn Equipment</h3>
                                 <h4>Build Your Way Better</h4>
                                 <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
-                                {{-- <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis cupiditate fuga doloremque necessitatibus beatae <br>architecto modi velit, nisi expedita, similique molestiae perspiciatis ut dolor minima suscipit illum aut, fugiat
-                                    exercitationem.
-                                </p> --}}
                             </div>
                             <div class="row firstcategorysection">
                                                                 

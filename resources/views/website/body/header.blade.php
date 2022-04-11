@@ -1,5 +1,7 @@
 @php
-    $navbardata = DB::table('mainmachines')->get()
+    // $navbardata = DB::table('mainmachines')->get() ;
+    $navbardata = DB::table('main_categories')->get()
+
 @endphp
 
         <!--main header start-->
@@ -51,7 +53,8 @@
                                                             <div class="row">
                                                                 <div class="col-md-12 d-grid">
                                                                     @foreach ($navbardata as $navdata)
-                                                                    <a href="{{ route('submachine',$navdata->id) }}"> {{ $navdata->machine_name}} </a>  
+                                                                    {{-- <a href="{{ route('submachine',$navdata->id) }}"> {{ $navdata->machine_name}} </a>   --}}
+                                                                    <a href="{{ route('main-machine',$navdata->id) }}"> {{ $navdata->category_name}} </a>  
                                                                     @endforeach
                                                                 </div>
                                                                 
