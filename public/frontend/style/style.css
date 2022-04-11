@@ -49,6 +49,7 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(26, 26, 26, 0.73) !important;
+            position: relative;
         }
         
         .main_logo {
@@ -656,7 +657,7 @@
             margin-top: -100px;
             background-image: url(./image/header_background.png);
             z-index: -1;
-            position: relative;
+            /* position: relative; */
         }
         
         .mainheadertitle h1 {
