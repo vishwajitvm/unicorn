@@ -90,7 +90,8 @@ Route::get('/', function () {
     $requestmachine = request_machine::all()->count() ;
     $servicedone = service_request::all()->count() ;
     $galleryimages = gallery::latest()->get() ;
-    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone' , 'galleryimages'])) ;
+    $videodata = manage_video::latest()->get() ;
+    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone' , 'galleryimages' , 'videodata'])) ;
 });
 
 

@@ -30,7 +30,7 @@
                                                         <div class="headercontent">
                                                             <h2 class="text-uppercase"> Ride On Roller </h2>
                                                             <p>Amidst our wide range of products, we are also engaged in offering a wide range of Ride on roller or Ride on vibratory roller. These Hi-tech Rollers credited for their better smooth performance and longer durability, are widely used for construction and repairing of roads and also to maintain edges of highways. They are also credited for their sturdiness and easy handling.</p>
-                                                                <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
+                                                                <button type="button" ><a class="custombutton font-weight-bold"  style="text-transform: 400px !important" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
 
                                                         </div>
                                                     </div>
@@ -419,12 +419,20 @@
                                 <div class="carousel-item active">
                                     <iframe width="60%" height="500px" src="https://www.youtube.com/embed/2UUwW5RMGZ8/AIzaSyD7Qwxbq9r2-SxNnq1VDlO_JzHF2mMlcIQ"></iframe>
                                 </div>
-                                <div class="carousel-item">
+                                
+                                @foreach ($videodata as $key=>$item)                            
+                                    <div class="carousel-item">
+                                        <video width="60%" height="500px" controls>
+                                            <source src="{{ URL('upload/manages_website_videos',$item->gallery_video) }}" type="video/mp4">
+                                          Your browser does not support the video tag.
+                                          </video>
+                                    </div>
+                                @endforeach
+
+                                {{-- <div class="carousel-item">
                                     <iframe width="60%" height="500px" src="https://www.youtube.com/embed/2UUwW5RMGZ8/AIzaSyD7Qwxbq9r2-SxNnq1VDlO_JzHF2mMlcIQ"></iframe>
-                                </div>
-                                <div class="carousel-item">
-                                    <iframe width="60%" height="500px" src="https://www.youtube.com/embed/2UUwW5RMGZ8/AIzaSyD7Qwxbq9r2-SxNnq1VDlO_JzHF2mMlcIQ"></iframe>
-                                </div>
+                                </div> --}}
+
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

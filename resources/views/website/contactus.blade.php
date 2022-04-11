@@ -45,7 +45,8 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="tel:918048982966">+91-8048982966</a>
+                                    <a href="tel:919811111632">+91 98111 11632</a> <br>
+                                    <a href="tel:919811777774">+91 98117 77774</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -95,7 +96,8 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="tel:918048982966">+91-8048982966</a>
+                                    <a href="tel:919811111632">+91 98111 11632</a> <br>
+                                    <a href="tel:919811777774">+91 98117 77774</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -143,7 +145,8 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="tel:918048982966">+91-8048982966</a>
+                                    <a href="tel:919811111632">+91 98111 11632</a> <br>
+                                    <a href="tel:919811777774">+91 98117 77774</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
@@ -194,7 +197,8 @@
                                 <div class="iconset "><i class="fas fa-phone-alt "></i></div>
                                 <div class="phonecontent ">
                                     <h4>Call Us On</h4>
-                                    <a href="tel:918048982966">+91-8048982966</a>
+                                    <a href="tel:919811111632">+91 98111 11632</a> <br>
+                                    <a href="tel:919811777774">+91 98117 77774</a>
                                 </div>
                             </div>
                             <div class="cardemail ">
