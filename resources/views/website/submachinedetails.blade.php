@@ -38,7 +38,8 @@
 
                             <!--model start here-->
                             <!--model start here-->                            
-                            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog"
+                                     aria-labelledby="exampleModalCenterTitle"  aria-hidden="true">
                                 <div class="modal-dialog bg-warning rounded border border-dark" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
@@ -100,7 +101,7 @@
                                     </div> --}}
                                   </div>
                                 </div>
-                              </div>
+                            </div>
                             <!--model end here-->
                             <!--model end here-->
                             

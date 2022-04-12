@@ -61,7 +61,7 @@
                     <p class="text-white text-left"> <b><i class="fas fa-phone-alt text-warning"></i></b>&nbsp;&nbsp;<a href="tel:919811111632" class="text-light">+91-9811111632</a> </p>
                     <p class="text-white text-left"> <b><i class="fas fa-phone-alt text-warning"></i></b> &nbsp;&nbsp;<a href="tel:919811777774" class="text-light">+91-9811777774</a> </p>
 
-                    <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b>&nbsp;&nbsp; equipmentunicorn@gmail.com</p>
+                    <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b>&nbsp;&nbsp; <a href="mailto:equipmentunicorn@gmail.com" class="text-light">equipmentunicorn@gmail.com</a></p>
                     {{-- <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b> Info.equipmentunicorn@gmail.com</p>
                     <p class="text-white text-left"><b><i class="fas fa-envelope text-warning"></i></b> Salesunicornequipment@gmail.com </p> --}}
 

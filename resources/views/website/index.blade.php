@@ -109,6 +109,8 @@
                                 </a>
                             </div>
 
+                            <x-popup componentName="Home"/>
+
                             <!-- Carousel Navigatiom -->
                             <div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
