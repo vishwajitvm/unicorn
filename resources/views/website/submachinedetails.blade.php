@@ -38,8 +38,7 @@
 
                             <!--model start here-->
                             <!--model start here-->                            
-                            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog"
-                                     aria-labelledby="exampleModalCenterTitle"  aria-hidden="true">
+                            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog bg-warning rounded border border-dark" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
@@ -101,7 +100,7 @@
                                     </div> --}}
                                   </div>
                                 </div>
-                            </div>
+                              </div>
                             <!--model end here-->
                             <!--model end here-->
                             
@@ -148,33 +147,33 @@
                                     <li data-target="#carousel-example" data-slide-to="2"></li>
                                 </ol>
                                     @php
-                                        $videodata = explode('|' , $data->sub_machine_image)
+                                        $videodata = explode('|' , $data->sub_machine_video)
                                     @endphp
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
+                                    {{-- <div class="carousel-item active">
                                         <div class="embed-responsive embed-responsive-16by9">
                                             <video width="100%" controls autoplay muted>
                                                 <source src="/images/movie.mp4" type="video/mp4">
                                               </video>
-                                            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0" allowfullscreen></iframe> -->
+                                        </div>
+                                    </div> --}}
+                                    {{-- EXPERIMENTAL ZONE STARTED --}}
+                                    @foreach ($videodata as $key=>$itemss)
+                                    <div class="carousel-item active"  >
+                                        <div class="embed-responsive embed-responsive-16by9 bg-dark">
+                                            <video width="200px" class="bg-dark" style="margin:auto" controls autoplay muted>
+                                                <source src="{{ URL::to($itemss) }}" type="video/mp4">
+                                            </video>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <video width="100%" controls autoplay muted>
-                                                <source src="/images/movie.mp4" type="video/mp4">
-                                              </video>
-                                            <!-- <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84910153?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" allowfullscreen></iframe> -->
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <video width="100%" controls autoplay muted>
-                                                <source src="/images/movie.mp4" type="video/mp4">
-                                              </video>
-                                            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oiKj0Z_Xnjc" allowfullscreen></iframe> -->
-                                        </div>
-                                    </div>
+
+                                    {{  $videodata  }}
+
+                                    @endforeach
+                                    {{-- EXPERIMENTAL ZONE ENDED --}}
+
+                                    
+
                                 </div>
                                 <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

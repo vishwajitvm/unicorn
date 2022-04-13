@@ -71,6 +71,37 @@
 										<input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Retype Password">
 									</div>
 								</div>
+
+								<div class="form-group">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text bg-transparent text-white"><i class="ti-mobile"></i></span>
+										</div>
+										<input type="tel" id="mobile" name="mobile"  required  class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Phone Number">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text bg-transparent text-white"><i class="ti-home"></i></span>
+										</div>
+										<input type="text" id="address" name="address"  required  class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Your Address">
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text bg-transparent text-white"><i class="ti-archive"></i></span>
+										</div>
+										<input type="text" id="company_name" name="company_name" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Company Name">
+									</div>
+								</div>
+
+								
+
 								  <div class="row">
 									<div class="col-12">
 									  <div class="checkbox text-white">
