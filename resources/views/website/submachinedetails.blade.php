@@ -167,8 +167,7 @@
                                         </div>
                                     </div>
 
-                                    {{  $videodata  }}
-
+                                   
                                     @endforeach
                                     {{-- EXPERIMENTAL ZONE ENDED --}}
 

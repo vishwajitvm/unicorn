@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('website.websitemaster')
 @section('websitespages')
 <!--META DATA-->
@@ -538,5 +537,3 @@
         </script>
 @endsection
 
-=======
->>>>>>> 77a60433b646a3915d085c12cc54f882a0b2e8ec
