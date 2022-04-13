@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('website.websitemaster')
 @section('websitespages')
 <!--META DATA-->
@@ -330,7 +331,7 @@
                                 <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
                             </div>
                             <div class="row mt-5">
-                                <div class="col-md-7">
+                                <div class="col-lg-7 col-sm-12">
                                     <div class="featuresicon">
                                         <div class="iconn">
                                             <img src="{{asset('frontend/images/road-roller_1.png')}}" alt="">
@@ -368,7 +369,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5 d-flex align-items-center">
+                                <div class="col-lg-5 col-sm-12 d-flex align-items-center">
                                     <div class="imagee">
                                         <img src="{{asset('frontend/images/rightsidefeatures.png')}}" alt="">
                                     </div>
@@ -537,3 +538,5 @@
         </script>
 @endsection
 
+=======
+>>>>>>> 77a60433b646a3915d085c12cc54f882a0b2e8ec
