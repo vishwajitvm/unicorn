@@ -86,7 +86,7 @@
         }
         
         .navbar-brand img {
-            width: 85px;
+            width: 120px;
             height: auto;
         }
         
@@ -1191,9 +1191,10 @@
         }
         
         .aboutusimg {
-            width: 100%;
+            width: 75%;
             max-width: 100%;
             object-fit: cover;
+            margin-left: 14%;
         }
         
         .aboutus a.aboutssbtn {

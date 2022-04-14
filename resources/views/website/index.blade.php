@@ -449,7 +449,7 @@
                     </section>
                     <!-- video section end here -->
 
-                                        <!-- how does it works section start here -->
+                    <!-- how does it works section start here -->
                     <section class="sections categorysection">
                         <div class="container">
                             <div class="main_title">
@@ -462,10 +462,10 @@
                                     <div class="contentttbox featuresicon">
                                         <div class="countingg"><span>1</span></div>
                                         <div class="headingcontentt">
-                                            <h3>Search For The Equipment You Need
+                                            <h3>Create an Account at Unicorn Equipment
                                                 <hr>
                                             </h3 style="color: #feb902; width: 50%; height: 2px;">
-                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
+                                            <p>To register yourself and get verified by Unicorn Equipment you must register yourself by provideing us your name , email , phone number , company name etc. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -489,10 +489,10 @@
                                     <div class="contentttbox featuresicon">
                                         <div class="countingg"><span>2</span></div>
                                         <div class="headingcontentt">
-                                            <h3>Search For The Equipment You Need
+                                            <h3>Sign in to explore the Unicorn Equipment in Inventory
                                                 <hr>
                                             </h3 style="color: #feb902; width: 50%; height: 2px;">
-                                            <p>Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships. </p>
+                                            <p>After Login to the system you can explore the machine at Unicorn Equipment.Also you can purchase those by requesting us from your speacial Dealer Portal. Here you can easily track your machine delivery. </p>
                                         </div>
                                     </div>
                                 </div>

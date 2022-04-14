@@ -42,6 +42,14 @@
                         Our ambitions are considerably higher than that. The main customer group consists of the most demanding companies - the rental &amp; construction companies, and they specify more than any other quality level. We endeavour to be responsive and respond quickly, all in order to drive the development forward. Of course, we work in CAD and other programs and collaborate with external consultants and industrial designers to create the best solutions from both customer and manufacturing perspective.
                     </p>
 
+                </div>
+
+                    <div class="col-md-6">
+                        <img src="{{asset('frontend/images/founder.jpg')}}" class="aboutusimg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12">
                     <h4>UNICORN environmental policy</h4>
 
                     <h5>Assembling</h5>
@@ -60,58 +68,14 @@
                         The machines are often subjected to rough treatment and harsh climate. Therefore, we have chosen to galvanize the chassis in order to achieve the very longest service life, in addition it increases the secondary value. The zinc layer resist scraping better than any other surface treatment and protects the steel by its ability to self-heal.
                     </p>
 
-                    <button type="button"><a class="custombutton aboutssbtn" href="#">Contact Now</a></button>
                 </div>
-                <div class="col-md-6">
+                    {{-- <button type="button"><a class="custombutton aboutssbtn" href="#">Contact Now</a></button> --}}
+                {{-- <div class="col-md-6">
                     <img src="{{asset('frontend/images/founder.jpg')}}" class="aboutusimg" alt="">
-                </div>
+                </div> --}}
 
-            </div>
         </div>
         </div>
     </section>
-
-
-    {{-- <section class="teamsectionn">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center">
-                <h2 class="text-center mb-5">Our Founders</h2>
-                <div class="col-md-3">
-                    <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/te1.jpg')}}" alt="">
-                        <h3 class="mb-2 mt-3">Vishwa</h3>
-                        <div class="mb-2 mt-1">Developer</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/te2.jpg')}}" alt="">
-                        <h3 class="mb-2 mt-3">Sonali</h3>
-                        <div class="mb-2 mt-1">Developer</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/te1.jpg')}}" alt="">
-                        <h3 class="mb-2 mt-3">Vishwa</h3>
-                        <div class="mb-2 mt-1">Developer</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="cardwrapperr text-left py-4 px-4">
-                        <img src="{{asset('frontend/images/te2.jpg')}}" alt="">
-                        <h3 class="mb-2 mt-3">Sonali</h3>
-                        <div class="mb-2 mt-1">Developer</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic harum totam architecto porro excepturi vel.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-    </section> --}}
    
 @endsection

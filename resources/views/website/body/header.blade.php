@@ -54,19 +54,11 @@
                                                                 <div class="col-md-12 d-grid">
                                                                     @foreach ($navbardata as $navdata)
                                                                     {{-- <a href="{{ route('submachine',$navdata->id) }}"> {{ $navdata->machine_name}} </a>   --}}
-                                                                    <a href="{{ route('main-machine',$navdata->id) }}" class="text-uppercase"> <b>{{ $navdata->category_name}}</b> </a>  
+                                                                    <a href="{{ route('main-machine',$navdata->id) }}" class="text-uppercase navbarcatData"> <b>{{ $navdata->category_name}}</b> </a>  
                                                                     @endforeach
+
                                                                 </div>
                                                                 
-                                                                {{-- <div class="col-md-6 d-grid ">
-                                                                    <a href="#">Link 1</a>
-                                                                    <a href="#">Link 2</a>
-                                                                    <a href="#">Link 3</a>
-                                                                    <a href="#">Link 1</a>
-                                                                    <a href="#">Link 2</a>
-                                                                    <a href="#">Link 3</a>
-                                                                    
-                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5 productslist">
@@ -130,3 +122,23 @@
 
         </header>
         <!--main header end-->
+
+
+
+        <script>
+            $(document).ready(function() {
+                $(".navbarcatData").hover(function() {
+                    let catData = $(this).closest('a').text() ;
+                    // console.warn(catData);
+                    $.ajax({
+                        type: 'post',
+                        url:  'ajax_navdata' ,
+                        data: 'catData='+catData+'&_token={{ csrf_token() }}',
+                        // dataType: "json",
+                        success: function (response) {
+                            console.warn(response);
+                        }
+                    });
+                })
+            })
+        </script>

@@ -44,11 +44,11 @@
                                 {{-- <img class="img-thumbnail" src="{{ (!empty($item->sub_machine_image))?url('upload/user_images/'.$item->sub_machine_image):url('upload/no_image.jpg') }}" alt=""> --}}
                             </div>
                             <div class="category_titleheading">
-                                <h3> {{ $item->sub_machine_name }} </h3>
+                                <h3> <b> {{ Str::upper($item->sub_machine_name) }} </b> </h3>
                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veritatis ex sunt quibusdam totam et, perspiciatis possimus unde at dolores harum placeat suscipit tenetur sequi quos, eius voluptates? Ut, nostrum.</p> --}}
                             </div>
                             <div class="custom-buttonnn">
-                                <a href=" {{ route('submachinedetail',$item->id) }} ">Explore Models</a>
+                                <a href=" {{ route('submachinedetail',$item->id) }} "> <strong>Explore Models</strong> </a>
                             </div>
                         </div>
                     </div>
