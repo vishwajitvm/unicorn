@@ -18,7 +18,7 @@
 
             <div class="container">
                 <div class="mainheadertitle text-center">
-                    <h1>Main Machine</h1>
+                    <h1 class="text-uppercase">Main Machine</h1>
                 </div>
             </div>
 

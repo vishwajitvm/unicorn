@@ -18,7 +18,7 @@
 
             <div class="container">
                 <div class="mainheadertitle text-center">
-                    <h1>Services</h1>
+                    <h1 class="text-uppercase">Services</h1>
                 </div>
             </div>
 

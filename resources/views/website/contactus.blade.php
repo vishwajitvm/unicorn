@@ -17,7 +17,7 @@
         <section class="innerpagebanner d-flex align-items-center">
             <div class="container">
                 <div class="mainheadertitle text-center">
-                    <h1>Contact Us</h1>
+                    <h1 class="text-uppercase">Contact Us</h1>
                 </div>
             </div>
         </section>

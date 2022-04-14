@@ -18,7 +18,7 @@
 
                     <div class="container">
                         <div class="mainheadertitle text-center">
-                            <h1>Search Here</h1>
+                            <h1 class="text-uppercase">Search Here</h1>
                             <div class="input-group searchgroup mt-5 mx-auto w-60">
                                 <input type="search" id="search" class="form-control rounded" placeholder="Search by Address, Pin Code, Dealer & State" aria-label="Search" aria-describedby="search-addon" />
                                 <button type="button" class="btn btn-outline-primary"><i class="fa fa-search" aria-hidden="true"></i></button>

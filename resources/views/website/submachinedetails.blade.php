@@ -16,7 +16,7 @@
             <section class="innerpagebanner d-flex align-items-center">
                 <div class="container">
                     <div class="mainheadertitle text-center">
-                        <h1> {{ $data->main_machine_name }} </h1>
+                        <h1 class="text-uppercase"> {{ $data->main_machine_name }} </h1>
                     </div>
                 </div>
             </section>
