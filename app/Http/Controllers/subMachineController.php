@@ -111,7 +111,11 @@ class subMachineController extends Controller
     public function submachineEdit($id) {
         $editsubmachineData = submachine::find($id) ;
         $selectData = mainmachine::all() ;
-        return view('backend.submachine.edit_submachine' , ['selectData'=>$selectData , 'editsubmachineData'=>$editsubmachineData ]) ;
+        $sel_maimachine = new mainmachine() ;
+        $selectData = mainmachine::all() ;
+        $main_cat_data = main_category::all() ;
+
+        return view('backend.submachine.edit_submachine' , ['selectData'=>$selectData , 'editsubmachineData'=>$editsubmachineData ] , compact(['main_cat_data'])) ;
     }
 
     //update submachine data

@@ -28,6 +28,21 @@
                             <div class="row">
                                 <div class="col-md-12"><!--col-6 stared here-->
                                     <div class="form-group">
+                                        <h5>Select Main Category <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <select name="main_category_id" id="main_category_id" required  class="form-control">
+                                                <option value="" selected="" disabled>Select Main Category</option>
+                                                @foreach ($main_cat_data as $row)
+                                                    <option value=" {{$row->id}} " {{ $editsubmachineData->main_category_id == "$row->id" ? "Selected": "" }}> {{$row->category_name}} </option>
+                                                @endforeach
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div><!--col-6 Ended here-->
+
+                                <div class="col-md-12"><!--col-6 stared here-->
+                                    <div class="form-group">
                                         <h5>Select main Machine<span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <select name="main_machine_name" id="main_machine_name" required  class="form-control">
@@ -248,6 +263,22 @@
             reader.readAsDataURL(i);
         }
     }
+</script>
+
+<script>
+    $(document).ready(function() {
+        $("#main_category_id").change(function() {
+            let catData = $(this).val() ;
+            jQuery.ajax({
+                url: '/ajax-get-main-machine',
+                type: 'post',
+                data: 'catData='+catData+'&_token={{ csrf_token() }}',
+                success: function(result){
+                    jQuery('#main_machine_name').html(result) ;
+                }
+            })
+        })
+    })
 </script>
 
 
