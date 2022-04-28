@@ -40,6 +40,7 @@ use App\Http\Controllers\GalleryManagementAdminController ;
 use App\Models\request_machine;
 use App\Models\service_request ;
 use App\Http\Controllers\ManageVideosAdminController ;
+use App\Http\Controllers\AdminManageCredentialsImages ;
 //model
 use App\Models\gallery ;
 use App\Models\manage_video ;
@@ -452,6 +453,23 @@ Route::prefix('managevideos')->group( function() {
 
 
 }) ;
+
+//
+//MANAGE CREDETIALS CERTIFIATES HERE
+//
+Route::prefix('managecredentials')->group( function() {
+    //add credentials ceertificated here
+    Route::get('/add' , [AdminManageCredentialsImages::class , 'AddCertificatesOnCredentails'])->name('managecredentials.add') ; 
+
+    //store
+    Route::post('/store' , [AdminManageCredentialsImages::class , 'StoreCertificatesOnCredentails'])->name('managecredentials.store') ; 
+
+    //view
+    Route::get('/view' , [AdminManageCredentialsImages::class , 'ViewCertificatesOnCredentails'])->name('managecredentials.view') ; 
+
+
+}) ;
+
 
 
 
