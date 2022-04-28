@@ -449,7 +449,7 @@
                     </section>
                     <!-- video section end here -->
 
-                    <!-- how does it works section start here -->
+                    {{-- <!-- how does it works section start here -->
                     <section class="sections categorysection">
                         <div class="container">
                             <div class="main_title">
@@ -522,7 +522,7 @@
             
                         </div>
                     </section>
-                    <!-- how does it works section end here -->
+                    <!-- how does it works section end here --> --}}
 </div>
 
     <script>

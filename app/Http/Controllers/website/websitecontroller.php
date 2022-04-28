@@ -69,8 +69,6 @@ class websitecontroller extends Controller
     }
 
         public function checkAuthentication() {
-        
-        
         if(!Auth::user()) {
             return redirect()->route('login') ;
         }
