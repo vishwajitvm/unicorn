@@ -246,7 +246,7 @@
                     </section>
                     <!-- category section end here -->
             
-                    <div class="clearfix"></div>
+                    {{-- <div class="clearfix"></div>
             
                     <!-- about us section start here -->
                     <section>
@@ -281,7 +281,7 @@
                     </section>
                     <!-- about us section end here -->
             
-                    <div class="clearfix"></div>
+                    <div class="clearfix"></div> --}}
 
                     <!-- usps section start here -->
                     <section>
@@ -389,8 +389,8 @@
                     <section class="blogsection categorysection">
                         <div class="container">
                             <div class="main_title">
-                                <h2>Gallery</h2>
-                                <h3 class="title_back_heading">Gallery</h3>
+                                <h2>OUR Association </h2>
+                                <h3 class="title_back_heading">OUR Association</h3>
                                 <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
                             </div>
 

@@ -28,9 +28,9 @@
                             <div class="menu-align">
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                        <li class="nav-item">
+                                        {{-- <li class="nav-item">
                                             <a class="nav-link active" aria-current="page" href="/">Home</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="nav-item">
                                             <a class="nav-link active" aria-current="page" href="{{route('aboutus')}}">About</a>
                                         </li>
@@ -88,6 +88,10 @@
                                             <a class="nav-link active" aria-current="page" href="{{ route('services') }}"> Services</a>
                                         </li>
 
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="{{ route('services') }}"> Credentials </a>
+                                        </li>
+
                                         
                                         <li class="nav-item">
                                             <a class="nav-link active" aria-current="page" href=" {{ route('contact-us') }} ">Contact</a>
@@ -124,13 +128,13 @@
         <!--main header end-->
 
 
-
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
             $(document).ready(function() {
                 $(".navbarcatData").hover(function() {
                     let catData = $(this).closest('a').text() ;
-                    // console.warn(catData);
-                    $.ajax({
+                    console.warn(catData);
+                    jQuery.ajax({
                         type: 'post',
                         url:  'ajax_navdata' ,
                         data: 'catData='+catData+'&_token={{ csrf_token() }}',

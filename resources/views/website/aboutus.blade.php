@@ -77,5 +77,43 @@
         </div>
         </div>
     </section>
+
+    <div class="clearfix"></div>
+            
+    <!-- about us section start here -->
+    <section>
+        <div class="aboutussection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 wrappersection">
+                        <div class="contantbox">
+                            <h2>The Benefits of using<br>
+                                <span style="color: #feca0a;">UNICORN EQUIPMENTS</span></h2>
+                            <h3 class="title_back_headin">About Us</h3>
+
+                            <p>
+                                Dynamically evisculate synergistic relationships without cross functional results. Quickly utilize cross-media catalysts for change after best-of-breed infomediaries. Objectively synergize granular architectures vis-a-vis impactful products. Uniquely
+                                disintermediate 2.0 e-business after diverse leadership. Intrinsicly build synergistic human capital before enterprise content. <br><br>Intrinsicly deliver alternative functionalities
+                                through alternative process improvements. Compellingly brand alternative communities whereas parallel deliverables. Objectively formulate business results without alternative relationships.
+                            </p>
+                            <div class="callnow">
+                                <button type="button"><a class="custombutton" href="#"><span><i class="fa fa-phone" aria-hidden="true"></i></span>Contact Us</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 rectangleright">
+                        <div class="imageright"><img src="{{asset('frontend/images/about_us_map.png')}}" alt=""></div>
+                        <div class="backgroundrectangle">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about us section end here -->
+
+    <div class="clearfix"></div>
+
    
 @endsection

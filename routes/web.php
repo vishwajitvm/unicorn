@@ -41,6 +41,7 @@ use App\Models\request_machine;
 use App\Models\service_request ;
 use App\Http\Controllers\ManageVideosAdminController ;
 use App\Http\Controllers\AdminManageCredentialsImages ;
+use App\Http\Controllers\ManageAjaxRequests;
 //model
 use App\Models\gallery ;
 use App\Models\manage_video ;
@@ -611,6 +612,10 @@ Route::post('services-requests' , [websitecontroller::class , 'PostServicesReque
 
 //POPUP REQUEST STORE
 Route::post('popup-request-store' , [websitecontroller::class , 'POPUPRequestStore'])->name('popup-request-store') ;
+
+//AJAX REQUEST DATA HERE
+Route::post('ajax_navdata' , [ManageAjaxRequests::class , 'HeaderRequest'])->name('ajax_navdata') ;
+
 
 
 

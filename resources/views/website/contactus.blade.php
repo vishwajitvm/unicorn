@@ -84,7 +84,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
+                            {{-- <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image"> --}}
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -139,7 +139,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
+                            {{-- <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image"> --}}
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -193,7 +193,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
+                            {{-- <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image"> --}}
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
@@ -252,7 +252,7 @@
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class=" col-md-4 ">
                         <div class="cardwrapper ">
-                            <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image">
+                            {{-- <img src="{{asset('frontend/images/unicorn_center.jpeg')}}"  alt="unicorn center image"> --}}
                             <div class="cardaddress ">
                                 <div class="iconset "><i class="fas fa-map-marker-alt "></i></div>
                                 <div class="addresscontent ">
