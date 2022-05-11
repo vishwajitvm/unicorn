@@ -22,7 +22,7 @@
                             <!-- Carousel -->
                             <div id="carousel" class="carousel slide gallery" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active" id="imgbg" data-slide-number="0" data-toggle="lightbox" data-gallery="gallery" data-remote="../style/image/main_banner_1.jpg">
+                                    <div class="carousel-item active" id="imgbg" data-slide-number="0" data-toggle="lightbox" data-gallery="gallery" data-remote="{{asset('frontend/style/image/main_banner_1.jpg')}}">
                                         <div class="slideimage1">
                                             <div class="container">
                                                 <div class="row d-flex justify-content-center">
@@ -141,8 +141,8 @@
                     <section class="loginsection">
                         <div class="container">
                             <div class="row shadowbg">
-                                <div class="col-md-6 borderright">
-                                    <div class="headingcontent">
+                                <div class="col-lg-6 col-md-6 col-sm-12 borderright">
+                                    <div class="headingcontent ">
                                         <h2 class="headinggcontent">Log In</h2>
                                         <p>
                                             <ol type="a">
@@ -157,7 +157,7 @@
             
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-lg-6 col-sm-6">
                                     <div class="formcontent">
                                         <form method="POST" action="{{ route('login') }}">
                                             @csrf
@@ -214,7 +214,7 @@
                                 @php
                                     $imgData = explode('|' , $item->category_images)
                                  @endphp
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-lg-6 col-sm-12">
                                         <div class="categoryimgbox">
                                             <!-- <img class="img-thumbnail" src="./images/walk-behind-roller.png" alt=""> -->
                                             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">

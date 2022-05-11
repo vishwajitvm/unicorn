@@ -1,4 +1,84 @@
  <!-- Footer -->
+         <!-- contact section start here -->
+        <section class="contactdeatils">
+            <div class="container-fluid contact-info ">
+                <div class="container contact-info-2   bg-white  pt-5">
+                    <h5 class="text-center">Let's Connect</h5>
+                    <h1 class="text-center">Consult With Us</h1>
+                    <div class="row  py-3 ms-3">
+                        <!-- email -->
+                        <div class="col-lg-3 col-sm-6 border contact-box">
+                            <i class="fa-solid fa-envelope-open"></i>
+
+                            <p class="heading">info@butlerme.com</p>
+
+                            <p>We reply within 24 hours</p>
+
+                        </div>
+                        <div class="col-lg-3 col-sm-6 border contact-box">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <p class="heading">Have any questions?​</p>
+
+                            <p>Tel: +971 4 39 22 001<br>
+
+                                Fax : +971 4 39 22 007</p>
+
+                        </div>
+                        <div class="col-lg-3 border contact-box">
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <p class="heading">Address</p>
+
+                            <p>710, Apricot Tower, Dubai Silicon Oasis
+                                P.O. Box: 231156 Dubai, UAE</p>
+
+                        </div>
+
+
+                        <div class="col-lg-12 text-center mt-5">
+
+                            <h2 class="fw-bold">Work With Us</h2>
+
+                            <div class="col-lg-12  work-with   text-center">
+                                <i class="fa-solid fa-phone"></i>
+
+                                <p class="heading">career@butlerme.com​</p>
+
+                                <p>We reply within 24 hours<br>
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- follow us  -->
+            <div class="container-fluid follow-us">
+
+                <div class="container p-5">
+                    <div class="row">
+                        <div class="col-lg-7  col-sm-12 follow-icon text-center"><i class="fa-solid fa-envelope-open"></i>
+                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <div class="col-lg-4  social-media">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <p class="heading">Follow Us On Social Media</p>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
  <footer class="text-center text-lg-start footerback text-muted">
     @php
     $foeterbardata = DB::table('main_categories')->take(5)->get()

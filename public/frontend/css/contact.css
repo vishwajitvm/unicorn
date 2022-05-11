@@ -1,0 +1,155 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+
+ }
+
+
+ /* contact section */
+
+
+ .contact-info {
+     /* background-image: linear-gradient(to right bottom, #feca0c, #f9da53, #f7e882, #f8f4ae, #fdffd8); */
+     background-color: #feca0a;
+
+
+ }
+
+ .contact-info-2 {
+     position: relative;
+     top: 0px;
+     bottom: 5px;
+ }
+
+
+ .contact-box {
+     padding: 33px;
+     margin: auto;
+     height: 305px;
+     -webkit-box-shadow: -4px 4px 14px 1px rgba(255, 227, 87, 0.67);
+     -moz-box-shadow: -4px 4px 14px 1px rgba(255, 227, 87, 0.67);
+     box-shadow: -4px 4px 14px 1px rgba(255, 227, 87, 0.67);
+     background: white;
+ }
+
+ .contact-box i {
+     font-size: 40px;
+     color: orange;
+     margin-top: 50px;
+
+
+ }
+
+ .contact-box .heading {
+     font-size: 25px;
+     margin-top: 20px;
+     font-weight: 900;
+     border: 0px solid red;
+ }
+
+ .contact-box p {
+     font-size: 15px;
+     font-weight: 500;
+
+ }
+
+ /* work withh  us  */
+ .work-with {
+     padding: 20px;
+     margin: auto;
+     /* height: 336px; */
+     -webkit-box-shadow: -4px 4px 14px 1px rgba(255, 227, 87, 0.67);
+     -moz-box-shadow: -4px 4px 14px 1px rgba(255, 227, 87, 0.67);
+     box-shadow: -4px 4px 14px 1px rgba(255, 227, 87, 0.67);
+     background: white;
+ }
+
+
+ .work-with i {
+     font-size: 40px;
+     color: orange;
+     margin-top: 50px;
+
+
+ }
+
+ .work-with .heading {
+     font-size: 25px;
+     margin-top: 20px;
+     font-weight: 900;
+     border: 0px solid red;
+ }
+
+ .work-with p {
+     font-size: 15px;
+     font-weight: 500;
+
+ }
+
+ /*follow us  */
+ .follow-us {
+     background-image:
+         linear-gradient(45deg, rgba(235, 200, 22, 0.482), rgba(211, 232, 78, 0.78)), url('../images/background-5.jpg');
+     width: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     /* text-align: center; */
+ }
+
+
+ .follow-icon i {
+
+     font-size: 50px;
+     padding: 40px;
+     color: black;
+     margin-top: 45px;
+ }
+
+ .social-media {
+     /* border: 1px solid red; */
+     padding: 50px;
+     background-color: antiquewhite;
+
+
+
+ }
+ @media (max-width: 762px){
+
+    .follow-icon{
+        width: 100%;
+        padding: 10px;
+    }
+     .follow-icon i{
+       /* display: none; */
+       font-size: 32px;
+       padding: 24px;
+       color: black;
+       margin-top: 11px;
+    }
+ }
+
+ .social-media i {
+     font-size: 40px;
+     color: #feca0a;
+
+
+ }
+
+ .social-media .heading {
+     font-size: 25px;
+     margin-top: 15px;
+     padding: 2px;
+ }
+
+
+ /* responsive */
+ @media (max-width: 768px){
+     
+.contact-box {
+    padding: 25px;
+    margin: auto;
+    height: 305px;
+}
+ }

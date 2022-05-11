@@ -95,9 +95,9 @@
 .headercontent p {
     color: #FFFFFF;
     font-family: Montserrat;
-    font-weight: 400;
-    font-size: 22px;
-    padding-bottom: 20px ;
+    font-weight: 500;
+    line-height: 1.5; 
+    font-size: 19px;
 }
 
 #carousel-thumbs img:hover {

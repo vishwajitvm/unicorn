@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*  */
+@media (max-width:768px) {
+
+    /* login section */
+    .headingcontent {
+        display: none;
+    }
+
+    .formcontent {
+        width: 100%;
+        padding: 50px 0 50px 0;
+
+    }
+
+    /* about us section */
+    .rectangleright {
+        display: none;
+    }
+
+    .rectangleright .uspheading {
+        font-size: 20px;
+    }
+
+}
+
+
+
+/* about us page  responsive*/
+
+@media (max-width:768px) {
+    .aboutus{
+        padding: 33px;
+    }
+    .aboutusimg {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-top: 50px;
+    }
+    /* .aboutus p{
+        width: auto;
+    } */
+    
+
+    /* founder section */
+    
+
+        .teamsectionn .cardwrapperr {
+            box-shadow: 0 .25rem 1.75rem rgba(30, 34, 40, .07)!important;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px;
+        }
+        /* contact section */
+        .map_content{
+            margin-top: 25px;
+        }
+
+    
+}
