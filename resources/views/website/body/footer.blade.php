@@ -10,9 +10,9 @@
                         <div class="col-lg-3 col-sm-6 border contact-box">
                             <i class="fa-solid fa-envelope-open"></i>
 
-                            <p class="heading">info@butlerme.com</p>
+                            <p class="heading" >Email Us</p>
 
-                            <p>We reply within 24 hours</p>
+                            <p>equipmentunicorn@gmail.com</p>
 
                         </div>
                         <div class="col-lg-3 col-sm-6 border contact-box">
@@ -20,18 +20,17 @@
 
                             <p class="heading">Have any questions?​</p>
 
-                            <p>Tel: +971 4 39 22 001<br>
+                            <p>Tel: +91 98117 77774<br>
 
-                                Fax : +971 4 39 22 007</p>
+                                Fax: +91 98111 11632</p>
 
                         </div>
                         <div class="col-lg-3 border contact-box">
                             <i class="fa-solid fa-location-dot"></i>
 
-                            <p class="heading">Address</p>
+                            <p class="heading">Office Address</p>
 
-                            <p>710, Apricot Tower, Dubai Silicon Oasis
-                                P.O. Box: 231156 Dubai, UAE</p>
+                            <p>WZ-131, First Floor Near Coffee House, Budela Market Vikas Puri, New Delhi-110018</p>
 
                         </div>
 
@@ -43,7 +42,7 @@
                             <div class="col-lg-12  work-with   text-center">
                                 <i class="fa-solid fa-phone"></i>
 
-                                <p class="heading">career@butlerme.com​</p>
+                                <p class="heading">equipmentunicorn@gmail.com</p>
 
                                 <p>We reply within 24 hours<br>
 
@@ -60,11 +59,12 @@
 
                 <div class="container p-5">
                     <div class="row">
-                        <div class="col-lg-7  col-sm-12 follow-icon text-center"><i class="fa-solid fa-envelope-open"></i>
-                            <i class="fa-solid fa-phone"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <i class="fa-brands fa-telegram"></i>
+                        <div class="col-lg-7  col-sm-12 follow-icon text-center">
+                            <a href="mailto:equipmentunicorn@gmail.com"><i class="fa-solid fa-envelope-open"></i></a>
+                            <a href="tel:919811777774"><i class="fa-solid fa-phone"></i></a>
+                            <a href="https://www.instagram.com/equipmentunicorn/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=919811777774&text=Hello,%20Unicorn%20Equipment" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            {{-- <a href=""><i class="fa-brands fa-telegram"></i></a> --}}
                         </div>
                         <div class="col-lg-4  social-media">
                             <i class="fa-solid fa-phone"></i>

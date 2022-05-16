@@ -157,7 +157,7 @@
             
                                 </div>
 
-                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                <div class="col-md-6 col-lg-6 col-sm-12">
                                     <div class="formcontent">
                                         <form method="POST" action="{{ route('login') }}">
                                             @csrf
@@ -412,7 +412,7 @@
                             </div>
                         </div>
                     </section>
-                                <!-- News section end here -->
+                    <!-- News section end here -->
             
             
                     <!-- video section Start Here -->

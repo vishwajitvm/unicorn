@@ -616,6 +616,14 @@ Route::post('popup-request-store' , [websitecontroller::class , 'POPUPRequestSto
 //AJAX REQUEST DATA HERE
 Route::post('ajax_navdata' , [ManageAjaxRequests::class , 'HeaderRequest'])->name('ajax_navdata') ;
 
+//our team
+Route::get('our-team' , [websitecontroller::class , 'OurTeam'])->name('our-team') ;
+
+//credentials page
+Route::get('credentials' , [websitecontroller::class , 'Managecredentials'])->name('credentials') ;
+
+
+
 
 
 

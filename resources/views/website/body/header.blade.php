@@ -122,7 +122,8 @@
 
         </header> --}}
         <!--main header end-->
-
+        
+        <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/"> <img src="{{asset('frontend/images/logo.png')}}" alt="Unicorn Logo">
@@ -141,7 +142,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item text-uppercase" href="{{route('aboutus')}}"> <b>About Us</b> </a></li>
-                                    <li><a class="dropdown-item text-uppercase" href="sub_machine.html"><b>Our Team</b></a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="{{route('our-team')}}"><b>Our Team</b></a></li>
                                 </ul>
                             </li>
 
@@ -163,7 +164,7 @@
                             </li>
 
                             <li class="nav-item text-uppercase">
-                                <a class="nav-link" href="{{ route('services') }}">Credentials</a>
+                                <a class="nav-link" href="{{ route('credentials') }}">Credentials</a>
                             </li> 
 
 
@@ -193,7 +194,8 @@
                     </div>
                 </div>
             </nav>
-    
+
+        </header>
 
 
         {{-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

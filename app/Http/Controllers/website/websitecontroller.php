@@ -17,6 +17,7 @@ use App\Models\assignproduct ;
 use App\Models\insuranceclaim ;
 use Illuminate\Support\Facades\View;
 use App\Models\dealer ;
+use App\Models\manage_credential;
 use Illuminate\Auth\Events\Failed;
 use phpDocumentor\Reflection\Types\Null_;
 use PHPUnit\Framework\Constraint\IsTrue;
@@ -179,6 +180,17 @@ class websitecontroller extends Controller
         $data->request_submachine_id = $request->request_submachine_id ;
         $data->save() ;
         return redirect()->back() ;
+    }
+
+    //our team
+    public function OurTeam() {
+        return view('website.ourteam' ) ;
+    }
+
+    //Manage Credentiaals page here
+    public function Managecredentials() {
+        $data = manage_credential::latest()->get() ;
+        return view('website.credentials' , compact(['data']) ) ;
     }
 
 }
