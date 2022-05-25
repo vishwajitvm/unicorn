@@ -25,7 +25,7 @@
     <title>Unicorn - {{ empty($title)?"Equipement":$title }}</title>
 </head>
 
-<body>
+<body class="scrollbar" id="style-6">
     <!--wrapper started -->
     <div class="wrapper">
         <!--main header start-->

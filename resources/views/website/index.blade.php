@@ -29,7 +29,7 @@
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
                                                             <h2 class="text-uppercase"> Ride On Roller </h2>
-                                                            <p>Amidst our wide range of products, we are also engaged in offering a wide range of Ride on roller or Ride on vibratory roller. These Hi-tech Rollers credited for their better smooth performance and longer durability, are widely used for construction and repairing of roads and also to maintain edges of highways. They are also credited for their sturdiness and easy handling.</p>
+                                                            <p>Amidst our wide range of products, we are also engaged in offering a wide range of Ride on roller or Ride on vibratory roller. These Hi-tech Rollers credited for their better smooth performance and longer durability.</p>
                                                                 <button type="button" ><a class="custombutton font-weight-bold"  style="text-transform: 400px !important" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
 
                                                         </div>
@@ -46,7 +46,7 @@
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
                                                             <h2 class="text-uppercase"> Walk Behind Roller </h2>
-                                                            <p>Walk Behind rollers can be double drum model, both types are self-propelled and can work in reverse travel direction. these roller controlled by cable or road linkages. They are used for soil, granular and asphalt compaction and for small area repair and pothole work.</p>
+                                                            <p>Walk Behind rollers can be double drum model, both types are self-propelled and can work in reverse travel direction. these roller controlled by cable or road linkages. They are used for soil, granular and asphalt compaction.</p>
                                                                 <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
 
                                                         </div>
@@ -63,7 +63,7 @@
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
                                                             <h2 class="text-uppercase">Bar cutting Machine </h2>
-                                                            <p>Unicorn Equipment a unit of M/S global links is a unique name. which is engaged in presenting a wide range of bar cutting machine. This brings duty bar cutting machine with strong construction and high quality components. Rebar Cutting Machine Mainly used for construction site for flawless smooth functionality and easy operations.</p>
+                                                            <p>Unicorn Equipment a unit of M/S global links is a unique name. which is engaged in presenting a wide range of bar cutting machine. This brings duty bar cutting machine with strong construction and high quality components.</p>
                                                                 <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
 
                                                         </div>
@@ -80,7 +80,7 @@
                                                     <div class="col-md-7">
                                                         <div class="headercontent">
                                                             <h2 class="text-uppercase">  bar bending machine </h2>
-                                                            <p> Automatic Bar Bending Machine offered by us are designed to bend the bar upto 42mm to 45 mm.Thease bar bending machine (UNI 50B) are served in the capacity of 4kw/6HP Power.</p>
+                                                            <p> Manufacturer of a wide range of products which include bar bending machine 32mm, tmt bar machine, steel bar bending machine, gw bending machine, uni 50b bar bending machine and mild steel bar bending machine.</p>
                                                                 <button type="button"><a class="custombutton" href=" {{ route('mainmachine') }} ">Explore All Machines</a></button>
 
                                                         </div>
@@ -115,7 +115,7 @@
                             <div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active" data-slide-number="0">
-                                        {{-- <div class="row mx-0 justify-content-center">
+                                        <div class="row mx-0 justify-content-center">
                                             <div id="carousel-selector-0" class="thumb col-3 px-1 py-2 selected" data-target="#carousel" data-slide-to="0">
                                                 <img src="{{asset('frontend/style/image/home_banner_1.jpg')}}" class="img-fluid" alt="...">
                                             </div>
@@ -128,7 +128,7 @@
                                             <div id="carousel-selector-3" class="thumb col-3 px-1 py-2" data-target="#carousel" data-slide-to="3">
                                                 <img src="{{asset('frontend/style/image/home_banner_4.jpg')}}" class="img-fluid" alt="...">
                                             </div>
-                                        </div> --}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,10 +151,8 @@
                                                 <li> Place your order using Unicorn Equipment Pannel </li>
                                             </ol>
                                         </p>
-            
                                         <span><b>Ready to create your account?</b> <a href=" {{route('register')}} ">Get Started</a></span>
                                     </div>
-            
                                 </div>
 
                                 <div class="col-md-6 col-lg-6 col-sm-12">
@@ -198,23 +196,11 @@
                             </div>
                             <div class="row firstcategorysection">
                                                                 
-                                {{-- @foreach ($data as $item)
-                                @php
-                                    $imgData = explode('|' , $item->category_images)
-                                 @endphp
-                                <div class="col-md-3">
-                                    <div class="categoryimgbox"><img class="img-thumbnail" src=" {{ URL::to($imgData[0]) }}" alt=""></div>
-                                    <div class="category_titleheading">
-                                        <h3><a href="{{ route('main-machine',$item->id) }}"> {{ $item->category_name }} </a></h3>
-                                    </div>
-                                </div>
-                                @endforeach --}}
-
                                 @foreach ($data as $key=>$item)
                                 @php
                                     $imgData = explode('|' , $item->category_images)
                                  @endphp
-                                    <div class="col-md-3 col-lg-6 col-sm-12">
+                                    <div class="col-md-2 col-lg-2 col-sm-12 px-0 py-0 mx-0 my-0 mx-auto" >
                                         <div class="categoryimgbox">
                                             <!-- <img class="img-thumbnail" src="./images/walk-behind-roller.png" alt=""> -->
                                             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -231,7 +217,7 @@
                                             </div>
                                         </div>
                                         <div class="category_titleheading">
-                                            <h3 class="text-uppercase"><a href="{{ route('main-machine',$item->id) }}"><b>{{ $item->category_name }}</b></a></h3>
+                                            <h3 class="text-capitalize"><a href="{{ route('main-machine',$item->id) }}">{{ Str::title($item->category_name) }}</a></h3>
                                         </div>
                                     </div>
                                 @endforeach

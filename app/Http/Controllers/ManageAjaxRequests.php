@@ -10,4 +10,5 @@ class ManageAjaxRequests extends Controller
     public function HeaderRequest(Request $request) {
         return "hello" ;
     }
+    
 }
