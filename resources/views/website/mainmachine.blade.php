@@ -13,17 +13,20 @@
 @endphp
 <!--META DATA END-->
 
-        <!--banner section start-->
-        <section class="innerpagebanner d-flex align-items-center">
+    <!--banner section start-->
+    <section class="innerpagebanner d-flex align-items-center">
 
-            <div class="container">
-                <div class="mainheadertitle text-center">
-                    <h1 class="text-uppercase">Main Machine</h1>
-                </div>
+        <div class="container">
+            <div class="mainheadertitle text-center">
+                <h1>Main Machine</h1>
             </div>
+        </div>
 
-        </section>
-        <!--banner section end here-->
+    </section>
+
+    <!--banner section end here-->
+
+    <!--main ,achines section start here-->
 
         <!--main ,achines section start here-->
         <section class="main_machines">
@@ -44,14 +47,5 @@
         </section>
         <!--main ,achines section end here-->
 
-    <script>
-        function myFunction() {
-          var x = document.getElementById("password");
-          if (x.type === "password") {
-            x.type = "text";
-          } else {
-            x.type = "password";
-          }
-        }
-        </script>
+    <!--main ,achines section end here-->
 @endsection

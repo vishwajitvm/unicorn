@@ -1,0 +1,309 @@
+/* ineer page start */
+.main_machines {
+    margin: 90px 0;
+}
+
+.main_machines .col-md-3 {
+    margin-bottom: 30px;
+}
+
+.innerpagebanner {
+    height: 400px;
+    width: 100%;
+    margin-top: -100px;
+    background-image: url('../img/header_background.png');
+    z-index: -1;
+    position: relative;
+}
+
+.mainheadertitle h1 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 700;
+
+    margin: 130px 0px 0px 0px;
+}
+
+.mainmachineinner {
+    border: none;
+    box-shadow: 0px 2px 15px 0px rgb(160 160 158 / 0.28);
+}
+/* inner page close */
+
+
+.categorysection span {
+    border: 2px solid #feca0a;
+    margin-top: -5px;
+}
+
+.categoryimgbox {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #514f4f33;
+    margin: 0px 15px;
+    border-radius: 5px;
+}
+
+.categoryimgbox img {
+    width: 280px !important;
+    max-width: 100%;
+    height: 230px;
+    max-height: 230px;
+    object-fit: cover !important;
+    padding: 10px;
+    border: none;
+}
+
+.category_titleheading {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.category_titleheading h3 {
+    font-size: 20px;
+  
+    font-weight: 500;
+    border: 0 !important;
+}
+.category_titleheading h3 a {
+    font-size: 20px;
+    color: black;
+    
+}
+.category_titleheading h3 a:hover {
+    font-size: 20px;
+    color: #feca0a;
+    
+}
+
+/* submachine details page css start here */
+
+.submachinedetails {
+    padding: 120px 0;
+}
+
+.submachineheading {
+    padding: 8px 20px;
+    background-color: #FECA0A;
+    border-radius: 5px;
+}
+
+.submachineheading h3 {
+    font-size: 24px;
+
+    font-weight: 600;
+    line-height: 2;
+}
+
+.submachineprice {
+    display: flex;
+    align-items: center;
+}
+
+.submachineprice h4 {
+    font-size: 18px;
+
+    font-weight: 600;
+    line-height: 1;
+}
+
+.submachineprice a {
+    line-height: 1;
+    margin-left: 50px;
+    padding: 12px 40px;
+    background-color: #FECA0A;
+    border-radius: 8px;
+    color: #000;
+}
+
+.submachineprice a:hover {
+    line-height: 1;
+    margin-left: 50px;
+    padding: 12px 40px;
+    background-color: #FECA0A;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.submachineprice h4 span {
+    font-size: 18px;
+  
+    font-style: italic;
+    font-weight: 700;
+}
+
+#image {
+    -webkit-animation-name: flow;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.3s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: flow;
+    animation-duration: 1.5s;
+}
+
+@keyframes flow {
+    from {
+        opacity: .3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#photo-view-container {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#photo-display {
+    display: inline-block;
+}
+
+#selected-photo {
+    height: 300px;
+    max-height: 300px;
+    width: 300px;
+    max-width: 500px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 8px;
+}
+
+#commentary {
+    color: #aaa;
+}
+
+#left {
+    float: left;
+    left: 10%;
+}
+
+#right {
+    float: right;
+    right: 10%;
+}
+
+#right,
+#left {
+    position: relative;
+    bottom: -45px;
+    cursor: pointer;
+}
+
+#photo-container-holder {
+    display: inline-block;
+    width: 360px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#photo-container {
+    display: inline-block;
+    height: 120px;
+    padding: 10px 0;
+    -webkit-transition: all 0.50s ease;
+    -moz-transition: all 0.50s ease;
+    -o-transition: all 0.50s ease;
+    transition: all 0.50s ease;
+}
+
+.photo-holder {
+    background-color: #888;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.photo-item {
+    cursor: pointer;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+a.intrestedbtn {
+    border-radius: 8px;
+    font-size: 16px;
+  
+    font-weight: 500;
+    color: #000;
+}
+
+.pdding {
+    margin-right: 20px;
+}
+
+a.intrestedbtn:hover {
+    border-radius: 8px;
+    font-size: 16px;
+   
+    font-weight: 500;
+    color: #fff;
+}
+
+.videossdisplay video {
+    border-radius: 6px;
+}
+
+.sub_machines {
+    margin: 90px 0;
+}
+
+.submachinebox {
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 2px 15px 0px rgb(160 160 158 / 0.28);
+}
+
+.wrapper_box {
+    padding: 0px;
+}
+
+.imag img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.imag .img-thumbnail {
+    border: none;
+}
+
+.custom-buttonnn {
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+}
+
+.custom-buttonnn a {
+    color: #000;
+    font-size: 18px;
+    font-family: Open Sans;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #feca0a;
+    padding: 10px 25px;
+}

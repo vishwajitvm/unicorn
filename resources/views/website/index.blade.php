@@ -148,7 +148,7 @@
                     @endphp
 
                     <div class="col-lg-4 col-sm-12 mb-5 text-center ">
-                        <div class="background_cat border  m-auto">
+                        <div class=" border  m-auto"> <!--background_cat -->
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -174,6 +174,10 @@
 
                 </div>
 
+            </div>
+
+            <div class="Find-button text-center">
+                <button class="btn btn-primary"><a href="{{ Route('mainmachine') }}">Explore All Unicorn Machine</a></button>
             </div>
 
         </section>
@@ -235,20 +239,20 @@
             <div class="container reward-main">
                 <div class="row text-center">
                     <div class="col-md-4 col-sm-4 my-5"><img src="frontend/assets/img/trophy 1 (Traced).png"><br>
-                        <h3>Order now</h3>
+                        <h3>Processing Orders</h3>
                         <br>
-                        <h4>5000</h4>
+                        <h4>{{ $requestmachine }}</h4>
                     </div>
                     <div class="col-md-4 col-sm-4 my-5"><img src="frontend/assets/img/Group 21.png"><br>
-                        <h3>Order now</h3>
+                        <h3>Order Complete</h3>
                         <br>
-                        <h4>5000</h4>
+                        <h4>{{ $dealdone }}</h4>
                     </div>
 
                     <div class="col-md-4 col-sm-4 my-5"><img src="frontend/assets/img/verify.png"><br>
-                        <h3>Order now</h3>
+                        <h3>Service Completed</h3>
                         <br>
-                        <h4>5000</h4>
+                        <h4>{{ $servicedone }}</h4>
                     </div>
                 </div>
             </div>
@@ -338,7 +342,7 @@
             <div class="container">
                 <div class="category_title">
                     <h2>OUR LATEST</h2>
-                    <h3 class="title_back_heading">UPDATE </h3>
+                    <h3 class="title_back_heading">Videos </h3>
                     <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
 
                 </div>
@@ -353,8 +357,8 @@
                                     <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="yes"></iframe>
                                 </div>
                             </div>
-
                         </div>
+                        
                         <div class="card swiper-slide">
                             <div class="video-content">
                                 <div class="card-video">
