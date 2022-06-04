@@ -1,0 +1,230 @@
+.info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
+    margin: 1.5rem;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+a {
+    text-decoration: none;
+    color: rgba(225, 255, 255, .8);
+}
+
+
+/* Slider style */
+
+.cd-slider {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    padding: 358px 0px;
+    overflow: hidden;
+}
+
+.cd-slider.ie9 nav div span {
+    display: none;
+}
+
+.cd-slider ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    padding: 358px 0px;
+    visibility: hidden;
+    transition: visibility 0s .6s;
+}
+
+
+/* .cd-slider ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    width: 135vh;
+    height: 135vh;
+    border: solid rgba(0, 0, 0, 0.2);
+    border-width: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: border-width .4s .6s;
+} */
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 45%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* mix-blend-mode: lighten; */
+    opacity: 0;
+    transform: scale(1.2);
+    transition: opacity .4s .6s, transform .4s .6s;
+}
+
+.content blockquote {
+    /* position: absolute;
+    bottom: 36%;
+    left: 12%; */
+    z-index: 2;
+    width: 100%;
+    max-width: 40%;
+}
+
+blockquote p {
+    font-size: 76px;
+    font-weight: 800;
+    color: #FDB900;
+    line-height: 1.2;
+}
+
+blockquote .button {
+    border: 2px solid #FDB900;
+    padding: 16px 49px 16px 49px;
+    background: none !important;
+    margin-top: 20px;
+    border-radius: 38px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+blockquote .button a {
+    color: black;
+    text-decoration: none;
+}
+
+blockquote .button:hover {
+    border: 2px solid #FDB900;
+    padding: 16px 49px 16px 49px;
+    margin-top: 20px;
+    border-radius: 38px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #FDB900;
+    color: white;
+}
+
+blockquote span {
+    font-size: 1.4rem;
+}
+
+
+/* current slide
+  ---------------------------------*/
+
+.cd-slider li.current_slide {
+    visibility: visible;
+}
+
+.cd-slider li.current_slide::before {
+    border-width: 16rem;
+}
+
+.cd-slider li.current_slide .content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* nav
+  ---------------------------------*/
+
+nav.sliderr div {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    width: 3rem;
+    height: 3rem;
+    margin-top: -2.5rem;
+    list-style: none;
+}
+
+nav.sliderr div:last-of-type {
+    left: auto;
+    right: 4%;
+}
+
+.prev,
+.next {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+    transition: box-shadow .3s;
+}
+
+.prev::before,
+.prev::after,
+.next::before,
+.next::after {
+    content: '';
+    position: absolute;
+    left: 43%;
+    background: #fff;
+    width: .4rem;
+    min-width: 3px;
+    border-radius: 3px;
+    height: 34%;
+}
+
+.prev::before {
+    transform: rotate(45deg);
+    top: 24%;
+}
+
+.prev::after {
+    transform: rotate(-45deg);
+    bottom: 24%;
+}
+
+.next::before,
+.next::after {
+    left: auto;
+    right: 43%;
+}
+
+.next::before {
+    transform: rotate(-45deg);
+    top: 24%;
+}
+
+.next::after {
+    transform: rotate(45deg);
+    bottom: 24%;
+}
+
+.prev:hover,
+.next:hover {
+    box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.15);
+}
+
+nav>div>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    z-index: 5;
+    pointer-events: none;
+    will-change: width, height;
+    transform: translate(-50%, -50%);
+    transition: width .6s, height .6s;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px){
+    .blockquote p{
+        font-size: 40px !important;
+    }
+}
