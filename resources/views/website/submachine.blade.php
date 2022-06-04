@@ -13,6 +13,7 @@
 @endphp
 <!--META DATA END-->
 
+
         <!--banner section start-->
         <section class="innerpagebanner d-flex align-items-center">
 
@@ -30,8 +31,7 @@
             <div class="container">
                 <div class="row d-flex align-items-center">
                     
-
-
+                    @if($data->count() > 0)
                     @foreach ($data as $item)
                     <div class="col-md-4 wrapper_box">
                         <div class="submachinebox">
@@ -53,6 +53,11 @@
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <div class="alert alert-warning">
+                        <strong>Sorry!</strong> No Model Found.
+                    </div>      
+                    @endif
 
                 </div>
             </div>
