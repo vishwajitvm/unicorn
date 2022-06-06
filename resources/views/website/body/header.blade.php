@@ -36,7 +36,7 @@
                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 
                             @foreach ($navbardata as $item)
-                                <li><a class="dropdown-item" href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a></li>
+                                <li><a class="dropdown-item navbarcatData" href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a>  </li>
                             @endforeach
                             
                             {{-- <li><a class="dropdown-item" href="main_machine.html">main_machine</a></li>
@@ -91,5 +91,30 @@
     </nav>
 </div>
 <!-- header closed -->
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".navbarcatData").hover(function() {
+            let catData = $(this).closest('a').text() ;
+            jQuery.ajax({
+                url: '/ajax-navdata',
+                type: 'post',
+                data: 'catData='+catData+'&_token={{ csrf_token() }}',
+                dataType:"json",
+                success: function(result){
+                    // jQuery('#main_machine_name').html(result) ;
+                    console.log(result) ;
+                }
+            })
+        })
+    })
+</script>
+
+
+
+
+
 
 

@@ -353,7 +353,7 @@
                         <div class="card swiper-slide">
                             <div class="video-content">
                                 <div class="card-video">
-                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="yes"></iframe>
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -361,7 +361,7 @@
                         <div class="card swiper-slide">
                             <div class="video-content">
                                 <div class="card-video">
-                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="yes"></iframe>
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA"></iframe>
                                 </div>
                             </div>
                         </div>

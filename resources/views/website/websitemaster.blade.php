@@ -23,7 +23,6 @@
     <!-- Link Swiper's CSS -->
     <link rel="icon" href=" {{asset('backend/images/faviconnew.png')}} ">
 
-
     <title>Unicorn - {{ empty($title)?"Equipement":$title }}</title>
 </head>
 

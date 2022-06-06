@@ -622,6 +622,9 @@ Route::get('our-team' , [websitecontroller::class , 'OurTeam'])->name('our-team'
 //credentials page
 Route::get('credentials' , [websitecontroller::class , 'Managecredentials'])->name('credentials') ;
 
+//AJAX HEADER CATEGORY TO MACHINE DATA FETCHING
+Route::post('ajax-navdata' , [websitecontroller::class , 'AJAXWebsiteHeaderNavbarMachineData'])->name('ajax-navdata') ;
+
 
 
 

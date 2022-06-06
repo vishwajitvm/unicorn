@@ -17,6 +17,7 @@ use App\Models\assignproduct ;
 use App\Models\insuranceclaim ;
 use Illuminate\Support\Facades\View;
 use App\Models\dealer ;
+use App\Models\main_category;
 use App\Models\manage_credential;
 use Illuminate\Auth\Events\Failed;
 use phpDocumentor\Reflection\Types\Null_;
@@ -191,6 +192,19 @@ class websitecontroller extends Controller
     public function Managecredentials() {
         $data = manage_credential::latest()->get() ;
         return view('website.credentials' , compact(['data']) ) ;
+    }
+
+    //AJAX REQUESTS
+    public function AJAXWebsiteHeaderNavbarMachineData(Request $request) {
+        $catData = $request->post('catData') ;  //patient name
+        $maincategoryData = main_category::all()->where('category_name', $catData) ;
+        // $data = mainmachine::all()->where('main_cat_id' , $maincategoryData) ;
+        foreach($maincategoryData as $item) {
+            // return $item->id ;
+            $data = mainmachine::all()->where('main_cat_id' , $item->id) ;
+            // return $data ;
+            return response()->json(['data'=>'data']);
+        }
     }
 
 }
