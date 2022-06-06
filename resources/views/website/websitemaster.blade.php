@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/banner.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style_2.css')}}">
-
-
     <!-- Link Swiper's CSS -->
+    <link rel="icon" href=" {{asset('backend/images/faviconnew.png')}} ">
+
 
     <title>Unicorn - {{ empty($title)?"Equipement":$title }}</title>
 </head>
