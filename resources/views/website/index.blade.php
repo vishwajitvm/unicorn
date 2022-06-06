@@ -155,10 +155,6 @@
                                         <img src="{{ URL::to($imgData[0]) }}" class="img-fluid" alt="category img 1">
                                     </div>
 
-                                    {{-- <div class="carousel-item">
-                                        <img src="frontend/assets/img/category/cutting machine.png" class="img-fluid">
-                                    </div> --}}
-
                                     @for ($i = 1; $i < count($imgData); $i++)
                                         <div class="carousel-item">
                                             <img src="{{ URL::to($imgData[$i]) }}" class="img-fluid">
@@ -169,7 +165,6 @@
                         </div>
                         <a href="{{ route('main-machine',$item->id) }}" class="text-dark"><p class="category_name">{{ Str::title($item->category_name) }}</p></a>
                     </div>
-
 
                     @endforeach
                     <!--end unicorn categopry here-->
