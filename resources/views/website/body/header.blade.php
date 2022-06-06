@@ -16,7 +16,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class=" collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{{ Route('aboutus') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Who we are
@@ -67,7 +67,7 @@
                     </li>
 
                 </ul>
-                <form class="d-flex">
+                <div class="d-flex form">
 
                     <button class="btn btn-outline-success " type="button">
                         <a href="{{ route('loginpage') }}">
@@ -85,7 +85,7 @@
                     <button class="btn btn-outline-success" type="submit">
                         <a href=" {{ route('findealer') }} ">Find Dealer</a>
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     </nav>

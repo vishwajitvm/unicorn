@@ -148,18 +148,22 @@
                     @endphp
 
                     <div class="col-lg-4 col-sm-12 mb-5 text-center ">
-                        <div class="m-auto"> <!--border background_cat -->
+                        <div class="m-auto "> <!--border background_cat -->
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="frontend/assets/img/category/cutting machine.png" class="img-fluid">
+                                        <img src="{{ URL::to($imgData[0]) }}" class="img-fluid" alt="category img 1">
                                     </div>
-                                    <div class="carousel-item">
+
+                                    {{-- <div class="carousel-item">
                                         <img src="frontend/assets/img/category/cutting machine.png" class="img-fluid">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="frontend/assets/img/category/cutting machine.png" class="img-fluid">
-                                    </div>
+                                    </div> --}}
+
+                                    @for ($i = 1; $i < count($imgData); $i++)
+                                        <div class="carousel-item">
+                                            <img src="{{ URL::to($imgData[$i]) }}" class="img-fluid">
+                                        </div>
+                                    @endfor
                                 </div>
                             </div>
                         </div>

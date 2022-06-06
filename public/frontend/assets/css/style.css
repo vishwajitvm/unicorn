@@ -24,10 +24,9 @@ body {
 
 .navbar-collapse ul {
     /* border: 1px solid blue; */
-    width: 70%;
     padding: 0px;
     text-align: left;
-    margin-left: 60px;
+    margin: 0 auto !important;
 }
 
 .navbar-collapse .dropdown-menu ul li a {
@@ -71,7 +70,7 @@ body {
     display: block;
 }
 
-.navbar-collapse form .btn {
+.navbar-collapse .form .btn {
     padding: 17px 24px;
     margin: 15px 5px 0 0;
     background-color: #FDB900;
@@ -186,13 +185,13 @@ body {
     }
 }
 
-.navbar-collapse form {
+.navbar-collapse .form {
     /* border: 1px solid red; */
     margin-right: 50px;
     margin-bottom: 15px;
 }
 
-.navbar-collapse form {
+.navbar-collapse .form {
     /* border: 1px solid red; */
     margin-right: 50px;
 }
@@ -271,6 +270,7 @@ body {
     justify-content: center;
     width: 300px !important;
     height: 150px;
+    /* transform: rotate(20deg); */
 }
 
 .category_name {
