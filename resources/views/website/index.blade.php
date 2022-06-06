@@ -148,7 +148,7 @@
                     @endphp
 
                     <div class="col-lg-4 col-sm-12 mb-5 text-center ">
-                        <div class=" border  m-auto"> <!--background_cat -->
+                        <div class="m-auto"> <!--border background_cat -->
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">

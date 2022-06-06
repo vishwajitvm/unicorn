@@ -207,8 +207,6 @@
     }
 </script>
 
-
-
 <script>
     $(document).ready(function() {
         $("#main_category_id").change(function() {

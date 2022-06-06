@@ -73,11 +73,11 @@
                         <a href="{{ route('loginpage') }}">
                             @php
                                 if(!Auth::user()) {
-                                    echo "Login to Dashboard" ;
+                                    echo "Login" ;
                                 }
                                 else{
                                     $id = Auth::user()->name ;
-                                    echo "$id dashboard" ;
+                                    echo "$id" ;
                                 }
                             @endphp
                         </a>
