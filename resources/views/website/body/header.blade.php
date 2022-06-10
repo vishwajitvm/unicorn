@@ -1,7 +1,5 @@
 @php
-    // $navbardata = DB::table('mainmachines')->get() ;
     $navbardata = DB::table('main_categories')->get()
-
 @endphp
 
         
@@ -36,21 +34,18 @@
                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 
                             @foreach ($navbardata as $item)
-                                <li><a class="dropdown-item navbarcatData" href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a>  </li>
-                            @endforeach
-                            
-                            {{-- <li><a class="dropdown-item" href="main_machine.html">main_machine</a></li>
-                            <li><a class="dropdown-item " href="sub_machine.html">main_machine</a></li> --}}
 
-                            {{-- <li class="dropdown-submenu">
-                                <a class="dropdown-item" tabindex="-1" href="#">Hover me for more options</a>
-                                <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item navbarcatData" tabindex="-1" href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a>
+
+                                {{-- <ul class="dropdown-menu dropmenuajaxdata" >
                                     <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
+                                    <li class="dropdown-item"><a href="#">Second level</a></li>
+                                    <li class="dropdown-item"><a href="#">Second level</a></li>
+                                </ul> --}}
+                            </li>
+                            @endforeach
 
-                                    <li class="dropdown-item"><a href="#">Second level</a></li>
-                                    <li class="dropdown-item"><a href="#">Second level</a></li>
-                                </ul>
-                            </li> --}}
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -94,23 +89,35 @@
 
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script>
+{{-- <script>
     $(document).ready(function() {
-        $(".navbarcatData").hover(function() {
+        $(".navbarcatData").mouseover(function() {
             let catData = $(this).closest('a').text() ;
             jQuery.ajax({
                 url: '/ajax-navdata',
                 type: 'post',
                 data: 'catData='+catData+'&_token={{ csrf_token() }}',
-                dataType:"json",
+                dataType:"JSON",
                 success: function(result){
                     // jQuery('#main_machine_name').html(result) ;
-                    console.log(result) ;
+                    $.each(result.data, function (i , e) {                    
+                        //  console.log(e.machine_name) ;
+                        // $html = `"<li class='dropdown-item'><a href='#'>"`e.machine_name`"</a></li>"`;
+                        // console.log(e) ;
+                        // $html = "<li class='dropdown-item'><a href='#'>" + e.machine_name + "</a></li>" ;
+                        // $(".dropmenuajaxdata").html($html);
+                        // $(".dropmenuajaxdata").append($html);
+                            $html = "<li class='dropdown-item'><a href='#'>" + e.machine_name + "</a></li><br>"  ;
+                            $(".dropmenuajaxdata").append($html);
+                            
+                            
+                    });
+                    
                 }
             })
         })
     })
-</script>
+</script> --}}
 
 
 

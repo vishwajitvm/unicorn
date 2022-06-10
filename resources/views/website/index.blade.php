@@ -201,25 +201,25 @@
                             <div class="col-md-3 topp  col-sm-3 mt-3 ">
                                 <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
                             </div>
-                            <div class="col-md-9 col-sm-12 fa-content mt-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus natus voluptas voluptatibus </div>
+                            <div class="col-md-9 col-sm-12 fa-content mt-3 "><br> 25 years of engineering excellence <br> & Universally accepted standard of quality </div>
                         </div>
                         <div class="row featur_details">
                             <div class="col-md-3  col-sm-3 mt-3 ">
                                 <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
                             </div>
-                            <div class="col-md-9  col-sm-12 fa-content mt-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus natus voluptas voluptatibus </div>
+                            <div class="col-md-9  col-sm-12 fa-content mt-3 "><br> Excellence in the offered array</div>
                         </div>
                         <div class="row featur_details">
                             <div class="col-md-3 col-sm-3 mt-3 ">
                                 <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
                             </div>
-                            <div class="col-md-9 col-sm-12 fa-content mt-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus natus voluptas voluptatibus </div>
+                            <div class="col-md-9 col-sm-12 fa-content mt-3 "> <br> Manufactures and supplies of an extensive range </div>
                         </div>
                         <div class="row featur_details">
                             <div class="col-md-3 bottomm col-sm-3 mt-3 ">
                                 <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
                             </div>
-                            <div class="col-md-9 col-sm-12 fa-content mt-3 py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus natus voluptas voluptatibus </div>
+                            <div class="col-md-9 col-sm-12 fa-content mt-3 py-4"> <br>Customer Focused Approch </div>
                         </div>
 
                     </div>

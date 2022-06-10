@@ -199,12 +199,11 @@ class websitecontroller extends Controller
         $catData = $request->post('catData') ;  //patient name
         $maincategoryData = main_category::all()->where('category_name', $catData) ;
         // $data = mainmachine::all()->where('main_cat_id' , $maincategoryData) ;
-        foreach($maincategoryData as $item) {
-            // return $item->id ;
+        foreach($maincategoryData as $key=>$item) {
             $data = mainmachine::all()->where('main_cat_id' , $item->id) ;
-            // return $data ;
-            return response()->json(['data'=>'data']);
+            return response()->json(['data'=>$data]);
         }
+        
     }
 
 }
