@@ -13,73 +13,120 @@
 @endphp
 <!--META DATA END-->
 
-        <!--banner section start-->
-        <section class="innerpagebanner d-flex align-items-center">
+     <!--banner section start-->
+     <section class="innerpagebanner d-flex align-items-center">
 
-            <div class="container">
-                <div class="mainheadertitle text-center">
-                    <h1 class="text-uppercase">Services</h1>
-                </div>
+        <div class="container">
+            <div class="mainheadertitle text-center">
+                <h1>Services</h1>
             </div>
 
-        </section>
-        <!--banner section end here-->
+        </div>
 
-            <!--main ,achines section start here-->
-    <section class="queryformparts">
-        <div class="container">
+    </section>
 
-            <div class="fromdiv">
-                <div class="headingdetail text-center mb-5">
-                    <h2>Get Your Service</h2>
+    <!--banner section end here-->
+
+    <!-- services  section start -->
+    <section class="services">
+        <div class="container services_main">
+            <div class="row">
+                <div class=" Your_Service col-lg-12 col-sm-12 col-md-12 border border-info bg-white">
+                    <h1>
+                        Get Your Service
+                    </h1>
+
+                    <!-- service form -->
+                    <div class="row my-5">
+
+                        <!-- 1 -->
+                        <div class="col-lg-6">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                                    <input type="text" name="service_username" class="form-control" id="exampleInputName">
+
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" name="service_useremail" class="form-control" id="exampleInputEmail1">
+
+                                </div>
+
+                            </form>
+                        </div>
+
+
+                        <!-- 2 -->
+                        <div class="col-lg-6">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Phone no</label>
+                                    <input type="text" class="form-control" id="exampleInputPhone" name="service_phonenumber">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Address</label>
+                                    <textarea id="address" class="form-control" name="service_address" cols="30" rows="5"></textarea>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+
+                        <!-- last row  -->
+
+                        <div class="col-lg-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputphoto" class="form-label">Upload Photos</label>
+                                    <input type="file" name="service_photos[]" accept="image/png, image/jpeg" multiple class="form-control">
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputphoto" class="form-label">Upload Videos</label>
+                                    <input type="file" class="form-control" name="service_videos[]" accept="video/*"
+                                        multiple>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputphoto" class="form-label">Upload Invoice Coppy </label>
+                                    <input type="file" name="service_invoice[]" multiple class="form-control"
+                                        accept=".pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- last row closed  -->
+                        <div class="col-sm-4">
+                            <div class="mb-3  mt-3 my-2 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">I agree<a href="#" style="color:blue ;"> Terms & Condition.</a></label>
+                            </div>
+                        </div>
+                        
+                        <!-- button -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
                 </div>
-                <form action="{{ route('services-requests') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="mb-4">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" name="service_username" class="form-control" id="name" placeholder="Name" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" name="service_useremail" class="form-control" id="email" placeholder="johndeo@gmail.com" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="phoneno" class="form-label">Phone No</label>
-                        <input type="tel" name="service_phonenumber" class="form-control" id="phoneno" placeholder="Phone No" value="+91" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label  class="form-label">Adress</label>
-                        <textarea name="service_address" class="form-control" style="border-radius: 2%" cols="30" rows="5"></textarea>
-                    </div>
-
-                    <div class="mb-4">
-                        <label  class="form-label">Upload Photos</label>
-                        <input type="file" class="form-control"  name="service_photos[]" accept="image/png, image/jpeg" multiple/>
-                    </div>
-
-                    <div class="mb-4">
-                        <label  class="form-label">Upload Videos</label>
-                        <input type="file"   class="form-control"   name="service_videos[]"  accept="video/*" multiple/>
-                    </div>
-
-                    <div class="mb-4">
-                        <label  class="form-label">Upload Invoice Coppy</label>
-                        <input type="file" name="service_invoice[]" multiple class="form-control"    accept=".pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-                    </div>
-
-                    <div class="mb-5 form-check">
-                        <input type="checkbox" class="form-check-input" name="service_checkbox_policy"  id="acceptpolicy" required>
-                        <label class="form-check-label" for="acceptpolicy">I agree <a href="#" style="color:#fff;"> Terms & Condition</a>.</label>
-                    </div>
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-
-                </form>
             </div>
         </div>
     </section>
+    <!-- services section closed -->
+
+
     <!--main ,achines section end here-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 

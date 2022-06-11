@@ -63,21 +63,26 @@
                             <h6 class="fw-bold text-left mb-4">
                                 Contact
                             </h6>
-                            <p class=" text-left"><b>Address:</b> abc def, palam 110045, india</p>
-                            <p class=" text-left"> <b>Phone no:</b> + 01 234 567 88</p>
-                            <p class="text-left"><b>Email:</b> info@example.com</p>
+                            <p class=" text-left"><b>Address:</b> WZ-131, First Floor Near Coffee House, Budela Market Vikas Puri, New Delhi-110018</p>
+                            <p class=" text-left"> <b>Phone no:</b> +91 98111 11632</p>
+                            <p class=" text-left"> <b>Phone no:</b> +91 98117 77774</p>
+
+                            <p class="text-left"><b>Email:</b> equipmentunicorn@gmail.com</p>
+                            {{-- <p class="text-left"><b>Email:</b> Salesunicornequipment@gmail.com</p>
+                            <p class="text-left"><b>Email:</b> Info.equipmentunicorn@gmail.com</p> --}}
+
 
                             <div>
 
                                 <div class="socialsicons text-left">
                                     <div class="socialiconalign">
-                                        <i class="fab fa-facebook-square"></i>
+                                        <a href="https://www.facebook.com/unicornequipment/" target="_blank"><i class="fab fa-facebook-square"></i></a>
                                     </div>
                                     <div class="socialiconalign">
-                                        <i class="fab fa-instagram-square"></i>
+                                        <a href="https://www.instagram.com/equipmentunicorn/" target="_blank"><i class="fab fa-instagram"></i></a>
                                     </div>
                                     <div class="socialiconalign">
-                                        <i class="fab fa-linkedin"></i>
+                                        <a href="https://www.linkedin.com/company/unicorn-equipment/" target="_blank"><i class="fab fa-linkedin"></i></a>
                                     </div>
                                     <div class="socialiconalign">
                                         <i class="fab fa-twitter-square"></i>

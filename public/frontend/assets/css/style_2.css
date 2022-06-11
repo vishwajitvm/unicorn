@@ -30,11 +30,12 @@ body {
 }
 
 .mainheadertitle h1 {
-    color: #fff;
+    color:black;
     font-size: 54px;
     font-weight: 700;
+    text-align: right;
 
-    margin: 130px 0px 0px 0px;
+    /* margin: 130px 0px 0px 0px; */
 }
 
 .mainmachineinner {
@@ -451,7 +452,9 @@ a.intrestedbtn:hover {
 }
 
 /* contact us page css start here */
-
+.contactpagebanner{
+   
+}
 .contactdetails {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -498,4 +501,29 @@ a.intrestedbtn:hover {
 
     margin-top: 80px;
     margin-bottom: 80px;
+}
+.services_main{
+    border-radius: 30px;
+    padding: 45px;
+    background-color: #FDB900;
+}
+.Your_Service{
+    padding: 35px;
+    border-radius: 30px;
+}
+.Your_Service h1{
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.Your_Service form .form-control {
+    border-radius: 0px !important;
+}
+
+
+/* responsive */
+@media (max-width:768px){
+    .services{
+        padding: 20px;
+    }
 }

@@ -353,7 +353,7 @@
                         <div class="card swiper-slide">
                             <div class="video-content">
                                 <div class="card-video">
-                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA"></iframe>
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/ml8A-KHHa5U"  allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -361,10 +361,43 @@
                         <div class="card swiper-slide">
                             <div class="video-content">
                                 <div class="card-video">
-                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/D0UnqGm_miA"></iframe>
+                                    <iframe width="100%" height="220px" src="https://www.youtube.com/embed/a8Rltz2Xe2c"  allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="card swiper-slide">
+                            <div class="video-content">
+                                <div class="card-video">
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/fThcvT-6H3U"  allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card swiper-slide">
+                            <div class="video-content">
+                                <div class="card-video">
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/kQS6XMBqE8E"  allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card swiper-slide">
+                            <div class="video-content">
+                                <div class="card-video">
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/j8uvFyHGCx4"  allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card swiper-slide">
+                            <div class="video-content">
+                                <div class="card-video">
+                                    <iframe width="100%" height="220px" border-radius="" src="https://www.youtube.com/embed/kqlSUBGzcs8"  allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
