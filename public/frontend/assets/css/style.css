@@ -1091,3 +1091,8 @@ footer p {
 .section-team .single-person:hover .speciality {
     color: #fff;
 }
+/* crendentials */
+.crendentials{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}

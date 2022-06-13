@@ -18,7 +18,7 @@
 
             <div class="container">
                 <div class="mainheadertitle text-center">
-                    <h1>Our Team</h1>
+                    <h1>Our <span style="color:white ;">Team</span> </h1>
                 </div>
             </div>
         </section>
@@ -30,7 +30,7 @@
             <div class="row justify-content-center text-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="header-section">
-                        <h3 class="small-title">Our Experts</h3>
+                        <h3 class="small-title">Unicorn Equipment Team</h3>
                         <h2 class="title">Let's meet with our team members</h2>
                     </div>
                 </div>

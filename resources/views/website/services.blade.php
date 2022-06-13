@@ -14,17 +14,16 @@
 <!--META DATA END-->
 
      <!--banner section start-->
-     <section class="innerpagebanner d-flex align-items-center">
-
-        <div class="container">
-            <div class="mainheadertitle text-center">
-                <h1>Services</h1>
-            </div>
-
+<!--banner section start-->
+<section class="innerpagebanner d-flex align-items-center">
+    <div class="container">
+        <div class="mainheadertitle text-center">
+            <h1>Services <span style="color:white ;"> </span></h1>
         </div>
-
-    </section>
-
+    </div>
+</section>
+</header>
+<!--main header end-->
     <!--banner section end here-->
 
     <!-- services  section start -->

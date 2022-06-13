@@ -13,79 +13,83 @@
 @endphp
 <!--META DATA END-->
 
-                <!--banner section start-->
-                <section class="innerpagebanner d-flex align-items-center">
+    <!--banner section start-->
+    <section class="innerpagebanner d-flex align-items-center">
 
-                    <div class="container">
-                        <div class="mainheadertitle text-center">
-                            <h1 class="text-uppercase">Search Here</h1>
-                            <div class="input-group searchgroup mt-5 mx-auto w-60">
-                                <input type="search" id="search" class="form-control rounded" placeholder="Search by Address, Pin Code, Dealer & State" aria-label="Search" aria-describedby="search-addon" />
-                                <button type="button" class="btn btn-outline-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <div class="container">
+            <div class="mainheadertitle text-center">
+                <h1>Search Here </h1>
+                <div class="input-group">
+                    <input type="search" id="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" style="background-color: white;" />
+                    <button type="button" class="btn "><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
 
-                <section class="serachdatatable">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table" id="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Dealer company</th>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Pin Code</th>
+    </section>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        
-                                        @foreach ($data as $key=>$item)
-                                        <tr style="display: none" class="tbldata">
-                                            <th scope="row">{{$key+1}}</th>
-                                            <td> {{ $item->dealercompany_name }} </td>
-                                            <td> {{ $item->dealerstate }} </td>
-                                            <td> {{ $item->dealerpincode }} </td>
-                                        </tr>
-                                        @endforeach
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <!--banner section end here-->
+    <!-- serach data section start here -->
 
-                <script>
-                    var $rows = $('#table tr');
-                    $('#search').keyup(function() {
-                        
-                        var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-                            reg = RegExp(val, 'i'),
-                            text;
-                        
-                        $rows.show().filter(function() {
-                            text = $(this).text().replace(/\s+/g, ' ');
-                            return !reg.test(text);
-                        }).hide();
-                    });
-                </script>
+    <section class="serachdatatable">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table my-5" id="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Dealer company</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Pin Code</th>
 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            @foreach ($data as $key=>$item)
+                            <tr style="display: none" class="tbldata">
+                                <th scope="row">{{$key+1}}</th>
+                                <td> {{ $item->dealercompany_name }} </td>
+                                <td> {{ $item->dealerstate }} </td>
+                                <td> {{ $item->dealerpincode }} </td>
+                            </tr>
+                            @endforeach
+                            
+                        </tbody>
+                    </table>
+    </div>
+            </div>
+        </div>
+    </section>
 
-                <script>
-                        $('#search').keyup(function()
-                    {
-                        if(!$(this).val() ) {
-                            location.reload();
-                        }
-                    });
-
-                </script>
-        
+    <script>
+        var $rows = $('#table tr');
+        $('#search').keyup(function() {
+            
+            var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+                reg = RegExp(val, 'i'),
+                text;
+            
+            $rows.show().filter(function() {
+                text = $(this).text().replace(/\s+/g, ' ');
+                return !reg.test(text);
+            }).hide();
+        });
+    </script>
 
 
-   
+    <script>
+            $('#search').keyup(function()
+        {
+            if(!$(this).val() ) {
+                location.reload();
+            }
+        });
+
+    </script>
+
+
+
 @endsection

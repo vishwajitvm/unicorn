@@ -20,23 +20,30 @@ body {
 }
 
 .innerpagebanner {
-    height: 400px;
+    height: 480px;
     width: 100%;
    background-position: center;
    background-size: cover;
-    background-image: url('../img/header_banner.jpg');
+    background-image: url('../img/header_banner.png');
     z-index: -1;
-    position: relative;
+    /* position: relative; */
 }
-
+@media (max-width:768px){
+    .innerpagebanner{
+      height: 100px;
+    }
+    .mainheadertitle h1{
+        font-size: 20px !important;
+    }
+}
 .mainheadertitle h1 {
-    color:black;
-    font-size: 54px;
+    color:#FDB900;
+    font-size: 80px;
     font-weight: 700;
     text-align: right;
-
     /* margin: 130px 0px 0px 0px; */
 }
+
 
 .mainmachineinner {
     border: none;
@@ -526,4 +533,27 @@ a.intrestedbtn:hover {
     .services{
         padding: 20px;
     }
+}
+
+.mainheadertitle .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 40%;
+    /* align-items: flex-end; */
+    float: right;
+}
+.mainheadertitle .input-group .btn{
+    position: relative;
+    right: 64px;
+    top: 5px;
+    color: black;
+}
+.mainheadertitle .input-group .btn:hover{
+    border: none;
+}
+.mainheadertitle .input-group i{
+    color: black;
+    font-size: 35px;
 }

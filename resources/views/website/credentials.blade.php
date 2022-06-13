@@ -24,13 +24,8 @@
         <!--banner section end here-->
 
                     <!-- News section start here-->
-                    <section class="blogsection categorysection">
+                    {{-- <section class="blogsection categorysection">
                         <div class="container">
-                            {{-- <div class="main_title">
-                                <h2>OUR Association </h2>
-                                <h3 class="title_back_heading">OUR Association</h3>
-                                <hr style="width: 6%; height: 4px; color: #feb902; opacity: 1;">
-                            </div> --}}
 
                             <div class="row">
                                 
@@ -49,8 +44,27 @@
                                 @endforeach
                             </div>
                         </div>
-                    </section>
+                    </section> --}}
                     <!-- News section end here -->
+
+                    <div class="crendentials">
+                        <div class="container">
+                            <div class="row">
+                                @foreach ($data as $items)
+                                <div class="col-lg-6"><img src="{{ (!empty($items->credential_image))?url('upload/gallery_images/'.$items->credential_image):url('upload/no_image.jpg') }}" class="fluid"
+                                    width="100%" height="100%">
+                            </div>
+
+                                @endforeach
+
+
+                                {{-- <div class="col-lg-6"><img src="./assets/img/certificate.jpg" class="fluid" width="100%" height="100%">
+                                </div> --}}
+                            </div>
+                            <!-- <img src="./assets/img/certificate.jpg" class="fluid"> -->
+                        </div>
+                    </div>
+                                    
 
 
     

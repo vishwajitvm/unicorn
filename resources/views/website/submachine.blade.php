@@ -19,7 +19,7 @@
 
             <div class="container">
                 <div class="mainheadertitle text-center">
-                    <h1> {{ Str::upper($idData->machine_name) }} </h1>
+                    <h1 class="text-light"> {{ Str::upper($idData->machine_name) }} </h1>
                 </div>
             </div>
 

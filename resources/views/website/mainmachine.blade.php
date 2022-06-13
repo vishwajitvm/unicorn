@@ -18,7 +18,7 @@
 
         <div class="container">
             <div class="mainheadertitle text-center">
-                <h1>Main Machine</h1>
+                <h1>Main <span style="color:white ;">Machine</span> </h1>
             </div>
         </div>
 

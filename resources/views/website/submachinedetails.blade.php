@@ -16,7 +16,7 @@
             <section class="innerpagebanner d-flex align-items-center">
                 <div class="container">
                     <div class="mainheadertitle text-center">
-                        <h1 class="text-uppercase"> {{ $data->main_machine_name }} </h1>
+                        <h1 class="text-uppercase text-light"> {{ $data->main_machine_name }} </h1>
                     </div>
                 </div>
             </section>
@@ -158,7 +158,7 @@
                                         </div>
                                     </div> --}}
                                     {{-- EXPERIMENTAL ZONE STARTED --}}
-                                    @foreach ($videodata as $key=>$itemss)
+                                    {{-- @foreach ($videodata as $key=>$itemss)
                                     <div class="carousel-item active"  >
                                         <div class="embed-responsive embed-responsive-16by9 bg-dark">
                                             <video width="200px" class="bg-dark" style="margin:auto" controls autoplay muted>
@@ -167,6 +167,32 @@
                                         </div>
                                     </div>
 
+                                   
+                                    @endforeach --}}
+
+                                    @foreach ($videodata as $key=>$itemss)
+                                        @php
+                                            $videoDatas = explode('|' , $itemss)
+                                        @endphp
+
+                                            <!--active-->
+                                            <div class="carousel-item active">
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <video width="100%" controls autoplay muted>
+                                                        <source src="{{ URL::to($videoDatas[0]) }}" type="video/mp4">
+                                                      </video>
+                                                </div>
+                                            </div>
+
+                                            @for ($i = 1; $i < count($videoDatas); $i++)
+                                            <div class="carousel-item">
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <video width="100%" controls autoplay muted>
+                                                        <source src="{{ URL::to($videoDatas[$i]) }}" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                            @endfor
                                    
                                     @endforeach
                                     {{-- EXPERIMENTAL ZONE ENDED --}}

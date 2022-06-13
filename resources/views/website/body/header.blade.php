@@ -4,7 +4,7 @@
 
         
 <!--header started -->
-<div class="wrapper">
+<div class="wrapper" style="position: sticky; top: 0; z-index:10000000" >
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
