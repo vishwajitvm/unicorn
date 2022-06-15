@@ -33,7 +33,6 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 "><img src="{{asset('frontend/assets/img/founder.jpg')}}" class="img-fluid"></div>
 
                 <div class="col-lg-7 ">
 
@@ -54,6 +53,8 @@
                         concrete treatment.
                     </p>
                 </div>
+                <div class="col-lg-5 "><img src="{{asset('frontend/assets/img/founder.jpg')}}" class="img-fluid"></div>
+
             </div>
         </div>
 

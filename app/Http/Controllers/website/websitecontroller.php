@@ -154,7 +154,7 @@ class websitecontroller extends Controller
         $data->save() ;
         //mail start
         $datamail = ['data'=>"You have recived a new request For Service" , 'name'=> $request->service_username , 'phonenumber'=>$request->service_phonenumber , 'Address'=>$request->service_address ] ;
-        $user['to']='memebazzzar@gmail.com' ;
+        $user['to']='Salesunicornequipment@gmail.com' ;
 
         Mail::send('mails.NewServiceRequestMail', $datamail, function ($messages) use ($user) {
             $messages->to($user['to']) ;

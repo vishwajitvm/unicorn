@@ -44,7 +44,7 @@ class userProductController extends Controller
 
         //sending mail functionality here
         $data = ['data'=>"You have recived a new request from" , 'name'=> $request->Product_username , 'phonenumber'=>$request->phone_number , 'mainmachine'=>$request->product_main_machine , 'submachine'=>$request->product_sub_machine , 'qunatity'=>$request->product_quantity  ] ;
-        $user['to']='memebazzzar@gmail.com' ;
+        $user['to']='Salesunicornequipment@gmail.com' ;
 
         Mail::send('mails.assignproductrequestmail', $data, function ($messages) use ($user) {
             $messages->to($user['to']) ;

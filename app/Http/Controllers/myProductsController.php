@@ -99,7 +99,7 @@ class myProductsController extends Controller
          'claimwarantyfrom'=>$request->warranty_from ,
          'claimwarantyto' =>$request->warranty_to ,
          'claimmessage' => $request->message ] ;
-        $user['to']='memebazzzar@gmail.com' ;
+        $user['to']='Salesunicornequipment@gmail.com' ;
 
         Mail::send('mails.claimrequestmail', $data, function ($messages) use ($user) {
             $messages->to($user['to']) ;

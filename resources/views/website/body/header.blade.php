@@ -3,8 +3,8 @@
 @endphp
 
         
-<!--header started -->
-<div class="wrapper" style="position: sticky; top: 0; z-index:10000000" >
+<!--header started  style="position: sticky; top: 0; z-index:10000000" -->
+<div class="wrapper"  >
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -58,7 +58,7 @@
                         <a class="nav-link" href="{{ route('credentials') }}">Crendintals</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact-us') }}">Contact us</a>
+                        <a class="nav-link" href="{{ route('contact-us') }}">Contact</a>
                     </li>
 
                 </ul>
@@ -89,7 +89,7 @@
 
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-{{-- <script>
+<script>
     $(document).ready(function() {
         $(".navbarcatData").mouseover(function() {
             let catData = $(this).closest('a').text() ;
@@ -108,8 +108,8 @@
                         // $(".dropmenuajaxdata").html($html);
                         // $(".dropmenuajaxdata").append($html);
                             $html = "<li class='dropdown-item'><a href='#'>" + e.machine_name + "</a></li><br>"  ;
-                            $(".dropmenuajaxdata").append($html);
-                            
+                            $(".dropmenuajaxdata").html($html);
+                                                    
                             
                     });
                     
@@ -117,7 +117,7 @@
             })
         })
     })
-</script> --}}
+</script>
 
 
 
