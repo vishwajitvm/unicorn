@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/banner.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style_2.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/sliders.scss')}}">
+
     <!-- Link Swiper's CSS -->
     <link rel="icon" href=" {{asset('backend/images/faviconnew.png')}} ">
 

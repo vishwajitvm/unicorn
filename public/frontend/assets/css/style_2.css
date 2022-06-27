@@ -555,6 +555,10 @@ a.intrestedbtn:hover {
     border-radius: 0px !important;
 }
 
+.associationimg img{
+    width: 50%;
+}
+
 
 /* responsive */
 @media (max-width:768px){

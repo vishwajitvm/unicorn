@@ -119,8 +119,8 @@
                     </div>
                     <ol class="list">
                         <li>Create an account At Unicorn Equipment</li>
-                        <li>Create an account At Unicorn Equipment</li>
-                        <li>Create an account At Unicorn Equipment</li>
+                        <li>Login  into Unicorn Equipment Dashboard</li>
+                        <li>Get an Unicorn Equipment</li>
                     </ol>
                     <button type="submit" class="btn btn-primary button-submit">Ready to create an account</button>
 
@@ -199,25 +199,25 @@
 
                         <div class="row featur_details">
                             <div class="col-md-3 topp  col-sm-3 mt-3 ">
-                                <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
+                                <div class="fa_img"><img src="frontend/assets/img/icon1.png"></div>
                             </div>
                             <div class="col-md-9 col-sm-12 fa-content mt-3 "><br> 25 years of engineering excellence <br> & Universally accepted standard of quality </div>
                         </div>
                         <div class="row featur_details">
                             <div class="col-md-3  col-sm-3 mt-3 ">
-                                <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
+                                <div class="fa_img"><img src="frontend/assets/img/icon2.png"></div>
                             </div>
                             <div class="col-md-9  col-sm-12 fa-content mt-3 "><br> Excellence in the offered array</div>
                         </div>
                         <div class="row featur_details">
                             <div class="col-md-3 col-sm-3 mt-3 ">
-                                <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
+                                <div class="fa_img"><img src="frontend/assets/img/icon3.png"></div>
                             </div>
                             <div class="col-md-9 col-sm-12 fa-content mt-3 "> <br> Manufactures and supplies of an extensive range </div>
                         </div>
                         <div class="row featur_details">
                             <div class="col-md-3 bottomm col-sm-3 mt-3 ">
-                                <div class="fa_img"><img src="frontend/assets/img/icon.png"></div>
+                                <div class="fa_img"><img src="frontend/assets/img/icon4.png"></div>
                             </div>
                             <div class="col-md-9 col-sm-12 fa-content mt-3 py-4"> <br>Customer Focused Approch </div>
                         </div>
@@ -329,11 +329,16 @@
                     <div class="col-lg-4 col-md-4 col-sm-4  mt-3 px-5"><img src="frontend/assets/img/logo 2ds.png" class="img-fluid">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 px-5"><img src="frontend/assets/img/logo 3ds.png" class="img-fluid"></div>
+
+                    @foreach ($manageCred as $itemss)
+                        <div class="col-lg-4 col-md-4 col-sm-4 px-5 associationimg"><img src="{{ (!empty($itemss->credential_image))?url('upload/gallery_images/'.$itemss->credential_image):url('upload/no_image.jpg') }}" class="img-fluid"></div>
+                    @endforeach
                 </div>
             </div>
 
         </section>
         <!-- association closed -->
+        
 
 
         <!-- update start-->

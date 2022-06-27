@@ -44,6 +44,7 @@ use App\Http\Controllers\AdminManageCredentialsImages ;
 use App\Http\Controllers\ManageAjaxRequests;
 //model
 use App\Models\gallery ;
+use App\Models\manage_credential;
 use App\Models\manage_video ;
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
@@ -75,7 +76,8 @@ Route::get('/', function () {
     $servicedone = service_request::all()->count() ;
     $galleryimages = gallery::latest()->get() ;
     $videodata = manage_video::latest()->get() ;
-    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone' , 'galleryimages' , 'videodata'])) ;
+    $manageCred = manage_credential::all() ;
+    return view('website.index' , compact(['data' , 'dealdone' , 'requestmachine' , 'servicedone' , 'galleryimages' , 'videodata' , 'manageCred'])) ;
 });
 
 
