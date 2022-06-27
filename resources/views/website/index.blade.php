@@ -240,18 +240,18 @@
                     <div class="col-md-4 col-sm-4 my-5"><img src="frontend/assets/img/trophy 1 (Traced).png"><br>
                         <h3>Processing Orders</h3>
                         <br>
-                        <h4>{{ $requestmachine }}</h4>
+                        <h4>{{ $requestmachine+2500 }}+</h4>
                     </div>
                     <div class="col-md-4 col-sm-4 my-5"><img src="frontend/assets/img/Group 21.png"><br>
                         <h3>Order Complete</h3>
                         <br>
-                        <h4>{{ $dealdone }}</h4>
+                        <h4>{{ $dealdone+1500 }}+</h4>
                     </div>
 
                     <div class="col-md-4 col-sm-4 my-5"><img src="frontend/assets/img/verify.png"><br>
                         <h3>Service Completed</h3>
                         <br>
-                        <h4>{{ $servicedone }}</h4>
+                        <h4>{{ $servicedone+3500 }}+</h4>
                     </div>
                 </div>
             </div>

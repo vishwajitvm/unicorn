@@ -14,11 +14,11 @@
 <!--META DATA END-->
 
     <!--banner section start-->
-    <section class="innerpagebanner d-flex align-items-center">
+    <section class="innerpagebanner2 d-flex align-items-center">
 
         <div class="container">
             <div class="mainheadertitle text-center">
-                <h1>Main <span style="color:white ;">Machine</span> </h1>
+                <h1> <span style="color:white ;"> Main Machine</span> </h1>
             </div>
         </div>
 

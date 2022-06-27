@@ -38,4 +38,15 @@ class AdminManageCredentialsImages extends Controller
         $data = manage_credential::latest()->get() ;
         return view('backend.credentials.view' , compact(['data'])) ;
     }
+
+    //delete 
+    public function DeleteCredentials($id) {
+        $deleteSubmachineData = manage_credential::find($id) ;
+        $deleteSubmachineData->delete() ;
+        $notification = array(
+            'message' => 'Selected Credential Deleted Successfully',
+            'alert-type' => 'error'
+        ) ;
+        return redirect()->route('managecredentials.view')->with($notification) ;
+    }
 }

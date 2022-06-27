@@ -28,6 +28,34 @@ body {
     z-index: -1;
     /* position: relative; */
 }
+
+.innerpagebanner2 {
+    position: relative;
+    height: 480px;
+    width: 100%;
+   background-position: center;
+   background-size: cover;
+    background-image: url('../img/mainmachine_img.jpg');
+    z-index: -1;
+    
+    /* position: relative; */
+    
+}
+
+
+.innerpagebanner2 .container{
+    z-index: 10000;
+}
+
+.innerpagebanner2::before{
+    content: "";
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #00000052;
+}
 @media (max-width:768px){
     .innerpagebanner{
       height: 100px;

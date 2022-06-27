@@ -15,7 +15,7 @@
 
 
         <!--banner section start-->
-        <section class="innerpagebanner d-flex align-items-center">
+        <section class="innerpagebanner2 d-flex align-items-center">
 
             <div class="container">
                 <div class="mainheadertitle text-center">

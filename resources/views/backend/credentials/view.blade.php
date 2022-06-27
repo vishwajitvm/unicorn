@@ -45,7 +45,7 @@
                               </td>
                               <td>
                                 <!--button here-->
-                                <a class="btn btn-danger" href=" {{Route('gallery.delete',$items->id)}}" id="delete">Delete</a>
+                                <a class="btn btn-danger" href=" {{Route('managecredentials.delete',$items->id)}}" id="delete">Delete</a>
                               </td>
                           </tr>
                         @endforeach

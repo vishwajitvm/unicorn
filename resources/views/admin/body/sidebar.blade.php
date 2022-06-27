@@ -264,7 +264,7 @@
         </li>
 
         <li class="treeview {{ ($prefix == '/managecredentials')?'active':'' }}">
-          <a href="#">
+          <a href="{{ route('managecredentials.view') }}">
             <i data-feather="server"></i>
             <span>Manage Credentials</span>
             <span class="pull-right-container">
@@ -272,8 +272,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('managecredentials.add') }}"><i class="ti-more"></i>Add Certificates</a></li>
-            <li><a href="{{ route('managecredentials.view') }}"><i class="ti-more"></i>View Certificates</a></li>
+            <li><a href="{{ route('managecredentials.add') }}"><i class="ti-more"></i>Add Credentials</a></li>
+            <li><a href="{{ route('managecredentials.view') }}"><i class="ti-more"></i>View Credentials</a></li>
           </ul>
         </li>
 

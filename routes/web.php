@@ -468,6 +468,7 @@ Route::prefix('managecredentials')->group( function() {
     //view
     Route::get('/view' , [AdminManageCredentialsImages::class , 'ViewCertificatesOnCredentails'])->name('managecredentials.view') ; 
 
+    Route::get('/delete/{id}' , [AdminManageCredentialsImages::class , 'DeleteCredentials'])->name('managecredentials.delete') ; 
 
 }) ;
 
