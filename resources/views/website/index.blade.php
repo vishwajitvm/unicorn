@@ -324,20 +324,26 @@
 
                 </div>
 
-                <div class="row association_bg text-center">
-                    <div class="col-lg-4 col-md-4 col-sm-4 px-5"><img src="frontend/assets/img/logo 1ds.png" class="img-fluid"></div>
-                    <div class="col-lg-4 col-md-4 col-sm-4  mt-3 px-5"><img src="frontend/assets/img/logo 2ds.png" class="img-fluid">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 px-5"><img src="frontend/assets/img/logo 3ds.png" class="img-fluid"></div>
+                <div class="slider">
+                    <div class="slide-track">
+                        {{-- <div class="slide">
+                            <img src="https://www.scorepromotions.com/assets/score/img/clients/Air-Canada-01.jpg" height="100" width="100" alt="" />
+                        </div> --}}
+                        @foreach ($manageCred as $itemss)
+                        <div class="slide">
+                            <img src="{{ (!empty($itemss->credential_image))?url('upload/gallery_images/'.$itemss->credential_image):url('upload/no_image.jpg') }}" height="100" width="250" alt="" />
+                        </div>
+                        @endforeach
 
-                    @foreach ($manageCred as $itemss)
-                        <div class="col-lg-4 col-md-4 col-sm-4 px-5 associationimg"><img src="{{ (!empty($itemss->credential_image))?url('upload/gallery_images/'.$itemss->credential_image):url('upload/no_image.jpg') }}" class="img-fluid"></div>
-                    @endforeach
+
+                    </div>
                 </div>
             </div>
 
         </section>
         <!-- association closed -->
+        
+
         
 
 

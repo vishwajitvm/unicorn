@@ -228,3 +228,28 @@ nav>div>span {
         font-size: 40px !important;
     }
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+.association .slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+.association .slide {
+    height: 100px;
+    width: 250px;
+}
+.association .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
