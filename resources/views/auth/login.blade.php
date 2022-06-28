@@ -31,7 +31,7 @@
 							<p class="text-white-50">Sign in to start your session</p> --}}
 							<div>
 								<a class="navbar-brand" href="/">
-									<img src="{{asset('frontend/images/white_logo.png')}}" width="150%" alt="Unicorn Logo">
+									<img src="{{asset('frontend/assets/img/logo (1).png')}}" width="70%" alt="Unicorn Logo">
 								</a>
 							</div>
 
