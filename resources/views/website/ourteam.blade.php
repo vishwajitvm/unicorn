@@ -94,6 +94,98 @@
                     </div>
                 </div>
                 <!-- / End Single Person -->
+
+                <!-- Start Single Person -->
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="single-person">
+                        <div class="person-image">
+                            <img src="{{asset('frontend/assets/img/team/vinnet.png')}}" alt="">
+                           
+                        </div>
+                        <div class="person-info">
+                            <h3 class="full-name">Vinnet</h3>
+                            <!-- <span class="speciality">Javascript Developer</span> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Person -->
+
+                <!-- Start Single Person -->
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="single-person">
+                        <div class="person-image">
+                            <img src="{{asset('frontend/assets/img/team/krishna.png')}}" alt="">
+                           
+                        </div>
+                        <div class="person-info">
+                            <h3 class="full-name">Krishna</h3>
+                            <!-- <span class="speciality">Javascript Developer</span> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Person -->
+
+                 <!-- Start Single Person -->
+                 <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="single-person">
+                        <div class="person-image">
+                            <img src="{{asset('frontend/assets/img/team/mahima.png')}}" alt="">
+                           
+                        </div>
+                        <div class="person-info">
+                            <h3 class="full-name">Mahima</h3>
+                            <!-- <span class="speciality">Javascript Developer</span> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Person -->
+
+                <!-- Start Single Person -->
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="single-person">
+                        <div class="person-image">
+                            <img src="{{asset('frontend/assets/img/team/aftab.png')}}" alt="">
+                           
+                        </div>
+                        <div class="person-info">
+                            <h3 class="full-name">aftab</h3>
+                            <!-- <span class="speciality">Javascript Developer</span> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Person -->
+
+                <!-- Start Single Person -->
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="single-person">
+                        <div class="person-image">
+                            <img src="{{asset('frontend/assets/img/team/rohit.png')}}" alt="">
+                           
+                        </div>
+                        <div class="person-info">
+                            <h3 class="full-name">rohit</h3>
+                            <!-- <span class="speciality">Javascript Developer</span> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Person -->
+
+                 <!-- Start Single Person -->
+                 <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <div class="single-person">
+                        <div class="person-image">
+                            <img src="{{asset('frontend/assets/img/team/unknown.png')}}" alt="">
+                           
+                        </div>
+                        <div class="person-info">
+                            <h3 class="full-name">rohit</h3>
+                            <!-- <span class="speciality">Javascript Developer</span> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Person -->
+
+
             </div>
         </div>
     </section>

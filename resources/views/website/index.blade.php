@@ -49,7 +49,7 @@
                     <div class="content  d-flex align-items-center" style="background-image:url('{{asset('frontend/assets/img/banner/BANNER\ 3.png')}}')">
                         <div class="container">
                             <blockquote>
-                                <p>BAR CUTTING MACHINE</p>
+                                <p>BAR BENDING MACHINE</p>
                                 <span>Unicorn Equipment a unit of M/S global links is a unique name. which is engaged in
                                     presenting a wide range of bar cutting machine. This brings duty bar cutting machine
                                     with strong construction and high quality components.</span><br><br>
@@ -287,19 +287,16 @@
                                         </div>
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <h3>Rishabh thakur</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus excepturi sed impedit quos, aut nesciunt, sunt non labore dolore quibusdam et velit tempore eligendi. Error expedita quae deserunt
-                                                    dicta aliquid!</p>
+                                                <h3>Omprakash Rajak</h3>
+                                                <p>Unicorn Equipment strong focus on innovation makes it an ideal platform for an employee to improve themselves in their respective domains making it one of the best companies to work for.</p>
                                             </div>
                                             <div class="carousel-item ">
-                                                <h3>Anuj</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus excepturi sed impedit quos, aut nesciunt, sunt non labore dolore quibusdam et velit tempore eligendi. Error expedita quae deserunt
-                                                    dicta aliquid!</p>
+                                                <h3>Jamuna</h3>
+                                                <p>Unicorn Equipment has given me the flexibility to explore different roles and acquire new skills while maintaining work – Life balance.</p>
                                             </div>
                                             <div class="carousel-item ">
-                                                <h3>Rohit</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus excepturi sed impedit quos, aut nesciunt, sunt non labore dolore quibusdam et velit tempore eligendi. Error expedita quae deserunt
-                                                    dicta aliquid!</p>
+                                                <h3>Harshad</h3>
+                                                <p>Working with Unicorn Equipment gives me an opportunity to interact with diverse set of people, work in new areas and challenge myself constantly. It’s a great platform to share your ideas and opinions.</p>
                                             </div>
                                         </div>
 

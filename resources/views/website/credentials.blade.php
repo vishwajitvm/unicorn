@@ -21,47 +21,18 @@
                 </div>
             </div>
         </section>
-        <!--banner section end here-->
 
-                    <!-- News section start here-->
-                    {{-- <section class="blogsection categorysection">
-                        <div class="container">
-
-                            <div class="row">
-                                
-                                @foreach ($data as $items)
-                                <div class="col-md-3">
-                                    <div class="image">
-                                        <img class="image__img" src="{{ (!empty($items->credential_image))?url('upload/gallery_images/'.$items->credential_image):url('upload/no_image.jpg') }}" alt="Bricks">
-                                        <div class="image__overlay image__overlay--primary">
-                                            <div class="image__title text-uppercase">  {{ $items->gallery_img_name  }} </div>
-                                            <p class="image__description text-capitalize">
-                                                {{ $items->credential_name }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </section> --}}
-                    <!-- News section end here -->
 
                     <div class="crendentials">
                         <div class="container">
                             <div class="row">
-                                @foreach ($data as $items)
-                                <div class="col-lg-6"><img src="{{ (!empty($items->credential_image))?url('upload/gallery_images/'.$items->credential_image):url('upload/no_image.jpg') }}" class="fluid"
-                                    width="100%" height="100%">
+                            <div class="col-lg-6"><img src="{{ asset('frontend/assets/img/certti/global_link_certi1.jpg') }}"  class="fluid" width="100%" height="100%">
                             </div>
 
-                                @endforeach
-
-
-                                {{-- <div class="col-lg-6"><img src="./assets/img/certificate.jpg" class="fluid" width="100%" height="100%">
-                                </div> --}}
+                            <div class="col-lg-6"><img src="{{ asset('frontend/assets/img/certti/udam_certi2.jpg') }}"  class="fluid" width="100%" height="100%">
                             </div>
-                            <!-- <img src="./assets/img/certificate.jpg" class="fluid"> -->
+
+                            </div>
                         </div>
                     </div>
                                     
