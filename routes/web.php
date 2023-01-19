@@ -617,7 +617,7 @@ Route::post('services-requests' , [websitecontroller::class , 'PostServicesReque
 Route::post('popup-request-store' , [websitecontroller::class , 'POPUPRequestStore'])->name('popup-request-store') ;
 
 //AJAX REQUEST DATA HERE
-Route::post('ajax-navdata' , [ManageAjaxRequests::class , 'HeaderRequest'])->name('ajax-navdata') ;
+// Route::post('ajax-navdata' , [ManageAjaxRequests::class , 'HeaderRequest'])->name('ajax-navdata') ;
 
 //our team
 Route::get('our-team' , [websitecontroller::class , 'OurTeam'])->name('our-team') ;

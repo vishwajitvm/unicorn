@@ -38,11 +38,11 @@
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item navbarcatData" tabindex="-1" href="{{ route('main-machine',$item->id) }}">{{ $item->category_name }}</a>
 
-                                {{-- <ul class="dropdown-menu dropmenuajaxdata" >
-                                    <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
+                                <ul class="dropdown-menu dropmenuajaxdata" >
+                                    {{-- <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
                                     <li class="dropdown-item"><a href="#">Second level</a></li>
-                                    <li class="dropdown-item"><a href="#">Second level</a></li>
-                                </ul> --}}
+                                    <li class="dropdown-item"><a href="#">Second level</a></li> --}}
+                                </ul>
                             </li>
                             @endforeach
 
@@ -92,6 +92,8 @@
 <script>
     $(document).ready(function() {
         $(".navbarcatData").mouseover(function() {
+            $(".dropmenuajaxdata").empty();
+
             let catData = $(this).closest('a').text() ;
             jQuery.ajax({
                 url: '/ajax-navdata',
@@ -100,21 +102,23 @@
                 dataType:"JSON",
                 success: function(result){
                     // jQuery('#main_machine_name').html(result) ;
-                    $.each(result.data, function (i , e) {                    
-                        //  console.log(e.machine_name) ;
+                    $.each(result.data, function (i , e) {  
+                        // console.log("new")                  
+                        //  console.log(e.id) ;
                         // $html = `"<li class='dropdown-item'><a href='#'>"`e.machine_name`"</a></li>"`;
                         // console.log(e) ;
-                        // $html = "<li class='dropdown-item'><a href='#'>" + e.machine_name + "</a></li>" ;
-                        // $(".dropmenuajaxdata").html($html);
-                        // $(".dropmenuajaxdata").append($html);
-                            $html = "<li class='dropdown-item'><a href='#'>" + e.machine_name + "</a></li><br>"  ;
-                            $(".dropmenuajaxdata").html($html);
-                                                    
-                            
+                        $html = '' ;  
+                        $html = "<li class='dropdown-item'><a href='/submachine/"+e.id+"'>" + e.machine_name + "</a></li>" ;
+                        // $nd = $(".dropmenuajaxdata").html($html);
+                        $datas = $(".dropmenuajaxdata").append($html);
+                        // console.log($datas) ;
+                        // $(".dropmenuajaxdata").innerHTML($html);
                     });
-                    
+
                 }
+                
             })
+            $(".dropmenuajaxdata").empty();
         })
     })
 </script>

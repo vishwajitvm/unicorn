@@ -26,7 +26,6 @@ class machineController extends Controller
         if($request->file('machine_image')) {
             $file = $request->file('machine_image') ;
             @unlink(public_path('upload/user_images/'.$data->machine_image)) ;
-            //now we have to generate the name for images
             $filename = date('YmdHi').$file->getClientOriginalName() ;
             $file->move(public_path('upload/user_images'),$filename) ;
             $data['machine_image'] = $filename ;
